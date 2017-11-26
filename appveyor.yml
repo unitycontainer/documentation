@@ -50,6 +50,6 @@ build_script:
 
 on_success:
   - cmd: cd unitycontainer.github.io
-  - git status
+  - git add -A
   - cmd: git commit --all --message="%APPVEYOR_BUILD_VERSION%"
   - git push origin master
