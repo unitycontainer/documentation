@@ -1,1 +1,1 @@
-register-type-injection-constructor.md
+register-type-injection
