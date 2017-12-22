@@ -1,1 +1,3 @@
-register-type.md
+# Type Registration
+
+## Introduction

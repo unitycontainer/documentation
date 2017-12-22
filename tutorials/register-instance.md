@@ -1,1 +1,1 @@
-register-type.md
+register-instance.md
