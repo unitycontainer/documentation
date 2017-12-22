@@ -1,0 +1,10 @@
+- name: Registering Types
+  href: register-type.md
+  items: 
+    - name: Injection
+      href: register-type-injection.md
+      items: 
+        - name: Selecting Constructors
+        href: register-type-injection-constructor.md
+        - name: Injecting Properties
+        href: register-type-injection-property.md        
