@@ -16,6 +16,18 @@
       },
       {
         "files": [
+          "tutorials/**.md",
+          "tutorials/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "unitycontainer.github.io/**"
+        ]
+      },
+      {
+        "files": [
           "articles/**.md",
           "articles/**/toc.yml",
           "toc.yml",
