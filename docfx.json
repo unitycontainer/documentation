@@ -16,12 +16,6 @@
       },
       {
         "files": [
-          "tutorials/**.yml",
-          "tutorials/**/*.md"
-        ]
-      },
-      {
-        "files": [
           "articles/**.md",
           "articles/**/toc.yml",
           "toc.yml",
