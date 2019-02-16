@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/50hjsoi3gqu1becr?svg=true)](https://ci.appveyor.com/project/IoC-Unity/documentation)
+[![Build status](https://ci.appveyor.com/api/projects/status/50hjsoi3gqu1becr?svg=true)](https://ci.appveyor.com/project/unitycontainer/documentation)
 
 # Unity Documentation
 
