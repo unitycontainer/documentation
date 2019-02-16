@@ -3,7 +3,8 @@
     {
       "src": [ { "files": [ "documentation.sln" ] } ],
       "dest": "api",
-      "properties": { "TargetFramework": "netstandard1.0" }
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
     }
   ],
   "build": {
@@ -58,8 +59,10 @@
       "default"
     ],
     "postProcessors": [],
+    "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,
-    "cleanupCacheHistory": false
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
   }
 }
