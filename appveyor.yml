@@ -2,7 +2,7 @@ image: Visual Studio 2017
 
 environment:
   access_token:
-    secure: 6c91312f5763a8df5e5499f30214ff64bacae545
+    secure: oDONs9zjz8/wJSmU+BE2lbQHO2XQD//ieWhTNZEUAyc0p3p46+pnhCiBdL/lEoZ1
 
 init:
   - git config --global credential.helper store
