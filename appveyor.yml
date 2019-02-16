@@ -50,6 +50,8 @@ build_script:
 
 on_success:
   - cmd: cd unitycontainer.github.io
+  - git config --global credential.helper store
+  - ps: Add-Content "$HOME\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
   - git add -A
-  - cmd: git commit --all --message="%APPVEYOR_BUILD_VERSION%"
+  - git commit --all --message="%APPVEYOR_BUILD_VERSION%"
   - git push origin master
