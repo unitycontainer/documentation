@@ -3,7 +3,7 @@ image: Visual Studio 2017
 environment:
   access_token:
     secure: bk5tALPqjPuZ7ndKusHtkYiXlRdbzqzZ2jJ0Srq4bNs8VRMR5iY0vhIMah/cHASI
-    
+
 init:
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
@@ -54,4 +54,4 @@ on_success:
   - ps: Add-Content "$HOME\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
   - git add -A
   - git commit --all --message="%APPVEYOR_BUILD_VERSION%"
-  - git push origin master
+  - git push --force origin master
