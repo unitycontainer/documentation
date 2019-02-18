@@ -17,19 +17,19 @@
   items: 
   - name: Overview
     href: lifetime_managers.md
-  - name: TransientLifetimeManager
+  - name: Transient
     href: lifetime_managers.md#transientlifetimemanager
-  - name: ContainerControlledTransientManager
+  - name: Per Container Transient
     href: lifetime_managers.md#containercontrolledtransientmanager
-  - name: ContainerControlledLifetimeManager
+  - name: Per Container
     href: lifetime_managers.md#containercontrolledlifetimemanager
-  - name: SingletonLifetimeManager
+  - name: Singleton
     href: lifetime_managers.md#singletonlifetimemanager
-  - name: ExternallyControlledLifetimeManager 
+  - name: External
     href: lifetime_managers.md#externallycontrolledlifetimemanager 
-  - name: HierarchicalLifetimeManager 
+  - name: Hierarchical
     href: lifetime_managers.md#hierarchicallifetimemanager 
-  - name: PerResolveLifetimeManager 
+  - name: Per Resolve
     href: lifetime_managers.md#perresolvelifetimemanager 
-  - name: PerThreadLifetimeManager 
+  - name: Per Thread
     href: lifetime_managers.md#perthreadlifetimemanager 
