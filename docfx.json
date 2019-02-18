@@ -1,8 +1,14 @@
 {
   "metadata": [
     {
-      "src": [ { "files": [ "documentation.sln" ] } ],
+      "src": [ { 
+      	"files": [ 
+      		"src/Abstractions/src/Unity.Abstractions.csproj", 
+      		"src/Container/src/Unity.Container.csproj", 
+      	] 
+      } ],
       "dest": "api",
+      "properties": { "TargetFramework": "netstandard2.0" },
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
