@@ -14,8 +14,8 @@
     href: adding_unity.md
   - name: Unity Packages
     href: unity_packages.md
-- name: Unity Dependency Injection
+- name: Unity Container
   items:
-  - name: Overview
+  - name: Dependency Injection
     href: dependency_injection.md
     
