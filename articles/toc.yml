@@ -6,5 +6,5 @@
   items:
   - name: Topics covered
     href: using_unity_in_applications.md
-  - name: Application Design Concepts with Unity
-    href: application_design_concepts_with_unity.md
+  - name: Design Concepts
+    href: design_concepts.md
