@@ -2,3 +2,9 @@
   href: intro.md
 - name: What Does Unity Do?
   href: what_does_unity_do.md
+- name: Using Unity in Applications
+  items:
+  - name: Topics covered
+    href: using_unity_in_applications.md
+  - name: Application Design Concepts with Unity
+    href: application_design_concepts_with_unity.md
