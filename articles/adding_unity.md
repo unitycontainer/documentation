@@ -15,4 +15,4 @@ using Unity;
 ```
 (Optional) If you are using the IServiceLocator interface, add a reference to the service location binary Microsoft.Practices.ServiceLocation.dll. Visual Studio may automatically copy this file to your bin directory when it compiles, but you do not need to include it unless you are explicitly using the UnityServiceLocatorAdapter class.
 
-Add your application code. For more information about how you can use Unity in your own applications, see What Does Unity Do?
+Add your application code. For more information about how you can use Unity in your own applications, see [What Does Unity Do?](what_does_unity_do.md)

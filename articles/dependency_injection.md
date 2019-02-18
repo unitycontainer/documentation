@@ -1,0 +1,2 @@
+# Dependency Injection with Unity
+Using the Unity dependency injection container provides opportunities for you to more easily decouple components, business objects, and services you use in applications, and can simplify how you organize and architect these applications.
