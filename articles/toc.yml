@@ -18,4 +18,12 @@
   items:
   - name: Dependency Injection
     href: dependency_injection.md
+  - name: Registration
+    href: registration.md
+  - name: Resolution
+    href: resolution.md
+  - name: Lifetime
+    href: lifetime.md
+  - name: Disposal
+    href: disposal.md
     
