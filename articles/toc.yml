@@ -4,7 +4,7 @@
   href: what_does_unity_do.md
 - name: Using Unity in Applications
   items:
-  - name: Topics covered
+  - name: Overview
     href: using_unity_in_applications.md
   - name: Design Concepts
     href: design_concepts.md
@@ -14,5 +14,8 @@
     href: adding_unity.md
   - name: Dependency Injection
     href: dependency_injection.md
-
+- name: Dependency Injection with Unity
+  items:
+  - name: Overview
+    href: dependency_injection.md
     
