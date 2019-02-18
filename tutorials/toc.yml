@@ -14,4 +14,22 @@
         - name: Injecting Properties
           href: register-type-injection-property.md        
 - name: Lifetime Managers
-  href: lifetime_managers.md
+  items: 
+  - name: Overview
+    href: lifetime_managers.md
+  - name: TransientLifetimeManager
+    href: lifetime_managers.md#TransientLifetimeManager
+  - name: ContainerControlledTransientManager
+    href: lifetime_managers.md#ContainerControlledTransientManager
+  - name: ContainerControlledLifetimeManager
+    href: lifetime_managers.md#ContainerControlledLifetimeManager
+  - name: SingletonLifetimeManager
+    href: lifetime_managers.md#SingletonLifetimeManager
+  - name: ExternallyControlledLifetimeManager 
+    href: lifetime_managers.md#ExternallyControlledLifetimeManager 
+  - name: HierarchicalLifetimeManager 
+    href: lifetime_managers.md#HierarchicalLifetimeManager 
+  - name: PerResolveLifetimeManager 
+    href: lifetime_managers.md#PerResolveLifetimeManager 
+  - name: PerThreadLifetimeManager 
+    href: lifetime_managers.md#PerThreadLifetimeManager 
