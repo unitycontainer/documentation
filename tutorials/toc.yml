@@ -13,3 +13,5 @@
           href: register-type-injection-constructor.md
         - name: Injecting Properties
           href: register-type-injection-property.md        
+- name: Lifetime Managers
+  href: lifetime_managers.md
