@@ -1,12 +1,7 @@
 ## Overview
 
-The Unity Container (Unity) is a lightweight, extensible dependency injection container. It facilitates building loosely coupled applications and provides developers with the following advantages:
+Unity is a lightweight, extensible dependency injection container that supports interception, constructor injection, property and field injection, and method call injection. You can use Unity in a variety of different ways to help decouple the components of your applications, to maximize coherence in components, and to simplify design, implementation, testing, and administration of these applications.
 
-* Simplified object creation, especially for hierarchical object structures and dependencies
-* Abstraction of requirements; this allows developers to specify dependencies at run time or in configuration and simplify management of crosscutting concerns
-* Increased flexibility by deferring component configuration to the container
-* Service location capability; this allows clients to store or cache the container
-* Instance and type interception
-* Registration by convention
+Unity is a full featured, general-purpose container for use in any type of Microsoft® .NET Framework-based application. It provides all of the features commonly found in dependency injection mechanisms, including methods to register type mappings, factories, and object instances, resolve objects, manage object lifetimes, and inject dependent objects into the parameters of constructors and methods and as the value of properties of objects it resolves.
 
-## Work in Progress
+In addition, Unity is extensible. You can write container extensions that change the behavior of the container, or add new capabilities. For example, the interception feature provided by Unity, which you can use to add policies to objects, is implemented as a container extension.
