@@ -3,8 +3,7 @@
     {
       "src": [ { 
       	"files": [ 
-      		"src/Abstractions/src/Unity.Abstractions.csproj", 
-      		"src/Container/src/Unity.Container.csproj", 
+      		"src/Abstractions/src/Unity.Abstractions.csproj" 
       	] 
       } ],
       "dest": "api",
