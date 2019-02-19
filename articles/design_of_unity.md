@@ -14,15 +14,6 @@ Unity was designed to achieve the following goals:
 
 ## Organization
 Unity organized into set of two assemblies:
-* [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/)
-* [Unity.Container](https://www.nuget.org/packages/Unity.Container/)
-
-These assemblies are distributed individually as well as a composite package containing both.
-
-* [Unity](https://www.nuget.org/packages/Unity/)
-
-This division is created to allow independence between declaration and implementation of container. 
-
 #### Unity.Abstractions
 This assembly contains all public members required to use Unity container in applications. It defines [IUnityContainer](xref:Unity.IUnityContainer) interface as well as types and interfaces required to register, configure and resolve types and instances. Abstraction assembly contains following namespaces:
 * [Unity](xref:Unity)
@@ -30,7 +21,9 @@ This assembly contains all public members required to use Unity container in app
 * [Unity.Lifetime](xref:Unity.Lifetime)
 * [Unity.Policy](xref:Unity.Policy)
 * [Unity.Resolution](xref:Unity.Resolution)
-
 #### Unity.Container
 This assembly implements Unity container's engine and exposes public members required to extend the container. 
+
+
+This division is created to allow independence between declaration and implementation of container. 
 
