@@ -20,7 +20,7 @@ Unity organized as a set of two assemblies:
 This division is created to allow independence between declaration and implementation of container. 
 
 ### Unity.Abstractions
-This assembly contains all public members required to use Unity container in applications. It defines `IUnityContainer` interface as well as types and interfaces needed to register, configure and resolve types and instances. Abstraction assembly contains following namespaces:
+This assembly contains all public members required to use Unity container in applications. It defines [IUnityContainer](xref:Unity.IUnityContainer) interface as well as types and interfaces required to register, configure and resolve types and instances. Abstraction assembly contains following namespaces:
 * [Unity](xref:Unity)
 * [Unity.Injection](xref:Unity.Injection)
 * [Unity.Lifetime](xref:Unity.Lifetime)
