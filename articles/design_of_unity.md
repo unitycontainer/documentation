@@ -4,22 +4,26 @@ This topic describes the design goals, the architecture, and the design highligh
 ## Design Goals
 Unity was designed to achieve the following goals:
 * Promote the principles of modular design through aggressive decoupling.
-* Raise awareness of the need to maximize testability when designing applications.
+* Maximize testability when designing applications.
 * Provide a fast and lightweight dependency injection container mechanism for creating new object instances and managing existing object instances.
-* Expose a compact and intuitive API for developers to work with the container.
-* Support a wide range of code languages, with method overrides that accept generic parameters where the language supports these.
-* Implement attribute-driven injection for constructors, property setters, and methods of target objects.
-* Provide extensibility through custom and third-party container extensions.
+* Expose a compact and intuitive API for developers to work with.
+* Support a wide range of languages, and platforms.
+* Allow attribute-driven injection for constructors, public properties, fields, and methods of target objects.
+* Provide extensibility through container extensions.
 * Provide the performance required in enterprise-level line of business (LOB) applications.
 
 ## Organization
-Unity organized as a set of two assemblies:
-* Unity.Abstractions
-* Unity.Container
+Unity organized into set of two assemblies:
+* [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/)
+* [Unity.Container](https://www.nuget.org/packages/Unity.Container/)
+
+These assemblies are distributed individually as well as a composite package containing both.
+
+* [Unity](https://www.nuget.org/packages/Unity/)
 
 This division is created to allow independence between declaration and implementation of container. 
 
-### Unity.Abstractions
+#### Unity.Abstractions
 This assembly contains all public members required to use Unity container in applications. It defines [IUnityContainer](xref:Unity.IUnityContainer) interface as well as types and interfaces required to register, configure and resolve types and instances. Abstraction assembly contains following namespaces:
 * [Unity](xref:Unity)
 * [Unity.Injection](xref:Unity.Injection)
@@ -27,7 +31,7 @@ This assembly contains all public members required to use Unity container in app
 * [Unity.Policy](xref:Unity.Policy)
 * [Unity.Resolution](xref:Unity.Resolution)
 
-### Unity.Container
+#### Unity.Container
 This assembly implements Unity container's engine and exposes public members required to extend the container. 
 
 ## Operation
