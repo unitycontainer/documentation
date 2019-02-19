@@ -34,7 +34,3 @@ This assembly contains all public members required to use Unity container in app
 #### Unity.Container
 This assembly implements Unity container's engine and exposes public members required to extend the container. 
 
-## Operation
-The public methods of the UnityContainer that developers use fall into two main categories:
-* **Methods that register mappings or types**. The methods RegisterType and the RegisterInstance create the appropriate entries within the current container context.
-* **Methods that retrieve objects**. These include overrides of the `Resolve` and `BuildUp` methods. These methods retrieve the required instances of the objects.
