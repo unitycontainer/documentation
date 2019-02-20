@@ -3,12 +3,12 @@
 
 By using dependency injection frameworks and inversion of control mechanisms, you can generate and assemble instances of custom classes and objects that can contain dependent object instances and settings. The following sections explain the ways that you can use Unity, and the features it provides:
 
-* The Types of Objects Unity Can Create
-* Registering Existing Types and Object Instances
-* Managing the Lifetime of Objects
-* Specifying Values for Injection
-* Populating collections
-* Support for deferred resolution
+* [The Types of Objects Unity Can Create](xref:#registering-types-and-object-instances)
+* [Registering Existing Types and Object Instances](xref:#registering-types-and-object-instances)
+* [Managing the Lifetime of Objects](xref:#managing-the-lifetime-of-objects)
+* [Specifying Values for Injection](xref:#specifying-values-for-injection)
+* [Populating collections](xref:#populating-collections)
+* [Support for deferred resolution](xref:#support-for-deferred-resolution)
 
 ## The Types of Objects Unity Can Create
 You can use the Unity container to generate instances of any object that has a public constructor (in other words, objects that you can create using the new operator). During object instantiation Unity can:
@@ -23,13 +23,13 @@ Unity can resolve any concrete, constructable type without registration. For exa
 
 Registration of types allows specifying a blueprint of how instance should be created and managed. Unity recognizes three ways of registering types:
 
-##### Instance registration
-Unity exposes a method named [RegisterInstance](xref:Unity.IUnityContainer#Unity_IUnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_IInstanceLifetimeManager_) that you can be used to register existing instances with the container. The instance could be registered as itself, as a type of the instance, or it could be registered as any of the interfaces the instance implements. Lifetime of registered instance could be either controlled by container or externally, in which case Unity just keeps weak reference to the object.
+#### Instance registration
+Unity exposes a method named [RegisterInstance](xref:Unity.IUnityContainer#Unity_IUnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_IInstanceLifetimeManager_) that you can use to register existing instances with the container. The instance could be registered as concrete type, a type of the instance you would get by calling `instance.GetType()`, or it could be registered as any of the interfaces the instance implements. Lifetime of registered instance could be either controlled by container it is registered with or externally, in which case Unity just keeps weak reference to the object.
 
-##### Factory registration
+#### Factory registration
 Method [RegisterFactory](xref:Unity.IUnityContainer#Unity_IUnityContainer_RegisterFactory_System_Type_System_String_System_Func_Unity_IUnityContainer_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_) provides a way to register a factory delegate Unity would call then required to provide the type.
 
-##### Type registration
+#### Type registration
 [RegisterType](xref:Unity.IUnityContainer#Unity_IUnityContainer_RegisterType_System_Type_System_Type_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___) is a method where you can instruct Unity how to create and initialize objects from scratch. You can specify:
 * Constructor to call 
 * Parameters to pass to the constructor or how to resolve them
