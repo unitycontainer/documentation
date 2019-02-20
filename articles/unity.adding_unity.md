@@ -18,7 +18,7 @@ This separation allows updates of patched container's engine without recompiling
 
 ## Adding Unity to project
 Unity container is distributed via NuGet and could be added to a project with the help of NuGet manager of by executing command:
-```
+```bash
 Install-Package Unity
 
 or
