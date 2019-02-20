@@ -8,11 +8,9 @@
     href: design_concepts.md
   - name: Adding Unity to application
     href: adding_unity.md
-- name: Quick Start
-  items:
-  - name: Overview
+  - name: Quick Start
     href: using_unity_in_applications.md
-- name: Unity Container
+- name: Features
   items:
   - name: Dependency Injection
     href: dependency_injection.md
