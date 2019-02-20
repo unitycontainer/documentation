@@ -7,78 +7,52 @@ By using dependency injection frameworks and inversion of control mechanisms, yo
 * Registering Existing Types and Object Instances
 * Managing the Lifetime of Objects
 * Specifying Values for Injection
-* Populating and Injecting Arrays, Including Generic Arrays
-* Intercepting Calls to Objects
+* Populating collections
+* Support for deferred resolution
 
 ## The Types of Objects Unity Can Create
-You can use the Unity container to generate instances of any object that has a public constructor (in other words, objects that you can create using the new operator), without registering a mapping for that type with the container. When you call the Resolve method and specify the default instance of a type that is not registered, the container simply calls the constructor for that type and returns the result.
+You can use the Unity container to generate instances of any object that has a public constructor (in other words, objects that you can create using the new operator). During object instantiation Unity can:
+* Select appropriate constructor 
+* Inject constructor with parameters
+* Inject public properties with values
+* Inject public fields with values
+* Call any public method on the created object   
 
-Unity exposes a method named RegisterType that you can use to register types and mappings with the container. It also provides a Resolve method that causes the container to build an instance of the type you specify. The lifetime of the object it builds corresponds to the lifetime you specify in the parameters of the method. If you do not specify a value for the lifetime, the container creates a new instance on each call to Resolve. For more information see Registering Types and Type Mappings.
-## Registering Existing Types and Object Instances
-Unity exposes a method named RegisterInstance that you can use to register existing instances with the container. When you call the Resolve method, the container returns the existing instance during that lifetime. If you do not specify a value for the lifetime, the instance has a container-controlled lifetime, which means that it effectively becomes a singleton instance. For more information see Creating Instance Registrations.
+## Registering Types and Object Instances
+Unity can resolve any concrete, constructable type without registration. For example calling `container.Resolve<object>()` will produce an instance immediately. 
+
+Registration of types allows specifying a blueprint of how instance should be created and managed. Unity recognizes three ways of registering types:
+
+##### Instance registration
+Unity exposes a method named [RegisterInstance](xref:Unity.IUnityContainer#Unity_IUnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_IInstanceLifetimeManager_) that you can be used to register existing instances with the container. The instance could be registered as itself, as a type of the instance, or it could be registered as any of the interfaces the instance implements. Lifetime of registered instance could be either controlled by container or externally, in which case Unity just keeps weak reference to the object.
+
+##### Factory registration
+Method [RegisterFactory](xref:Unity.IUnityContainer#Unity_IUnityContainer_RegisterFactory_System_Type_System_String_System_Func_Unity_IUnityContainer_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_) provides a way to register a factory delegate Unity would call then required to provide the type.
+
+##### Type registration
+[RegisterType](xref:Unity.IUnityContainer#Unity_IUnityContainer_RegisterType_System_Type_System_Type_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___) is a method where you can instruct Unity how to create and initialize objects from scratch. You can specify:
+* Constructor to call 
+* Parameters to pass to the constructor or how to resolve them
+* Properties to initialize and how to do it
+* Fields to inject and with what
+* Methods to call on the created object and parameters to pass to these methods
+* Specify how lifetime should be managed
+
 ## Managing the Lifetime of Objects
-Unity allows you to choose the lifetime of objects that it creates. By default, Unity creates a new instance of a type each time you resolve that type. However, you can use a lifetime manager to specify a different lifetime for resolved instances. For example, you can specify that Unity should maintain only a single instance (effectively, a singleton). It will create a new instance only if there is no existing instance. If there is an existing instance, it will return a reference to this instead. There are also other lifetime managers you can use. For example, you can use a lifetime manager that holds only a weak reference to objects so that the creating process can dispose them, or a lifetime manager that maintains a separate single instance of an object on each separate thread that resolves it.
+Unity allows you to choose the lifetime of the objects it creates. By default, Unity creates a new instance of a type each time you resolve that type. However, you can use different lifetime managers to specify a required lifetime for resolved instances. For example, you can specify that Unity should maintain only a single instance (a singleton). It will create a new instance only if there is no existing instance. If there is an existing instance, it will return a reference to this instead. There are also other lifetime managers you can use.
 
-You can specify the lifetime manager to use when you register a type, a type mapping, or an existing object using design-time configuration, as shown in Specifying Types in the Configuration File or, alternatively, you can use run-time code to add a registration to the container that specifies the lifetime manager you want to use, as shown in Registering Types and Type Mappings and Creating Instance Registrations.
-## Configuring Types for Injection into Constructors, Methods, and Properties
-Unity enables you to use techniques such as constructor injection, property injection, and method call injection to generate and assemble instances of objects complete with all dependent objects and settings. For more information see Specifying Values for Injection and Registering Injected Parameter and Property Values.
-## Example Application Code for Constructor Injection
-As an example of constructor injection, if a class that you instantiate using the Resolve method of the Unity container has a constructor that defines one or more dependencies on other classes, the Unity container automatically creates the dependent object instance specified in the parameters of the constructor. For example, the following code shows a class named CustomerService that has a dependency on a class named LoggingService.
-```C#
-public class CustomerService
-{
-  public CustomerService(LoggingService myServiceInstance)
-  {
-    // work with the dependent instance
-    myServiceInstance.WriteToLog("SomeValue");
-  }
-}
-```
-At run time, developers create an instance of the CustomerService class using the Resolve method of the container, which causes it to inject an instance of the concrete class LoggingService within the scope of the CustomerService class.
-```C#
-IUnityContainer uContainer = new UnityContainer();
-CustomerService myInstance = uContainer.Resolve<CustomerService>();
-```
-## Example Application Code for Property (Setter) Injection
-In addition to constructor injection, described earlier, Unity supports property and method call injection. The following code demonstrates property injection. A class named ProductService exposes as a property a reference to an instance of another class named SupplierData (not defined in the following code). Unity does not automatically set properties as part of creating an instance; you must explicitly configure the container to do so. One way to do this is to apply the Dependency attribute to the property declaration, as shown in the following code.
-```C#
-public class ProductService
-{
-  private SupplierData supplier;
+## Specifying Values for Injection
+Unity allows configurations where dependencies are resolved from the container. But it also provides an easy way to configure injection of values at registration. In other words you could provide values for dependencies to be registered and used during subsequent resolutions. 
 
-  [Dependency]
-  public SupplierData SupplierDetails
-  {
-    get { return supplier; }
-    set { supplier = value; }
-  }
-}
-```
-Now, creating an instance of the ProductService class using Unity automatically generates an instance of the SupplierData class and sets it as the value of the SupplierDetails property of the ProductService class.
-## Populating and Injecting Arrays, Including Generic Arrays
-You can define arrays, including arrays of generic types, and Unity will inject the array into your classes at run time. You can specify the members of an array, or have Unity populate the array automatically by resolving all of the matching types defined in your configuration. You can then use the populated arrays as types to resolve directly, or to set the values of constructor and method parameters and properties. Arrays can be defined in configuration files or by adding the definitions to the container at run time using code.
-For details and examples, see the sections on arrays in the following topics:
-* Configuring Injected Parameter and Property Values
-* Registering Injected Parameter and Property Values
-* Registering Generic Parameters and Types
-## Intercepting Calls to Objects
-The best types in object oriented systems are ones that have a single responsibility. But as systems grow, other concerns tend to creep in. System monitoring, such as logging, event counters, parameter validation, and exception handling are just some examples of areas where this is common. These cross-cutting concerns often require large amounts of repetive code throughout the application and if your design choice changes, for example you change your logging framework, then the logging calls must be changed in many places throughout the code set.
+Unity also allows overriding of any dependency values during resolution. It could override any configured or resolved value during resolution of the type.
 
-Interception is a technique that enables you to add code that will run before and after a method call on a target object. The call is intercepted and additional processing can happen. When you perform this coding process manually, you are following what is commonly known as the decorator pattern. Writing decorators requires that the types in question be designed for it in the beginning, and requires a different decorator type for each type you are decorating.
+## Populating collections
+Unity has built-in support for resolving arrays and enumerations of types. For example it would recognize following types as collections and resolve them using proper algorithm:
+* `Resolve<T[]>()`
+* `Resolve<IEnumerable<T>>()`
 
-The Unity interception system creates the decorators automatically. This allows you to easily reuse code that implements these cross-cutting concerns with minimal, if any, attention to what types the cross-cutting concerns will be applied to.
-## Example Application Code
-The following example configures the container at run time for interception of the type TypeToIntercept by using a VirtualMethodInterceptor interceptor with an interception behavior, ABehavior, and an additional interface to be implemented.
-```C#
-IUnityContainer container = new UnityContainer();
-container.AddNewExtension<Interception>();
-container.RegisterType<TypeToIntercept>(
-        new Interceptor<VirtualMethodInterceptor>(),
-        new InterceptionBehavior<ABehavior>(),
-        new AdditionalInterface<IOtherInterface>());
-```
-You could then resolve an instance by using the following call:
-```C#
-TypeToIntercept instance = container.Resolve<TypeToIntercept>();
-```
-Now when calling methods on an instance, the code in the ABehavior class will be executed before and after any call to the instance.
+## Support for deferred resolution
+Unity container implements strategies to allow deferred resolution of types. It has two types of deferred resolvers:
+* `Func<T>` - Creates factory method which instantiates type **T** on demand.
+* `Lazy<T>` - Creates `Lazy<T>` object and passes it to created type.
+
