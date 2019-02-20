@@ -8,7 +8,7 @@ In addition, Unity is extensible. You can write container extensions that change
 
 By using dependency injection frameworks and inversion of control mechanisms, you can generate and assemble instances of custom classes and objects that can contain dependent object instances and settings. The following sections explain the ways that you can use Unity, and the features it provides:
 
-* [The Types of Objects Unity Can Create](xref:intro.md#registering-types-and-object-instances)
+* [The Types of Objects Unity Can Create](#registering-types-and-object-instances)
 * [Registering Existing Types and Object Instances](xref:intro.md#registering-types-and-object-instances)
 * [Managing the Lifetime of Objects](xref:intro.md#managing-the-lifetime-of-objects)
 * [Specifying Values for Injection](xref:intro.md#specifying-values-for-injection)
@@ -32,7 +32,7 @@ Registration of types allows specifying a blueprint of how instance should be cr
 Unity exposes a method named [RegisterInstance](xref:Unity.IUnityContainer#Unity_IUnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_IInstanceLifetimeManager_) that you can use to register existing instances with the container. The instance could be registered as concrete type, a type of the instance you would get by calling `instance.GetType()`, or it could be registered as any of the interfaces the instance implements. Lifetime of registered instance could be either controlled by container it is registered with or externally, in which case Unity just keeps weak reference to the object.
 
 #### Factory registration
-Method [RegisterFactory](xref:Unity.IUnityContainer#Unity_IUnityContainer_RegisterFactory_System_Type_System_String_System_Func_Unity_IUnityContainer_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_) provides a way to register a factory delegate Unity would call then required to provide the type.
+Method [RegisterFactory](xref:Unity.IUnityContainer#Unity_IUnityContainer_RegisterFactory_System_Type_System_String_System_Func_Unity_IUnityContainer_System_Type_System_String_System_Object__Unity_Lifetime_IFactoryLifetimeManager_) provides a way to register a factory delegate Unity would call when required to provide the type.
 
 #### Type registration
 [RegisterType](xref:Unity.IUnityContainer#Unity_IUnityContainer_RegisterType_System_Type_System_Type_System_String_Unity_Lifetime_ITypeLifetimeManager_Unity_Injection_InjectionMember___) is a method where you can instruct Unity how to create and initialize objects from scratch. You can specify:
