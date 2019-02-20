@@ -50,6 +50,7 @@ Unity also allows overriding of any dependency values during resolution. It coul
 Unity has built-in support for resolving arrays and enumerations of types. For example it would recognize following types as collections and resolve them using proper algorithm:
 * `Resolve<T[]>()`
 * `Resolve<IEnumerable<T>>()`
+* `Resolve<List<T>>()`
 
 ## Support for deferred resolution
 Unity container implements strategies to allow deferred resolution of types. It has two types of deferred resolvers:
