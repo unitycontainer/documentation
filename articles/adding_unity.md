@@ -14,7 +14,7 @@ Normally modular systems have one main application/module with boot-loader respo
 In such systems modules are created and distributed by various teams and departments and synchronization between these might be a challenge. This is where Unity comes in. 
 As stated elsewhere on this site [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/) contains all declarations required by Unity to operate. Because of that modules could only reference one assembly: [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/) removing requirement to be recompiled whenever Unity container engine has changed. 
 
-Given that spec changes very infrequently and [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/) package stays the same most of the time it provides big benefit in terms of saving development time and money.
+Given that specifications change very infrequently and [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/) package stays the same most of the time it provides big benefit in terms of saved development time and money.
 
 ## Adding Unity to project
 Unity container is distributed via NuGet and could be added to a project with the help of NuGet manager of by executing command:
@@ -27,12 +27,12 @@ Install-Package Unity.Abstractions
 Install-Package Unity.Container
 ```
 
-If you wish to use [Floating version references](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files#floating-versions) it is recommended to lock in the minor and major versions and only allow patch version to slide:
+If you wish to use [Floating Version references](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files#floating-versions) it is recommended to lock in the minor and major versions and only allow patch version to slide:
 
 ```
 <PackageReference Include="Unity.Container" Version="5.9.*" />
 ```
-doing so will guarantee that no breaking changes caught you of guard.
+doing so will guarantee that no breaking change caught you of guard.
 
 
 

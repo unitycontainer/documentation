@@ -6,7 +6,7 @@
     href: design_of_unity.md
   - name: Application Design
     href: design_concepts.md
-  - name: Adding Unity
+  - name: Adding Unity to application
     href: adding_unity.md
 - name: Unity in Applications
   items:
