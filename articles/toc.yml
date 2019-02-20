@@ -12,14 +12,26 @@
     href: using_unity_in_applications.md
 - name: Features
   items:
-  - name: Dependency Injection
-    href: dependency_injection.md
-  - name: Registration
-    href: registration.md
+  - name: Overview
+    href: features.md
+  - name: Registering
+    items:
+    - name: Type
+      href: registration.md
+    - name: Mapping
+      href: registration.md
+    - name: Instance
+      href: registration.md
+    - name: Factory
+      href: registration.md
   - name: Lifetime
-    href: lifetime.md
-  - name: Resolution
-    href: resolution.md
-  - name: Disposal
-    href: disposal.md
+    items:
+    - name: Overview
+      href: lifetime.md
+    - name: Disposal
+      href: disposal.md
+  - name: Resolving
+    items:
+    - name: Overview
+      href: resolution.md
     
