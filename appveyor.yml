@@ -15,7 +15,7 @@ install:
   - git clone https://github.com/unitycontainer/abstractions.git src\Abstractions
   - git clone --branch v5.x https://github.com/unitycontainer/container.git src\Container
   - git clone https://github.com/unitycontainer/unitycontainer.github.io.git unitycontainer.github.io
-  - cmd: nuget restore
+  - cmd: nuget restore src/**/*.csproj
   - cmd: nuget install docfx.console -ExcludeVersion 
 
 before_build:
