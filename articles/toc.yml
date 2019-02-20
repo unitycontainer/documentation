@@ -21,7 +21,7 @@
     - name: Factory
       href: features/registration.md
     - name: Type
-        items:
+      items:
       - name: Concrete Type
         href: features/registration.md
       - name: Mapping
