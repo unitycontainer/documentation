@@ -16,14 +16,18 @@
     href: features/features.md
   - name: Registering
     items:
-    - name: Type
-      href: features/registration.md
-    - name: Mapping
-      href: features/registration.md
     - name: Instance
       href: features/registration.md
     - name: Factory
       href: features/registration.md
+    - name: Type
+        items:
+      - name: Concrete Type
+        href: features/registration.md
+      - name: Mapping
+        href: features/registration.md
+      - name: Mapping
+        href: features/injection.md
   - name: Lifetime
     items:
     - name: Overview
