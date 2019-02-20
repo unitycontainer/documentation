@@ -69,6 +69,13 @@
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": false
+    "disableGitFeatures": false,
+    "globalMetadata" :
+    {
+      "_appTitle" : "Unity Container",
+      "_appFooter" : "Copyright &copy; 2009–2019 Unity Container project",
+      "_appLogoPath" : "images/logo.svg",
+      "_appFaviconPath": "images/favicon.ico"
+    }  
   }
 }
