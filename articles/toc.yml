@@ -13,25 +13,25 @@
 - name: Features
   items:
   - name: Overview
-    href: features.md
+    href: features/features.md
   - name: Registering
     items:
     - name: Type
-      href: registration.md
+      href: features/registration.md
     - name: Mapping
-      href: registration.md
+      href: features/registration.md
     - name: Instance
-      href: registration.md
+      href: features/registration.md
     - name: Factory
-      href: registration.md
+      href: features/registration.md
   - name: Lifetime
     items:
     - name: Overview
-      href: lifetime.md
+      href: features/lifetime.md
     - name: Disposal
-      href: disposal.md
+      href: features/disposal.md
   - name: Resolving
     items:
     - name: Overview
-      href: resolution.md
+      href: features/resolution.md
     
