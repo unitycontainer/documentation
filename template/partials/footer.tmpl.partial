@@ -8,7 +8,7 @@
         <a href="#top">Back to top</a>
       </span>
       {{{_appFooter}}}
-      {{^_appFooter}}<span>Unity Container</span>{{/_appFooter}}
+      {{^_appFooter}}<span><strong>Unity Container</strong> Project</span>{{/_appFooter}}
     </div>
   </div>
 </footer>
