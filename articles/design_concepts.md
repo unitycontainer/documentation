@@ -1,23 +1,16 @@
 # Application Design Concepts with Unity
-Features such as inversion of control, dependency injection, interception, factory, and lifetime (some of which are described in the "Scenarios for Unity" section of the topic When Should I Use Unity?) provide several major advantages when building applications that consist of many individual classes and components. Designing applications that conform to these patterns can provide the following:
-* The capability to substitute one component for another using a pluggable architecture.
-* The capability to centralize and abstract common features and to manage crosscutting concerns such as logging, authentication, caching, and validation.
-* Increased configuration flexibility.
-* The capability to locate and instantiate services and components, including singleton instances of these services and components.
+Features such as inversion of control, dependency injection, interception, factory, and lifetime  provide several major advantages when building applications that consist of many individual classes and components. Designing applications that conform to these patterns can provide numerous benefits:
+
+* Decoupling service providers from service consumers
+* Runtime as well as design time configuration of services and dependencies
+* Ability to substitute one component for another.
+* Centralization and abstraction of crosscutting concerns (logging, authentication, caching, and etc).
+* Advanced lifetime management of components and services.
 * Simplified testability for individual components and sections of the application.
 * Simplified overall design, with faster and less error-prone development.
-* Ease of reuse for common components within other applications.
+* Improved reusability of components within other applications.
 
-Of course, implementing these patterns can initially make the design and development process more complex, but the advantages easily justify this extra complexity. In addition, the use of a comprehensive dependency injection mechanism can actually make the task of designing and developing applications much easier.
-
-Fundamentally, there are two approaches to using a dependency injection mechanism:
-* You can arrange to have dependent objects automatically injected, using techniques such as constructor injection, property (setter) injection, and method call injection that inject dependent objects immediately when you instantiate the parent object. This approach is generally most appropriate for applications that require a pluggable architecture or where you want to manage crosscutting concerns.
-* You can have objects injected only on demand, by calling the Resolve method of the container only when you need to retrieve a reference to a specific object.
-* This approach is known as service locator. It is more intrusive into your application, but can be simpler if your architecture does not lend itself to having a central container.
-
-In addition to dependency injection, developers may wish to implement patterns such as Interception, Decorator, Chain Of Responsibility, and Intercepting Filter, where a call from a client or process passes through a graph of objects, with each one able to access and act upon details of the call, such as the method or property name, the parameter types and values, the returned type and value, and other information. Unity achieves this through interception of method calls, providing opportunities to apply policies to objects using a technique often referred to as policy injection.
-
-Unity provides a comprehensive dependency injection and interception mechanism, and is easy to incorporate into your applications. However, it does change the way that you design these applications. The following sections of this topic describe areas where dependency injection is useful:
+Unity provides a comprehensive dependency injection and interception platform, and is easy to incorporate into your applications. However, it does change the way that you design these applications. The following sections of this topic describe areas where dependency injection is useful:
 * Pluggable Architectures
 * Managing Crosscutting Concerns
 * Service and Component Location
