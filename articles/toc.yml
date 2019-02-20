@@ -1,7 +1,5 @@
 - name: Introduction
   href: intro.md
-- name: What Does Unity Do?
-  href: what_does_unity_do.md
 - name: Unity in Applications
   items:
   - name: Overview
