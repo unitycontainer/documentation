@@ -1,15 +1,17 @@
-- name: Introduction
-  href: intro.md
+- name: Unity
+  items:
+  - name: Introduction
+    href: intro.md
+  - name: Design of Unity
+    href: design_of_unity.md
+  - name: Application Design
+    href: design_concepts.md
+  - name: Adding Unity
+    href: adding_unity.md
 - name: Unity in Applications
   items:
   - name: Overview
     href: using_unity_in_applications.md
-  - name: Design Concepts
-    href: design_concepts.md
-  - name: Design of Unity
-    href: design_of_unity.md
-  - name: Adding Unity
-    href: adding_unity.md
   - name: Unity Packages
     href: unity_packages.md
 - name: Unity Container
