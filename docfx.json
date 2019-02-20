@@ -1,15 +1,15 @@
 {
   "metadata": [
     {
-      "src": [ { 
-      	"files": [ 
-      		"src/Abstractions/src/Unity.Abstractions.csproj" 
-      	] 
-      } ],
+      "src": [
+        {
+      	  "files": [
+      		  "src/Abstractions/src/Unity.Abstractions.csproj"
+      	  ]
+        }
+      ],
       "dest": "api",
-      "properties": { "TargetFramework": "netstandard2.0" },
-      "disableGitFeatures": false,
-      "disableDefaultFilter": false
+      "properties": { "TargetFramework": "netstandard2.0" }
     }
   ],
   "build": {
@@ -61,7 +61,8 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default"
+      "default",
+      "template"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
