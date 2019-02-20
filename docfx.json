@@ -46,16 +46,9 @@
         ]
       }
     ],
-    "overwrite": [
-      {
-        "files": [
-          "apidoc/**.md"
-        ],
-        "exclude": [
-          "obj/**",
-          "unitycontainer.github.io/**"
-        ]
-      }
+    "overwrite": "apidoc/*.md",
+    "xrefService": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
     ],
     "dest": "unitycontainer.github.io",
     "globalMetadataFiles": [],

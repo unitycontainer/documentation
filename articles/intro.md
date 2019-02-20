@@ -6,14 +6,14 @@ In addition, Unity is extensible. You can write container extensions that change
 
 # What Does Unity Do?
 
-By using dependency injection frameworks and inversion of control mechanisms, you can generate and assemble instances of custom classes and objects that can contain dependent object instances and settings. The following sections explain the ways that you can use Unity, and the features it provides:
+Apart from decoupling types, components, services, and separating concerns, Unity crates and manages objects. Think of it as operator [new ...](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/new-operator) on steroids.
 
-* [The Types of Objects Unity Can Create](#registering-types-and-object-instances)
-* [Registering Existing Types and Object Instances](xref:intro.md#registering-types-and-object-instances)
-* [Managing the Lifetime of Objects](xref:intro.md#managing-the-lifetime-of-objects)
-* [Specifying Values for Injection](xref:intro.md#specifying-values-for-injection)
-* [Populating collections](xref:intro.md#populating-collections)
-* [Support for deferred resolution](xref:intro.md#support-for-deferred-resolution)
+* [The Types of Objects Unity Can Create](#the-types-of-objects-unity-can-create)
+* [Registering Existing Types and Object Instances](#registering-types-and-object-instances)
+* [Managing the Lifetime of Objects](#managing-the-lifetime-of-objects)
+* [Specifying Values for Injection](#specifying-values-for-injection)
+* [Populating collections](#populating-collections)
+* [Support for deferred resolution](#support-for-deferred-resolution)
 
 ## The Types of Objects Unity Can Create
 You can use the Unity container to generate instances of any object that has a public constructor (in other words, objects that you can create using the new operator). During object instantiation Unity can:
@@ -24,9 +24,9 @@ You can use the Unity container to generate instances of any object that has a p
 * Call any public method on the created object   
 
 ## Registering Types and Object Instances
-Unity can resolve any concrete, constructable type without registration. For example calling `container.Resolve<object>()` will produce an instance immediately. 
+Unity can resolve any concrete, constructable reference type without registration. For example calling `container.Resolve<object>()` will produce an instance immediately. 
 
-Registration of types allows specifying a blueprint of how instance should be created and managed. Unity recognizes three ways of registering types:
+Registrations allow mapping between service types and implementation types. Create a blueprint of how instances instantiated, initialized, and managed. For generic types it creates internal mini factories that used to generate concrete types. Unity supports three ways of registering types:
 
 #### Instance registration
 Unity exposes a method named [RegisterInstance](xref:Unity.IUnityContainer#Unity_IUnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_IInstanceLifetimeManager_) that you can use to register existing instances with the container. The instance could be registered as concrete type, a type of the instance you would get by calling `instance.GetType()`, or it could be registered as any of the interfaces the instance implements. Lifetime of registered instance could be either controlled by container it is registered with or externally, in which case Unity just keeps weak reference to the object.
