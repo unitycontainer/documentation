@@ -30,6 +30,10 @@
       href: registration/mapping.md
     - name: Injection
       href: registration/injection.md
+- name: Resolution
+  items:
+  - name: Overview
+    href: resolution/resolution.md
 - name: Lifetime
   items:
   - name: Overview
@@ -52,8 +56,4 @@
     href: lifetime/managers.md#per-thread
   - name: Disposal
     href: lifetime/disposal.md
-- name: Resolution
-  items:
-  - name: Overview
-    href: resolution/resolution.md
     
