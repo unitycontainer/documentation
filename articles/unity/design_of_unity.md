@@ -30,4 +30,4 @@ This assembly implements Unity container's engine and exposes public members req
 This is a convenience package containing both [Unity.Abstractions](https://www.nuget.org/packages/Unity/) as well as [Unity.Container](https://www.nuget.org/packages/Unity/) assemblies. This package is distributed for these who do now wish to separate declarations and implementation.
 
 ### More Information
-For more information about using packages inside applications see [Application Design](design_concepts.md) concepts with Unity.
+For more information about using packages inside applications see [Application Design](application_design.md) concepts with Unity.
