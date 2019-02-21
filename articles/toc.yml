@@ -14,46 +14,46 @@
   items:
   - name: Overview
     href: features/features.md
-  - name: Registering
+- name: Registration
+  items:
+  - name: Overview
+    href: registration/registration.md
+  - name: Instance
+    href: registration/registration.md
+  - name: Factory
+    href: registration/registration.md
+  - name: Type
     items:
-    - name: Metadata (Name)
-      href: features/registration.md
-    - name: Instance
-      href: features/registration.md
-    - name: Factory
-      href: features/registration.md
-    - name: Type
-      items:
-      - name: Concrete Type
-        href: features/registration.md
-      - name: Mapping
-        href: features/registration.md
-      - name: Mapping
-        href: features/injection.md
-  - name: Lifetime
-    items:
-    - name: Overview
-      href: features/lifetime.md
-    - name: Transient
-      href: features/lifetime.md
-    - name: Per Container
-      href: features/lifetime.md
-    - name: Per Container Transient
-      href: features/lifetime.md
-    - name: Singleton
-      href: features/lifetime.md
-    - name: External
-      href: features/lifetime.md
-    - name: Hierarchical
-      href: features/lifetime.md
-    - name: Per Resolve
-      href: features/lifetime.md
-    - name: Per Thread
-      href: features/lifetime.md
-    - name: Disposal
-      href: features/disposal.md
-  - name: Resolving
-    items:
-    - name: Overview
-      href: features/resolution.md
+    - name: Concrete
+      href: registration/registration.md
+    - name: Mapping
+      href: registration/registration.md
+    - name: Injection
+      href: registration/injection.md
+- name: Lifetime
+  items:
+  - name: Overview
+    href: lifetime/lifetime.md
+  - name: Transient
+    href: lifetime/lifetime.md
+  - name: Per Container
+    href: lifetime/lifetime.md
+  - name: Per Container Transient
+    href: lifetime/lifetime.md
+  - name: Singleton
+    href: lifetime/lifetime.md
+  - name: External
+    href: lifetime/lifetime.md
+  - name: Hierarchical
+    href: lifetime/lifetime.md
+  - name: Per Resolve
+    href: lifetime/lifetime.md
+  - name: Per Thread
+    href: lifetime/lifetime.md
+  - name: Disposal
+    href: lifetime/disposal.md
+- name: Resolution
+  items:
+  - name: Overview
+    href: resolution/resolution.md
     
