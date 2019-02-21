@@ -11,6 +11,7 @@ init:
   - git config --global user.name "Build Job"
 
 install:
+  - git config --global core.autocrlf true
   - git clone https://github.com/unitycontainer/abstractions.git src\Abstractions
   - git clone --branch v5.x https://github.com/unitycontainer/container.git src\Container
   - git clone https://github.com/unitycontainer/unitycontainer.github.io.git unitycontainer.github.io
@@ -52,7 +53,6 @@ on_success:
   - cmd: cd unitycontainer.github.io
   - git config --global credential.helper store
   - ps: Add-Content "$HOME\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
-  - git config core.autocrlf false
   - git add -A
   - git commit --all --message="%APPVEYOR_BUILD_VERSION%"
   - git push --force origin master
