@@ -31,7 +31,7 @@ Each Unity container exposes a [collection](xref:Unity.IUnityContainer#Unity_IUn
 Unity registration may contain the following information:
 
 #### [Registered Type](xref:Unity.IContainerRegistration#Unity_IContainerRegistration_RegisteredType) [Required]
-A type that will be requested during resolution is called **Registered Type**. In the example below `SomeType` would be a registered type. 
+A `Type` that will be requested during resolution is called **Registered Type**. In the example below `SomeType` would be a registered type. 
 ```cs
 container.RegisterType<SomeClass>();
 ...
