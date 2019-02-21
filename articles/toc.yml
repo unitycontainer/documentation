@@ -35,12 +35,12 @@
   - name: Overview
     href: lifetime/lifetime.md
   - name: Transient
-    href: lifetime/managers.md
+    href: lifetime/managers.md#transient
+  - name: Singleton
+    href: lifetime/managers.md#singleton
   - name: Per Container
     href: lifetime/managers.md
   - name: Per Container Transient
-    href: lifetime/managers.md
-  - name: Singleton
     href: lifetime/managers.md
   - name: External
     href: lifetime/managers.md

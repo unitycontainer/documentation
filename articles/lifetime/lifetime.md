@@ -1,5 +1,5 @@
 # Lifetime
-The Unity container manages the creation and resolution of objects based on a lifetime you specify when you register the type, and uses the transient lifetime if you do not specify anything for your type registration.
+The Unity container manages the lifetime of objects based on a [Lifetime Manager](xref:Unity.Lifetime) you specify when you register the type. If you do not specify anything for your type registration Unity uses transient lifetime manager.
 
 When you register a type in configuration, or by using the ``RegisterType`` method and do not explicitly specify lifetime manager, the default behavior is for the container to use a transient lifetime manager. It creates a new instance of the registered, mapped, or requested type each time you call the Resolve method or when the dependency mechanism injects instances into other classes. The container does not store a reference to the object.
 
