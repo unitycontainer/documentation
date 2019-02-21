@@ -39,17 +39,17 @@
   - name: Singleton
     href: lifetime/managers.md#singleton
   - name: Per Container
-    href: lifetime/managers.md
+    href: lifetime/managers.md#per-container
   - name: Per Container Transient
-    href: lifetime/managers.md
+    href: lifetime/managers.md#per-container-transient
   - name: External
-    href: lifetime/managers.md
+    href: lifetime/managers.md#external
   - name: Hierarchical
-    href: lifetime/managers.md
+    href: lifetime/managers.md#hierarchical
   - name: Per Resolve
-    href: lifetime/managers.md
+    href: lifetime/managers.md#per-resolve
   - name: Per Thread
-    href: lifetime/managers.md
+    href: lifetime/managers.md#per-thread
   - name: Disposal
     href: lifetime/disposal.md
 - name: Resolution
