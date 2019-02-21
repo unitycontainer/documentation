@@ -7,9 +7,9 @@ environment:
 init:
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
-  - git config --global user.email "IoC-Unity@eniks.com"
+  - git config --global user.email "unity@eniks.com"
   - git config --global user.name "Build Job"
-  - git config --global core.safecrlf false
+  - git config --global core.autocrlf true
 
 install:
   - git clone https://github.com/unitycontainer/abstractions.git src\Abstractions
