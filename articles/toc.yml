@@ -19,15 +19,15 @@
   - name: Overview
     href: registration/registration.md
   - name: Instance
-    href: registration/registration.md
+    href: registration/instance.md
   - name: Factory
-    href: registration/registration.md
+    href: registration/factory.md
   - name: Type
     items:
     - name: Concrete
-      href: registration/registration.md
+      href: registration/type.md
     - name: Mapping
-      href: registration/registration.md
+      href: registration/mapping.md
     - name: Injection
       href: registration/injection.md
 - name: Lifetime
