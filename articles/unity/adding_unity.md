@@ -17,7 +17,7 @@ As stated elsewhere on this site [Unity.Abstractions](https://www.nuget.org/pack
 This separation allows updates of patched container's engine without recompiling all the modules used in the system. Given that specifications change very infrequently and [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/) package stays the same most of the time it provides big benefit in terms of saved development/testing time and money.
 
 ## Adding Unity to project
-Unity container is distributed via NuGet and could be added to a project with the help of NuGet manager of by executing command:
+Unity container is distributed via NuGet and could be added to a project with the help of NuGet manager or by executing command:
 ```bash
 Install-Package Unity
 
