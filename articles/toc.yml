@@ -24,7 +24,7 @@
     href: registration/factory.md
   - name: Type
     items:
-    - name: Concrete
+    - name: Simple
       href: registration/type.md
     - name: Mapping
       href: registration/mapping.md
@@ -33,6 +33,8 @@
 - name: Resolution
   items:
   - name: Overview
+    href: resolution/resolution.md
+  - name: Dependencies
     href: resolution/resolution.md
 - name: Lifetime
   items:
