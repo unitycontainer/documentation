@@ -9,7 +9,6 @@ init:
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
   - git config --global user.email "unity@eniks.com"
   - git config --global user.name "Build Job"
-  - git config --global core.autocrlf true
 
 install:
   - git clone https://github.com/unitycontainer/abstractions.git src\Abstractions
@@ -53,6 +52,7 @@ on_success:
   - cmd: cd unitycontainer.github.io
   - git config --global credential.helper store
   - ps: Add-Content "$HOME\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - git config core.autocrlf true
   - git add -A
   - git commit --all --message="%APPVEYOR_BUILD_VERSION%"
   - git push --force origin master
