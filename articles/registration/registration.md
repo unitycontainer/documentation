@@ -88,5 +88,5 @@ Unity container provide a way to create child containers (other systems refer to
 * **Types registered in predecessor containers always available in descendant containers**<br>
 This is very simple concept, each registration is like a public virtual declaration in C# types. Every descendant inherits it and can use at will.
 
-* **Types registered in descendant containers hides the same registration of predecessors**<br>
+* **Types registered in descendant containers override the same registration of predecessors**<br>
 Following the same analogy with public virtual declarations, each override registration installs its own declaration and hides the one in predecessor containers.
