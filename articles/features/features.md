@@ -19,7 +19,7 @@ Mapping
   * removing registration.
 * Register user-defined delegate factory and register existing instance.
 * Register implementation types from provided assemblies with automatically determined service types.
-* Register with service key of arbitrary type, or register multiple non-keyed services.
+  * Register with service key of arbitrary type, or register multiple non-keyed services.
 * Register with resolution condition.
 * Register with associated metadata object of arbitrary type.
 
