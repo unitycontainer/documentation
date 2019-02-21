@@ -16,6 +16,8 @@
     href: features/features.md
   - name: Registering
     items:
+    - name: Metadata (Name)
+      href: features/registration.md
     - name: Instance
       href: features/registration.md
     - name: Factory

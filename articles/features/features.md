@@ -11,24 +11,32 @@ Mapping
 
 ## Container
 
-Register interface/type mapping, additionally supported: registering service once, registration update, removing registration.
-Register user-defined delegate factory and register existing instance.
-Register implementation types from provided assemblies with automatically determined service types.
-Register with service key of arbitrary type, or register multiple non-keyed services.
-Register with resolution condition.
-Register with associated metadata object of arbitrary type.
-Resolve and ResolveMany.
-Unknown service resolution: 
-Optional automatic concrete types resolution
-Instance lifetime control or Reuse in DryIoc terms: 
-Nested disposable scopes with optional names
-Ambient scope context
-Supported out-of-the-box: Transient, Singleton, Scoped in multiple flavors, including scoped to specific service in object graph
-useParentReuse and use useDecorateeReuse option for injected dependencies
-Control reused objects behavior with preventDisposal and weaklyReferenced.
-Extensive Open-generics support: constraints, variance, complex nested, recurring generic definitions
-Constructor, and optional property and field injection.
-Static and Instance factory methods in addition to constructor. Factory method supports parameter injection the same way as constructor!
+* Register interface
+* type mapping
+* additionally supported: 
+  * registering service once, 
+  * registration update, 
+  * removing registration.
+* Register user-defined delegate factory and register existing instance.
+* Register implementation types from provided assemblies with automatically determined service types.
+* Register with service key of arbitrary type, or register multiple non-keyed services.
+* Register with resolution condition.
+* Register with associated metadata object of arbitrary type.
+
+* Resolve and ResolveMany.
+  * Unknown service resolution: 
+  * Optional automatic concrete types resolution
+
+* Instance lifetime control or Reuse in DryIoc terms: 
+  * Nested disposable scopes with optional names
+  * Ambient scope context
+
+* Supported out-of-the-box: Transient, Singleton, Scoped in multiple flavors, including scoped to specific service in object graph
+* useParentReuse and use useDecorateeReuse option for injected dependencies
+* Control reused objects behavior with preventDisposal and weaklyReferenced.
+* Extensive Open-generics support: constraints, variance, complex nested, recurring generic definitions
+* Constructor, and optional property and field injection.
+* Static and Instance factory methods in addition to constructor. Factory method supports parameter injection the same way as constructor!
 Injecting properties and fields into existing object.
 Creating concrete object without registering it in Container but with injecting its parameters, properties, and fields.
 Generic wrappers: 
