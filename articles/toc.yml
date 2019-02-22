@@ -1,15 +1,12 @@
-- name: Unity
-  items:
-  - name: Introduction
-    href: introduction.md
-  - name: Features
-    href: features.md
-  - name: Design of Unity
-    href: design_of_unity.md
-  - name: Application Design
-    href: application_design.md
-  - name: Adding Unity to application
-    href: adding_unity.md
-  - name: Quick Start
-    href: using_unity.md
-    
+- name: Introduction
+  href: introduction.md
+- name: Features
+  href: features.md
+- name: Design of Unity
+  href: design_of_unity.md
+- name: Application Design
+  href: application_design.md
+- name: Adding Unity to application
+  href: adding_unity.md
+- name: Quick Start
+  href: using_unity.md
