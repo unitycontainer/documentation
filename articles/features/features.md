@@ -8,13 +8,13 @@ Using the Unity dependency injection container provides opportunities for you to
 ### Registration
 * No registration required for simple POCO types
 * Registration/updates at any time (no builder required)
-* Supports registration metadata
-* Supports generic types
+* Support registration metadata
+* Support generic types
 * Register existing objects 
 * Custom Type factories
 * Type mappings
   * Register as a `Type`
-  * Supports `Type` polymorphism
+  * Support `Type` polymorphism
   * Register as an implemented interface
   * Multiple interfaces of the same `Type`
 * Register Type
@@ -27,41 +27,41 @@ Using the Unity dependency injection container provides opportunities for you to
       * By types of parameters
       * By injected members
       * By provided values
-  * Initializing properties
+  * Initializing Properties
     * Marked with attribute
     * Injected during registration (Injection Member)
-  * Initializing fields
+  * Initializing Fields
     * Marked with attribute
     * Injected during registration (Injection Member)
-  * Calling methods on the object
+  * Calling Methods on the object
     * Marked with attribute
     * Injected during registration (Injection Member)
       * By types of parameters
       * By injected members
       * By provided values
 
-### Existing Registrations
-* Lists registrations of the container
-* Supports registration hierarchies
+### Registrations Collection
+* List registrations of the container
+* Support registration hierarchies
 
 ### Check if `Type` is registered
 * Fast and efficient algorithm
 
 
 ### Initialization of existing objects (BuildUp)
-* Performs initialization on already created objects
-* Follows the same pattern as create (Resolve) object
+* Perform initialization on already created objects
+* Follow the same pattern as create (Resolve) object
 * Compatible with Activator and Compiled pipelines
-* Initializes Properties and Fields
-* Calls methods and injects parameters
+* Initialize Properties and Fields
+* Call Methods and inject parameters
 
 ### Create Instances (Resolve)
-* Injects constructor with parameters
-* Initializes Properties and Fields
-* Calls methods and injects parameters
-* Supports Activator pipelines
-* Creates optimized (compiled) pipelines
-* Seamlessly resolves registered instances or creates new objects
+* Inject constructor with parameters
+* Initialize Properties and Fields
+* Call Methods and injects parameters
+* Support Activator pipelines
+* Create optimized (compiled) pipelines
+* Seamlessly resolve registered instances or creates new objects
 * Built-in support for deferred resolution
   * `Func<T>` 
   * `Lazy<T>` 
@@ -76,7 +76,7 @@ Using the Unity dependency injection container provides opportunities for you to
   * Injects with resolved parameters
   * Injects with registered values
   * Supports parameter overrides
-* Open-generics types
+* Open-generic types
   * constraints
   * variance
   * nested
@@ -94,7 +94,7 @@ Using the Unity dependency injection container provides opportunities for you to
 * Other (Extension)
 
 ### Create child (Scoped) containers
-* Creates disposable child containers (scopes)
+* Create disposable child containers (scopes)
 
 ### Extensible
 * Validation
