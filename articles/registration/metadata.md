@@ -1,5 +1,5 @@
 # Registration Metadata
-During registration Unity relies on information you provide to properly register types, instances, and factories. This is a description of metadata that could be passed to Unity to properly declare build instructions:
+During registration Unity relies on information you provide to properly register types, instances, and factories. This is a description of metadata you could provide to properly declare how the `Type` should be registered and  built:
 
 ## [Registered Type](xref:Unity.IContainerRegistration#Unity_IContainerRegistration_RegisteredType) [Required]
 A `Type` that will be requested during resolution is called **Registered Type**. In the example below `SomeType` would be a registered type. 
@@ -11,10 +11,10 @@ var value = container.Resolve<SomeClass>();
 Different container authors call this type by different names, [FromType](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ee650974(v%3dpandp.10)), [ServiceType](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.servicedescriptor.servicetype), etc. The key point to remember is that this is the `Type` container will be referencing in the internal registry and will be looking for when executing the resolve.
 
 ## [Name](xref:Unity.IContainerRegistration#Unity_IContainerRegistration_Name) [Optional]
-Each registration must be unique within the scope on a container it is registered with. A registration is identified by two pieces of information: `Registered Type` and `Name`. 
+Each registration must be unique within the scope on a container it is registered with. A registration is identified by two pieces of information: **`Registered Type`** and **`Name`**. 
 Adding the name to registration allows multiple 'instances' of the same type to be registered with the container. 
 
-For example, if you register the same service multiple times, each subsequent registration will override the last because in each case you are registering the same type `IService` with the same name `null`:
+For example, if you register the same service with no name multiple times, each subsequent registration will override the last because in each case you are registering the same type `IService` with the same name `null`:
 ```cs
 container.RegisterType<IService, Service1>();
 container.RegisterType<IService, Service2>();
