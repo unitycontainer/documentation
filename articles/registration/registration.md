@@ -1,4 +1,4 @@
-# Unity Registration
+# Registering Types with Unity
 Unity does not require `Type` to be registered to resolve it. 
 
 Any concrete, constructable `Type` could be resolved by Unity. It will even create and supply parameters if required. In other words, if you can create a `Type` with `new` operator:
@@ -12,11 +12,11 @@ var value = container.Resolve<SomeClass>();
 
 You only need to register a `Type` if you want to specify:
 
-* Object's lifetime policy
+* Object's lifetime policy other than transient
 * Nondefault constructor 
 * Instruct Unity to inject properties or fields
-* Call a method on the created object
-* To create a mapping between service and implementation types
+* Call a method on the created object during initialization
+* Create a mapping between service and implementation types
 * Or all of the above
 
 ## What is a Registration and how it works
@@ -81,6 +81,11 @@ For more information see [Type Mapping](mapping.md).
 
 #### [Lifetime Manager](xref:Unity.IContainerRegistration#Unity_IContainerRegistration_LifetimeManager) [Optional]
 This member holds a reference to a lifetime manager that Unity will be using to manage instance(s) of this type. For more information see [Lifetime Management](../lifetime/lifetime.md) 
+
+#### [Injection Instructions](injection.md) [Optional]
+During registration you could instruct Unity on select constructor certain constructor, initialize properties and fields, call methods, and can provide values and instructions for injected parameters.
+
+For more information see [Injection Members](injection.md)
 
 ## Registration Hierarchy
 Unity container provides a way to create child containers (other systems refer to it as resolution scopes) and allows building sophisticated scope trees of registrations. There are just a few simple rules to follow when dealing with container hierarchies:
