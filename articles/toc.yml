@@ -18,6 +18,8 @@
   items:
   - name: Overview
     href: registration/registration.md
+  - name: Metadata
+    href: registration/metadata.md
   - name: Instance
     href: registration/instance.md
   - name: Factory
