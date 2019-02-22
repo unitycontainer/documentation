@@ -83,9 +83,7 @@ For more information see [Type Mapping](mapping.md).
 This member holds a reference to a lifetime manager that Unity will be using to manage instance(s) of this type. For more information see [Lifetime Management](../lifetime/lifetime.md) 
 
 #### [Injection Instructions](injection.md) [Optional]
-During registration you could instruct Unity on select constructor certain constructor, initialize properties and fields, call methods, and can provide values and instructions for injected parameters.
-
-For more information see [Injection Members](injection.md)
+During registration you could instruct the container to select certain constructor, initialize properties and fields, call methods, and inject values and instructions for dependencies. All this is done by passing appropriate [Injection Members](injection.md) to the registration. For more information see [Injection Members](injection.md)
 
 ## Different types of registrations
 Unity recognizes three different scenarios of how instances and types are created:
