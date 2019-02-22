@@ -29,7 +29,7 @@ container.RegisterInstance(typeof(IService), "xyz", instance)
 ```
 In this example Unity creates two registrations of type **IService**. When either is resolved it returns the instance of the **Service** object we registered with container. For more information see [Type Mapping](mapping.md)
 
-## Lifetime of instances registered Unity
+## Lifetime
 Due to the fact that container does not create these instances it only supports limited number of compatible lifetimes:
 
 #### [Per Container](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_PerContainer)

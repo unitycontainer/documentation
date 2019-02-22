@@ -4,45 +4,101 @@ Using the Unity dependency injection container provides opportunities for you to
 
 
 # Features
-Instance
-Factory
-Type
-Mapping
 
-## Container
+### Registration
+* No registration required for simple POCO types
+* Registration/updates at any time (no builder required)
+* Supports registration metadata
+* Supports generic types
+* Register existing objects 
+* Custom Type factories
+* Type mappings
+  * Register as a `Type`
+  * Supports `Type` polymorphism
+  * Register as an implemented interface
+  * Multiple interfaces of the same `Type`
+* Register Type
+  * Constructor selection
+    * Constructor marked by attribute
+    * 'Smart' constructor selection
+      * Longest constructor Unity can satisfy with parameters (dynamic)
+      * Legacy longest constructor (Extension)
+    * Specific constructor (Injection Member)
+      * By types of parameters
+      * By injected members
+      * By provided values
+  * Initializing properties
+    * Marked with attribute
+    * Injected during registration (Injection Member)
+  * Initializing fields
+    * Marked with attribute
+    * Injected during registration (Injection Member)
+  * Calling methods on the object
+    * Marked with attribute
+    * Injected during registration (Injection Member)
+      * By types of parameters
+      * By injected members
+      * By provided values
 
-* Register interface
-* type mapping
-* additionally supported: 
-  * registering service once, 
-  * registration update, 
-  * removing registration.
-* Register user-defined delegate factory and register existing instance.
-* Register implementation types from provided assemblies with automatically determined service types.
-  * Register with service key of arbitrary type, or register multiple non-keyed services.
-* Register with resolution condition.
-* Register with associated metadata object of arbitrary type.
+### Existing Registrations
+* Lists registrations of the container
+* Supports registration hierarchies
 
-* Resolve and ResolveMany.
-  * Unknown service resolution: 
-  * Optional automatic concrete types resolution
+### Check if `Type` is registered
+* Fast and efficient algorithm
 
-* Instance lifetime control or Reuse in DryIoc terms: 
-  * Nested disposable scopes with optional names
-  * Ambient scope context
 
-* Supported out-of-the-box: Transient, Singleton, Scoped in multiple flavors, including scoped to specific service in object graph
-* useParentReuse and use useDecorateeReuse option for injected dependencies
-* Control reused objects behavior with preventDisposal and weaklyReferenced.
-* Extensive Open-generics support: constraints, variance, complex nested, recurring generic definitions
-* Constructor, and optional property and field injection.
-* Static and Instance factory methods in addition to constructor. Factory method supports parameter injection the same way as constructor!
-Injecting properties and fields into existing object.
-Creating concrete object without registering it in Container but with injecting its parameters, properties, and fields.
-Generic wrappers: 
-Service collections: T[], IEnumerable<T>, LazyEnumerable<T>, and I(ReadOnly)Collection|List<T>.
-Other: Lazy<T>, Func<T>, Meta<TMetadata, T> or Tuple<TMetadata, T>, KeyValuePair<TKey, T>, and user-defined wrappers.
-Currying over constructor (or factory method) arguments: Func<TArg, T>, Func<TArg1, TArg2, T>, etc.
-Nested wrappers: e.g. Tuple<SomeMetadata, Func<ISomeService>>[].
-Composite pattern: Composite itself is excluded from result collection.
-Decorator pattern.
+### Initialization of existing objects (BuildUp)
+* Performs initialization on already created objects
+* Follows the same pattern as create (Resolve) object
+* Compatible with Activator and Compiled pipelines
+* Initializes Properties and Fields
+* Calls methods and injects parameters
+
+### Create Instances (Resolve)
+* Injects constructor with parameters
+* Initializes Properties and Fields
+* Calls methods and injects parameters
+* Supports Activator pipelines
+* Creates optimized (compiled) pipelines
+* Seamlessly resolves registered instances or creates new objects
+* Built-in support for deferred resolution
+  * `Func<T>` 
+  * `Lazy<T>` 
+* Built-in support for collections
+  * `T[]`
+  * `IEnumerable<T>`
+* Automatic concrete types resolution
+* Dependency injection
+  * Required
+  * Optional
+  * Supports Default parameters
+  * Injects with resolved parameters
+  * Injects with registered values
+  * Supports parameter overrides
+* Open-generics types
+  * constraints
+  * variance
+  * nested
+  * recurring generic definitions
+
+### Manages lifetime of objects
+* Transient
+* Singleton
+* Per Container
+* Per Container Transient
+* Hierarchical
+* External
+* Per Thread
+* Per Resolve
+* Other (Extension)
+
+### Create child (Scoped) containers
+* Creates disposable child containers (scopes)
+
+### Extensible
+* Validation
+* Legacy behavior
+* Configuration
+* Interception
+* Other
