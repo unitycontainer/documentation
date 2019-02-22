@@ -1,3 +1,5 @@
+- name: Unity Workflow
+  href: workflow.md
 - name: Registration
   items:
   - name: Overview
@@ -44,23 +46,23 @@
     href: lifetime/managers.md#per-thread
   - name: Disposal
     href: lifetime/disposal.md
-- name: Lifetime Managers
-  items: 
-  - name: Overview
-    href: lifetime_managers.md
-  - name: Transient
-    href: lifetime_managers.md#transientlifetimemanager
-  - name: Per Container Transient
-    href: lifetime_managers.md#containercontrolledtransientmanager
-  - name: Per Container
-    href: lifetime_managers.md#containercontrolledlifetimemanager
-  - name: Singleton
-    href: lifetime_managers.md#singletonlifetimemanager
-  - name: External
-    href: lifetime_managers.md#externallycontrolledlifetimemanager 
-  - name: Hierarchical
-    href: lifetime_managers.md#hierarchicallifetimemanager 
-  - name: Per Resolve
-    href: lifetime_managers.md#perresolvelifetimemanager 
-  - name: Per Thread
-    href: lifetime_managers.md#perthreadlifetimemanager 
+  - name: Lifetime Managers
+    items: 
+    - name: Overview
+      href: lifetime/lifetime_managers.md
+    - name: Transient
+      href: lifetime/lifetime_managers.md#transientlifetimemanager
+    - name: Per Container Transient
+      href: lifetime/lifetime_managers.md#containercontrolledtransientmanager
+    - name: Per Container
+      href: lifetime/lifetime_managers.md#containercontrolledlifetimemanager
+    - name: Singleton
+      href: lifetime/lifetime_managers.md#singletonlifetimemanager
+    - name: External
+      href: lifetime/lifetime_managers.md#externallycontrolledlifetimemanager 
+    - name: Hierarchical
+      href: lifetime/lifetime_managers.md#hierarchicallifetimemanager 
+    - name: Per Resolve
+      href: lifetime/lifetime_managers.md#perresolvelifetimemanager 
+    - name: Per Thread
+      href: lifetime/lifetime_managers.md#perthreadlifetimemanager 
