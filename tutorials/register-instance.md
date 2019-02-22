@@ -1,1 +1,0 @@
-register-instance.md

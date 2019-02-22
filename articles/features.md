@@ -92,7 +92,7 @@
 * Create disposable child containers (scopes)
 
 ### Extensible
-* Validation
+* Diagnostic
 * Legacy behavior
 * Configuration
 * Interception

@@ -1,18 +1,49 @@
-- name: Registerations
-  href: registration.md
-  items: 
-  - name: Register Instances
-    href: register-instance.md
-  - name: Register Types
-    href: register-type.md
-    items: 
+- name: Registration
+  items:
+  - name: Overview
+    href: registration/registration.md
+  - name: Metadata
+    href: registration/metadata.md
+  - name: Instance
+    href: registration/instance.md
+  - name: Factory
+    href: registration/factory.md
+  - name: Type
+    items:
+    - name: Simple
+      href: registration/type.md
+    - name: Mapping
+      href: registration/mapping.md
     - name: Injection
-      href: register-type-injection.md
-      items: 
-        - name: Selecting Constructors
-          href: register-type-injection-constructor.md
-        - name: Injecting Properties
-          href: register-type-injection-property.md        
+      href: registration/injection.md
+- name: Resolution
+  items:
+  - name: Overview
+    href: resolution/resolution.md
+  - name: Dependencies
+    href: resolution/resolution.md
+- name: Lifetime
+  items:
+  - name: Overview
+    href: lifetime/lifetime.md
+  - name: Transient
+    href: lifetime/managers.md#transient
+  - name: Singleton
+    href: lifetime/managers.md#singleton
+  - name: Per Container
+    href: lifetime/managers.md#per-container
+  - name: Per Container Transient
+    href: lifetime/managers.md#per-container-transient
+  - name: External
+    href: lifetime/managers.md#external
+  - name: Hierarchical
+    href: lifetime/managers.md#hierarchical
+  - name: Per Resolve
+    href: lifetime/managers.md#per-resolve
+  - name: Per Thread
+    href: lifetime/managers.md#per-thread
+  - name: Disposal
+    href: lifetime/disposal.md
 - name: Lifetime Managers
   items: 
   - name: Overview

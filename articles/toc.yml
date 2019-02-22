@@ -1,61 +1,15 @@
 - name: Unity
   items:
   - name: Introduction
-    href: unity/introduction.md
+    href: introduction.md
   - name: Features
-    href: unity/features.md
+    href: features.md
   - name: Design of Unity
-    href: unity/design_of_unity.md
+    href: design_of_unity.md
   - name: Application Design
-    href: unity/application_design.md
+    href: application_design.md
   - name: Adding Unity to application
-    href: unity/adding_unity.md
+    href: adding_unity.md
   - name: Quick Start
-    href: unity/using_unity.md
-- name: Registration
-  items:
-  - name: Overview
-    href: registration/registration.md
-  - name: Metadata
-    href: registration/metadata.md
-  - name: Instance
-    href: registration/instance.md
-  - name: Factory
-    href: registration/factory.md
-  - name: Type
-    items:
-    - name: Simple
-      href: registration/type.md
-    - name: Mapping
-      href: registration/mapping.md
-    - name: Injection
-      href: registration/injection.md
-- name: Resolution
-  items:
-  - name: Overview
-    href: resolution/resolution.md
-  - name: Dependencies
-    href: resolution/resolution.md
-- name: Lifetime
-  items:
-  - name: Overview
-    href: lifetime/lifetime.md
-  - name: Transient
-    href: lifetime/managers.md#transient
-  - name: Singleton
-    href: lifetime/managers.md#singleton
-  - name: Per Container
-    href: lifetime/managers.md#per-container
-  - name: Per Container Transient
-    href: lifetime/managers.md#per-container-transient
-  - name: External
-    href: lifetime/managers.md#external
-  - name: Hierarchical
-    href: lifetime/managers.md#hierarchical
-  - name: Per Resolve
-    href: lifetime/managers.md#per-resolve
-  - name: Per Thread
-    href: lifetime/managers.md#per-thread
-  - name: Disposal
-    href: lifetime/disposal.md
+    href: using_unity.md
     
