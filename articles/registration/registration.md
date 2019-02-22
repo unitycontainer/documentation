@@ -87,6 +87,16 @@ During registration you could instruct Unity on select constructor certain const
 
 For more information see [Injection Members](injection.md)
 
+## Different types of registrations
+Unity recognizes three different scenarios of how instances and types are created:
+#### Instances created outside of Unity
+A lot of times parts of system's infrastructure require to be available to clients and services of the application. These entities are created and managed outside of Unity but should be accessible by consumers of the framework during subsequent resolutions. <br>
+To enable access to these objects Unity provides a way to register instances. For more information see [Instance Registration](instance.md).
+#### Instances created by registered Type factories
+Although Unity is quite capable in creating instance of types, sometimes it is more efficient or desireable to use `Type` factories. Unity satisfies this requirement by providing API to register a special factory delegate. For more information see [Factory Registration](factory.md)  
+#### Instances created by Unity
+This is the most common scenario where objects are created by the container itself. Creation process is controlled by either `Type` registrations associated with the container or implicit Unity defaults if none registered. For more information how `Type` can be registered see [Type Registration](type.md)
+
 ## Registration Hierarchy
 Unity container provides a way to create child containers (other systems refer to it as resolution scopes) and allows building sophisticated scope trees of registrations. There are just a few simple rules to follow when dealing with container hierarchies:
 
