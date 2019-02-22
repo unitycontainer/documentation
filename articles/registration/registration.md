@@ -1,7 +1,7 @@
 # Registering Types with Unity
 Unity does not require `Type` to be registered to resolve it. 
 
-Any concrete, constructable `Type` could be resolved by Unity. It will even create and supply parameters if required. In other words, if you can create a `Type` with `new` operator:
+Any concrete, constructable `Type` could be resolved by Unity without any prior preparation. It will even create and supply parameters if required. In other words, if you can create a `Type` with `new` operator:
 ```cs
 var value = new SomeClass(new SomeOtherClass());
 ```
@@ -9,15 +9,13 @@ you can resolve it from Unity:
 ```cs
 var value = container.Resolve<SomeClass>();
 ```
+A lot of times, if type does not require any custom steps, it is faster to resolve `Type` from the container if it is not registered. You should only register a `Type` if one of the following is required:
 
-You only need to register a `Type` if you want to specify:
-
-* Object's lifetime policy other than transient
-* Nondefault constructor 
-* Instruct Unity to inject properties or fields
-* Call a method on the created object during initialization
-* Create a mapping between service and implementation types
-* Or all of the above
+* Lifetime policy other than transient
+* Nondefault constructor should be selected
+* Properties or fields not marked with appropriate attributes should be injected
+* Method should be called during initialization on the created object
+* Mapping between service and implementation types 
 
 ## What is a Registration and how it works
 When you register a `Type`, you are instructing Unity how to create and initialize an instance of that `Type` during instantiation. You also instruct Unity how to deal with the crated instance during its lifetime.
