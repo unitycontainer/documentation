@@ -2,6 +2,8 @@
   items:
   - name: Introduction
     href: unity/introduction.md
+  - name: Features
+    href: unity/features.md
   - name: Design of Unity
     href: unity/design_of_unity.md
   - name: Application Design
@@ -10,10 +12,6 @@
     href: unity/adding_unity.md
   - name: Quick Start
     href: unity/using_unity.md
-- name: Features
-  items:
-  - name: Overview
-    href: features/features.md
 - name: Registration
   items:
   - name: Overview
