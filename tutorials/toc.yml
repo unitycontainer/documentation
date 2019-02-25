@@ -28,8 +28,6 @@
     href: resolution/resolution.md
   - name: By Type
     href: resolution/type.md
-  - name: By Type and Name
-    href: resolution/named_type.md
   - name: Generics
     href: resolution/generics.md
   - name: Collections

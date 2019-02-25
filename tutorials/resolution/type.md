@@ -9,6 +9,8 @@ The following table describes the overloads of the Resolve method that return in
 |-----|-----|
 | `Resolve<T>()` | Returns an instance of the type registered with the default name as the type T. |
 | `Resolve(Type t)` | Returns an instance of the default type registered with the container as the type t. |
+| `Resolve<T>(string name)` | Returns an instance of the type registered with the container as the type T and with the specified name. Names are case sensitive. |
+| `Resolve(Type t, string name)` | Returns an instance of the type registered with the container as the type t and with the specified name. Names are case sensitive. |
 | | |
 
 ## Using the Resolve Method with Default Registrations
@@ -18,12 +20,14 @@ The following code registers a mapping for an interface named IService and speci
 ```cs
 IUnityContainer container = new UnityContainer();
 container.RegisterType<IService, CustomerService>();
+
 var instance = container.Resolve<IService>();
 ```
 Alternatively, you can use the non-generic overloads of the methods. The following code achieves the same result.
 ```cs
 IUnityContainer container = new UnityContainer();
 container.RegisterType<IService, CustomerService>();
+
 var instance = (IService)container.Resolve(typeof(IMyService));
 ```
 ### Resolving Types Registered as Base Classes
@@ -34,15 +38,39 @@ The following code registers a mapping for an object named MyBaseService and spe
 ```cs
 IUnityContainer myContainer = new UnityContainer();
 myContainer.RegisterType<MyBaseService, CustomerService>();
+
 MyBaseService myServiceInstance = myContainer.Resolve<MyBaseService>();
 ```
 Alternatively, you can use the non-generic overloads of the methods. The following code achieves the same result.
 ```cs
 IUnityContainer myContainer = new UnityContainer();
 myContainer.RegisterType(typeof(MyBaseService), typeof(CustomerService));
+
 MyBaseService myServiceInstance = (MyBaseService)myContainer.Resolve(typeof(MyBaseService));
 ```
+## Using the Resolve Method with Named Registrations
+If you need to create multiple registrations for the same type, you can specify a name to differentiate each registration. Then, to retrieve an object of the appropriate type, you specify the name and the registered type. Following examples demonstrate the technique:
+```cs
+IUnityContainer container = new UnityContainer();
+container.RegisterType<IService, CustomerService>();
+container.RegisterType<IService, CompanyService>("name");
+container.RegisterType<IService, ExternalService>("other name");
+
+var instance = container.Resolve<IService>("name");
+```
+Alternatively, you can use the non-generic overloads of the methods. The following code achieves the same result.
+```cs
+IUnityContainer container = new UnityContainer();
+container.RegisterType<IService, EmailService>();
+container.RegisterType<IService, LDAPService>("name");
+container.RegisterType<IService, CustomerService>("other name");
+
+var instance = (IService)container.Resolve(typeof(IMyService), "other name");
+```
+
+
 ### Note
 If the target class or object specifies any dependencies of its own, using constructor, property, or method call injection attributes, the instance returned will have these dependent objects injected automatically.
 
 By default, the RegisterType method registers a type with a transient lifetime, which means that the container will not hold onto a reference to the objects it creates when you call the Resolve method. Each time you call one of these methods, the container generates a new instance of the specified or mapped type. However, you can use lifetime managers to control the creation, lifetime, and disposal of objects if required.
+
