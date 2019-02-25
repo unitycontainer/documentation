@@ -1,0 +1,2 @@
+# Resolving collections of Objects of a Particular Type
+When you want to obtain a list of all the registered objects of a specific type, you can use the array `T[]` or `IEnumerable<T>` of that type. The difference between array and enumerable resolution is that array only returns named (non default name) registrations where enumerable always return all, named and unnamed registrations.
