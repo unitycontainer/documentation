@@ -18,14 +18,20 @@
       href: registration/mapping.md
     - name: Injection
       href: registration/injection.md
+  - name: Injection Attributes
+    items:
+    - name: Overview
+      href: registration/attributes.md
 - name: Resolution
   items:
   - name: Overview
     href: resolution/resolution.md
   - name: By Type
     href: resolution/type.md
-  - name: By Type and Registration Name.
+  - name: By Type and Name
     href: resolution/named_type.md
+  - name: Generics
+    href: resolution/generics.md
   - name: Collections
     href: resolution/collections.md
   - name: Overrides
