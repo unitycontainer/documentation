@@ -10,6 +10,8 @@ The following topics describe how you can resolve objects using the Resolve or B
 * [Resolving an Object by Type](type.md)
 * [Resolving an Object by Type and Registration Name](named_type.md)
 * [Resolving collections of Objects of a Particular Type](collections.md)
+* [Resolving Generic Types](generics.md)
+* [Deferring the Resolution of Objects](deferred.md)
 * [Overrides](overrides.md)
 
 For more information about how you can configure Unity with type registrations and mappings, see Registration.
