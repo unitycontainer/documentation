@@ -22,8 +22,14 @@
   items:
   - name: Overview
     href: resolution/resolution.md
-  - name: Dependencies
-    href: resolution/resolution.md
+  - name: By Type
+    href: resolution/type.md
+  - name: By Type and Registration Name.
+    href: resolution/named_type.md
+  - name: Collections
+    href: resolution/collections.md
+  - name: Overrides
+    href: resolution/overrides.md
 - name: Lifetime
   items:
   - name: Overview
@@ -66,3 +72,5 @@
       href: lifetime/lifetime_managers.md#perresolvelifetimemanager 
     - name: Per Thread
       href: lifetime/lifetime_managers.md#perthreadlifetimemanager 
+
+
