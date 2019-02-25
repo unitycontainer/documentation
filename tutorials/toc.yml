@@ -42,10 +42,10 @@
       href: resolution/overrides.md
     - name: Parameter
       href: resolution/override_parameter.md
-    - name: Property
-      href: resolution/override_property.md
     - name: Field
       href: resolution/override_field.md
+    - name: Property
+      href: resolution/override_property.md
     - name: Dependency
       href: resolution/override_dependency.md
 - name: Lifetime
