@@ -26,7 +26,7 @@
   items:
   - name: Overview
     href: resolution/resolution.md
-  - name: By Type
+  - name: Resolving
     href: resolution/type.md
   - name: Generics
     href: resolution/generics.md
@@ -46,6 +46,8 @@
       href: resolution/override_property.md
     - name: Dependency
       href: resolution/override_dependency.md
+- name: Hierarchies      
+  href: hierarchies.md
 - name: Lifetime
   items:
   - name: Overview

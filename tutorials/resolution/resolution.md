@@ -8,7 +8,6 @@ The provision of both generic and non-generic overloads of many of the Unity con
 The following topics describe how you can resolve objects using the Resolve or BuildUp methods:
 
 * [Resolving an Object by Type](type.md)
-* [Resolving an Object by Type and Registration Name](named_type.md)
 * [Resolving collections of Objects of a Particular Type](collections.md)
 * [Resolving Generic Types](generics.md)
 * [Deferring the Resolution of Objects](deferred.md)
