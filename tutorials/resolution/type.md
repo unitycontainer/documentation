@@ -11,7 +11,6 @@ The following table describes the overloads of the Resolve method that return in
 | `Resolve(Type t)` | Returns an instance of the default type registered with the container as the type t. |
 | `Resolve<T>(string name)` | Returns an instance of the type registered with the container as the type T and with the specified name. Names are case sensitive. |
 | `Resolve(Type t, string name)` | Returns an instance of the type registered with the container as the type t and with the specified name. Names are case sensitive. |
-| | |
 
 ## Using the Resolve Method with Default Registrations
 The following examples show how you can use the Resolve method to create or obtain a reference to an object defined in the container configuration. Typically you will register a type mapping between an interface and a concrete type that implements it, or between a base class and a concrete type that inherits it. The examples use the run-time methods of the container to register the types it will resolve.
