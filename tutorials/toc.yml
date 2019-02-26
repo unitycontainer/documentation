@@ -18,7 +18,7 @@
       href: registration/mapping.md
     - name: Injection
       href: registration/injection.md
-  - name: Injection Attributes
+  - name: Attributed
     items:
     - name: Overview
       href: registration/attributes.md
