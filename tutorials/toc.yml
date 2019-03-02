@@ -90,5 +90,11 @@
       href: lifetime/lifetime_managers.md#perresolvelifetimemanager 
     - name: Per Thread
       href: lifetime/lifetime_managers.md#perthreadlifetimemanager 
+- name: Diagnostic
+  href: diagnostic.md
+- name: Legacy Support
+  items:
+  - name: Overview
+    href: legacy/legacy.md
 
 

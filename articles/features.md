@@ -1,6 +1,7 @@
 # Features
-
+## Preparation
 ### Registration
+
 * No registration required for simple POCO types
 * Registration/updates at any time (no builder required)
 * Support registration metadata
@@ -36,14 +37,18 @@
       * By provided values
 
 ### Registrations Collection
+
 * List registrations of the container
 * Support registration hierarchies
 
 ### Check if `Type` is registered
+
 * Fast and efficient algorithm
 
+## Execution
 
 ### Initialization of existing objects (BuildUp)
+
 * Perform initialization on already created objects
 * Follow the same pattern as create (Resolve) object
 * Compatible with Activator and Compiled pipelines
@@ -51,6 +56,7 @@
 * Call Methods and inject parameters
 
 ### Create Instances (Resolve)
+
 * Inject constructor with parameters
 * Initialize Properties and Fields
 * Call Methods and injects parameters
@@ -78,6 +84,7 @@
   * recurring generic definitions
 
 ### Manages lifetime of objects
+
 * Transient
 * Singleton
 * Per Container
@@ -89,11 +96,26 @@
 * Other (Extension)
 
 ### Create child (Scoped) containers
+
 * Create disposable child containers (scopes)
 
-### Extensible
-* Diagnostic
-* Legacy behavior
+## Extensibility
+
+### Diagnostic
+
+* Registration
+* Injection Attribute
+* Stack Overflow
+* Cyclic reference
+
+### Legacy
+
+* Legacy constructor selection
+
+### Functionality
+
 * Configuration
 * Interception
-* Other
+* Logging
+* Web
+* Etc.

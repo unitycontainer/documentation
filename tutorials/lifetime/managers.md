@@ -19,3 +19,6 @@ This lifetime manager could be used on any types of registration, Type, Instance
 ## External
 ## Per Thread
 ## Per Resolve
+
+
+https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff660872(v%3dpandp.20)
