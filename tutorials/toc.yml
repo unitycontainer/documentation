@@ -1,6 +1,7 @@
 - name: Unity Workflow
   href: workflow.md
-- name: Registration
+- uid: Tutorials.Registration
+  name: Registration
   items:
   - name: Overview
     href: registration/registration.md
@@ -10,11 +11,13 @@
     href: registration/instance.md
   - name: Factory
     href: registration/factory.md
-  - name: Type
+  - uid: Tutorials.Registration.Type
+    name: Type
     items:
     - name: Simple
       href: registration/type.md
-    - name: Mapping
+    - uid: Tutorials.Registration.Type.Mapping
+      name: Mapping
       href: registration/mapping.md
     - name: Injection
       href: registration/injection.md
@@ -22,12 +25,17 @@
     items:
     - name: Overview
       href: registration/attributes.md
-- name: Resolution
+- uid: Tutorials.Resolution
+  name: Resolution
   items:
-  - name: Overview
+  - uid: Tutorials.Resolution.Overview
+    name: Overview
     href: resolution/resolution.md
   - name: Resolving
     href: resolution/type.md
+  - uid: Tutorials.Resolution.Selection
+    name: Member Selection
+    href: resolution/selection.md
   - name: Generics
     href: resolution/generics.md
   - name: Collections
