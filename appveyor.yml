@@ -46,7 +46,7 @@ before_build:
         }
 
 build_script:
-  - cmd: .\docfx.console\tools\docfx docfx.json --force
+  - cmd: .\docfx.console\tools\docfx docfx.json
 
 on_success:
   - cmd: cd unitycontainer.github.io
