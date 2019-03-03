@@ -1,5 +1,6 @@
 # Features
-## Preparation
+
+### Setup
 
 * Registration
   * No registration required for simple POCO types
@@ -35,15 +36,11 @@
         * By types of parameters
         * By injected members
         * By provided values
-
-### Registrations Collection
-
-* List registrations of the container
-* Support registration hierarchies
-
-### Check if `Type` is registered
-
-* Fast and efficient algorithm
+* Registrations Collection
+  * List registrations of the container
+  * Support registration hierarchies
+* Check if `Type` is registered
+  * Fast and efficient algorithm
 
 ## Execution
 
