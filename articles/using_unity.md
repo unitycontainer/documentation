@@ -141,4 +141,4 @@ var value2 = container.Resolve<IService>();
 // value1 and value2 are the same instance of Component
 ```
 
-For more information see [Lifetime Management](xref:Tutorials.Lifetime.Overview)
+For more information see [Lifetime Management](xref:Tutorial.Lifetime.Overview)
