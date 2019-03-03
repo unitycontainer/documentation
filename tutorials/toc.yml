@@ -1,7 +1,6 @@
 - name: Unity Workflow
   href: workflow.md
-- uid: Tutorials.Registration
-  name: Registration
+- name: Registration
   items:
   - name: Overview
     href: registration/registration.md
@@ -11,13 +10,11 @@
     href: registration/instance.md
   - name: Factory
     href: registration/factory.md
-  - uid: Tutorials.Registration.Type
-    name: Type
+  - name: Type
     items:
     - name: Simple
       href: registration/type.md
-    - uid: Tutorials.Registration.Type.Mapping
-      name: Mapping
+    - name: Mapping
       href: registration/mapping.md
     - name: Injection
       href: registration/injection.md
@@ -25,16 +22,13 @@
     items:
     - name: Overview
       href: registration/attributes.md
-- uid: Tutorials.Resolution
-  name: Resolution
+- name: Resolution
   items:
-  - uid: Tutorials.Resolution.Overview
-    name: Overview
+  - name: Overview
     href: resolution/resolution.md
   - name: Resolving
     href: resolution/type.md
-  - uid: Tutorials.Resolution.Selection
-    name: Member Selection
+  - name: Member Selection
     href: resolution/selection.md
   - name: Generics
     href: resolution/generics.md
@@ -56,11 +50,9 @@
       href: resolution/override_dependency.md
 - name: Hierarchies      
   href: hierarchies.md
-- uid: Tutorials.Lifetime
 - name: Lifetime
   items:
-  - uid: Tutorials.Lifetime.Overview
-    name: Overview
+  - name: Overview
     href: lifetime/lifetime.md
   - name: Transient
     href: lifetime/managers.md#transient

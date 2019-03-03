@@ -1,10 +1,13 @@
 # Instance Registration
+
 Registering instances is useful if you already have an instance of an object that you have previously created and want Unity to manage its lifetime, or if you want Unity to inject that object into other objects that it is resolving. 
 
 From container's point of view instance registration is in every way similar to type registration, except that it does not need to create the instance on the first Resolve request. It simply gets the object from lifetime manager and returns it as requested. The LifetimeManager controls the lifetime of the object and disposes it when appropriate.
 
 ## Registration of an Existing Object Instances
-The [RegisterInstance](Unity.IUnityContainer#Unity_IUnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_IInstanceLifetimeManager_) method registers an existing instance with the container. You specify the instance type and optional lifetime in the parameter list. The container will return the specified existing instance for the duration of the specified lifetime. Unity container offers several overloads to simplify registration syntax. The simplest instance registration does not require any additional parameters other than instance itself:
+
+The [RegisterInstance](xref:Unity.IUnityContainer#Unity_IUnityContainer_RegisterInstance_System_Type_System_String_System_Object_Unity_Lifetime_IInstanceLifetimeManager_) method registers an existing instance with the container. You specify the instance type and optional lifetime in the parameter list. The container will return the specified existing instance for the duration of the specified lifetime. Unity container offers several overloads to simplify registration syntax. The simplest instance registration does not require any additional parameters other than instance itself:
+
 ```cs
 var instance = new Service();
 
