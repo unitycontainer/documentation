@@ -1,3 +1,7 @@
+---
+uid: Article.Unity.Design
+---
+
 # Design of Unity
 This topic describes the design goals, the architecture, and the design highlights of Unity. You do not have to understand the design to use Unity; however, this topic will help you to understand how it works and how it interacts with the underlying object builder subsystem.
 
