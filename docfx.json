@@ -46,7 +46,6 @@
         ]
       }
     ],
-    "overwrite": "apidoc/*.md",
     "xrefService": [
       "https://xref.docs.microsoft.com/query?uid={uid}"
     ],
@@ -54,8 +53,7 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default",
-      "template"
+      "default"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
