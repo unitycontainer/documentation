@@ -1,3 +1,7 @@
+---
+uid: Tutorial.Resolution.Overview
+---
+
 # Resolving Objects
 
 There are types you can create immediately from the container and there are types that require registration. Generally any primitive type would require registration and all classes are available immediately.

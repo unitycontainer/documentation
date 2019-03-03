@@ -24,7 +24,7 @@ A lot of times, if type does not require any custom steps, it is faster to resol
 * Nondefault constructor should be selected
 * Properties or fields not marked with appropriate attributes should be injected
 * Method should be called during initialization on the created object
-* Mapping between service and implementation types 
+* Mapping between service and implementation types
 
 ## What is a Registration and how it works
 
