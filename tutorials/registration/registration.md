@@ -33,7 +33,7 @@ When you register a `Type`, you are instructing Unity how to create and initiali
 Once registration is complete, Unity creates a blueprint of the type factory where it stores implementation details (name, to and from types, etc.), information about what members to inject and how, and lifetime manager responsible for managing the instance.
 At the later time, when that `Type` is requested, Unity uses this blueprint to create a pipeline (resolver delegate) to be used to create type.
 
-Each Unity container exposes a [collection](xref:Unity.IUnityContainer#Unity_IUnityContainer_Registrations) of available registrations presented as an enumeration of [IContainerRegistration](xref:Unity.IContainerRegistration) objects. This collection could be used to filter and select certain registrations as well as to [check if the `Type` is registered](xref:#Unity.IUnityContainer#Unity_IUnityContainer_IsRegistered_System_Type_System_String_) and how.
+Each Unity container exposes a [collection](xref:Unity.IUnityContainer#Unity_IUnityContainer_Registrations) of available registrations presented as an enumeration of [IContainerRegistration](xref:Unity.IContainerRegistration) objects. This collection could be used to filter and select certain registrations as well as to [check if the `Type` is registered](xref:Unity.IUnityContainer#Unity_IUnityContainer_IsRegistered_System_Type_System_String_) and how.
 
 ## Different types of registrations
 
