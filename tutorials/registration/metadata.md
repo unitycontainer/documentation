@@ -1,3 +1,7 @@
+---
+uid: Tutorial.Registration.Metadata
+---
+
 # Registration Metadata
 During registration Unity relies on information you provide to properly register types, instances, and factories. This is a description of metadata you could provide to properly declare how the `Type` should be registered and  built:
 

@@ -56,7 +56,7 @@ var value = container.Resolve<Foo>();
 // value created with constructor 'Foo(string id, object obj)'
 ```
 
-For more information on how Unity selects members see [Member Selection](xref:Tutorials.Resolution.Selection)
+For more information on how Unity selects members see [Member Selection](xref:Tutorial.Resolution.Selection)
 
 ## Type Mapping
 
@@ -105,7 +105,7 @@ var value = container.Resolve<Foo>();
 
 During the resolution Unity tries to satisfy dependency of type `IService` and finds an instruction you left during registration to use type `Component` to satisfy it. It crates `Component`, satisfying all the dependencies, if required, and passes it to constructor of `Foo` as `IService`.
 
-For more information see [Type Mapping](xref:Tutorials.Registration.Type.Mapping)
+For more information see [Type Mapping](xref:Tutorial.Registration.Type.Mapping)
 
 ## Lifetime
 

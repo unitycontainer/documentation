@@ -1,3 +1,7 @@
+---
+uid: Tutorial.Registration.Instance
+---
+
 # Instance Registration
 
 Registering instances is useful if you already have an instance of an object that you have previously created and want Unity to manage its lifetime, or if you want Unity to inject that object into other objects that it is resolving. 

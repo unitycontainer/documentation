@@ -1,4 +1,9 @@
+---
+uid: Tutorial.Registration.Attribute
+---
+
 # Using Injection Attributes
+
 One of the most useful and powerful techniques when using Unity is to take advantage of dependency injection for the parameters of class constructors and methods, and for the values of properties. This approach allows you to resolve and populate the entire hierarchy of objects used in your application based on type registrations and mappings defined in the container, with the subsequent advantages this offers.
 
 You can specify constructor, property, and method call injection information in configuration or by adding registrations to the container at run time. You can also apply attributes to members of your classes. When you resolve these classes through the container, Unity will generate instances of the dependent objects and wire up the target class with these instances.
