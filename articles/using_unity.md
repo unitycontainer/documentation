@@ -109,13 +109,13 @@ For more information see [Type Mapping](xref:Tutorials.Registration.Type.Mapping
 
 ## Lifetime
 
-By default, when no lifetime manager is associated with type, Unity crates a new instance every time this type is requested. Instances created are not tracked and their lifetime is not managed by the container.
+By default Unity crates a new instance every time type is requested. Instances it created are not tracked and their lifetime is not managed by the container.
 
 ```cs
 // Register mapping between IService and Component
 container.RegisterType<IService, Component>();
 
-// Resolve Foo
+// Resolve IService
 var value1 = container.Resolve<IService>();
 var value2 = container.Resolve<IService>();
 
@@ -134,7 +134,7 @@ To make `IService` a singleton for entire application and create it only once yo
 // Register mapping between IService and Component
 container.RegisterType<IService, Component>(TypeLifetime.Singleton);
 
-// Resolve Foo
+// Resolve IService
 var value1 = container.Resolve<IService>();
 var value2 = container.Resolve<IService>();
 
