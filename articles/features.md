@@ -1,40 +1,40 @@
 # Features
 ## Preparation
-### Registration
 
-* No registration required for simple POCO types
-* Registration/updates at any time (no builder required)
-* Support registration metadata
-* Support generic types
-* Register existing objects 
-* Custom Type factories
-* Type mappings
-  * Register as a `Type`
-  * Support `Type` polymorphism
-  * Register as an implemented interface
-  * Multiple interfaces of the same `Type`
-* Register Type
-  * Constructor selection
-    * Constructor marked by attribute
-    * 'Smart' constructor selection
-      * Longest constructor Unity can satisfy with parameters (dynamic)
-      * Legacy longest constructor (Extension)
-    * Specific constructor (Injection Member)
-      * By types of parameters
-      * By injected members
-      * By provided values
-  * Initializing Properties
-    * Marked with attribute
-    * Injected during registration (Injection Member)
-  * Initializing Fields
-    * Marked with attribute
-    * Injected during registration (Injection Member)
-  * Calling Methods on the object
-    * Marked with attribute
-    * Injected during registration (Injection Member)
-      * By types of parameters
-      * By injected members
-      * By provided values
+* Registration
+  * No registration required for simple POCO types
+  * Registration/updates at any time (no builder required)
+  * Support registration metadata
+  * Support generic types
+  * Register existing objects 
+  * Custom Type factories
+  * Type mappings
+    * Register as a `Type`
+    * Support `Type` polymorphism
+    * Register as an implemented interface
+    * Multiple interfaces of the same `Type`
+  * Register Type
+    * Constructor selection
+      * Constructor marked by attribute
+      * 'Smart' constructor selection
+        * Longest constructor Unity can satisfy with parameters (dynamic)
+        * Legacy longest constructor (Extension)
+      * Specific constructor (Injection Member)
+        * By types of parameters
+        * By injected members
+        * By provided values
+    * Initializing Properties
+      * Marked with attribute
+      * Injected during registration (Injection Member)
+    * Initializing Fields
+      * Marked with attribute
+      * Injected during registration (Injection Member)
+    * Calling Methods on the object
+      * Marked with attribute
+      * Injected during registration (Injection Member)
+        * By types of parameters
+        * By injected members
+        * By provided values
 
 ### Registrations Collection
 
