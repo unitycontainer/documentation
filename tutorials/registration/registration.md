@@ -1,10 +1,10 @@
 ---
-uid: Tutorial.Registration
+uid: Tutorial.Registration.Overview
 ---
 
 # Registering Types with Unity
 
-Unity does not require `Type` to be registered to resolve it. 
+Unity does not require `Type` to be registered to resolve it.
 
 Any concrete, constructable `Type` could be resolved by Unity without any prior preparation. It will even create and supply parameters if required. In other words, if you can create a `Type` with `new` operator:
 
@@ -30,10 +30,10 @@ A lot of times, if type does not require any custom steps, it is faster to resol
 
 When you register a `Type`, you are instructing Unity how to create and initialize an instance of that `Type` during instantiation. You also instruct Unity how to deal with the crated instance during its lifetime.
 
-Once registration is complete, Unity creates a blueprint of the type factory where it stores implementation details (name, to and from types, etc.), information about what members to inject and how, and lifetime manager responsible for managing the instance. <br>
-At the later time, when that `Type` is requested, Unity uses this blueprint to create a pipeline (resolver delegate) to be used to create type. 
+Once registration is complete, Unity creates a blueprint of the type factory where it stores implementation details (name, to and from types, etc.), information about what members to inject and how, and lifetime manager responsible for managing the instance.
+At the later time, when that `Type` is requested, Unity uses this blueprint to create a pipeline (resolver delegate) to be used to create type.
 
-Each Unity container exposes a [collection](xref:Unity.IUnityContainer#Unity_IUnityContainer_Registrations) of available registrations presented as an enumeration of [IContainerRegistration](xref:Unity.IContainerRegistration) objects. This collection could be used to filter and select certain registrations as well as to [check if the `Type` is registered](xref:#Unity.IUnityContainer#Unity_IUnityContainer_IsRegistered_System_Type_System_String_) and how.
+Each Unity container exposes a [collection](xref:Unity.IUnityContainer##Unity_IUnityContainer_Registrations) of available registrations presented as an enumeration of [IContainerRegistration](xref:Unity.IContainerRegistration) objects. This collection could be used to filter and select certain registrations as well as to [check if the `Type` is registered](xref:#Unity.IUnityContainer#Unity_IUnityContainer_IsRegistered_System_Type_System_String_) and how.
 
 ## Different types of registrations
 
@@ -41,7 +41,7 @@ Unity recognizes three different scenarios of how instances and types are create
 
 ### Instances created outside of Unity
 
-A lot of times parts of system's infrastructure require to be available to clients and services of the application. These entities are created and managed outside of Unity but should be accessible by consumers of the framework during subsequent resolutions. <br>
+A lot of times parts of system's infrastructure require to be available to clients and services of the application. These entities are created and managed outside of Unity but should be accessible by consumers of the framework during subsequent resolutions.
 To enable access to these objects Unity provides a way to register instances. For more information see [Instance Registration](instance.md).
 
 ### Instances created by registered Type factories
@@ -61,4 +61,5 @@ Unity container provides a way to create child containers (other systems refer t
 This is a very simple concept, each registration is like a public virtual declaration in cs types. Every descendant inherits it and can use at will.
 
 ### Types registered in descendant containers override the same registration of predecessors
+
 Following the same analogy with public virtual declarations, each override registration installs its own declaration and hides the one in predecessor containers.
