@@ -6,7 +6,7 @@ This topic describes how to develop applications using Unity, and how to create 
 
 Unity exposes very compact API to operate the container. The most operations related to registration, resolution, and lifetime management is exposed through one interface - **[IUnityContainer](xref:Unity.IUnityContainer)**.
 
-So, to start using Unity you need to create an instance of the container and get reference to [IUnityContainer](xref:Unity.IUnityContainer) interface:
+To start using Unity you need to create an instance of the container and get reference to [IUnityContainer](xref:Unity.IUnityContainer) interface:
 
 ```cs
 IUnityContainer container = new UnityContainer();
@@ -14,10 +14,14 @@ IUnityContainer container = new UnityContainer();
 
 ## Creating instances
 
-In basic scenario, once container is created you could immediately start using it:
+Once container is created you could start using it immediately:
 
 ```cs
+IUnityContainer container = new UnityContainer();
 var value = container.Resolve<object>();
+
+// Calling Resolve<object>() is the same as 
+value = new object(); 
 ```
 
 It will create any type with accessible constructor. Consider following example:
