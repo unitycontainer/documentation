@@ -87,11 +87,9 @@ public class Foo
 }
 ```
 
-In this example we have `IService` interface defining an API and class `Component` implementing that API. Type `Foo` is a consumer of the service and should be injected by container with an instance of the service during creating.
+In this example we have `IService` interface defining an API and class `Component` implementing that API. Type `Foo` is a consumer of the service and should be injected by container with an instance of the service during initialization.
 
-If you just call `container.Resolve<IService>()` it will throw an exception complaining that it can not crate an interface type. It does no know that type `Component` implements the interface and should be crated as a dependency.
-
-Type mapping crated during registration instructs Unity to create implementation type (`Component` in this case) when service type (`IService` in this example) is requested:
+If you just call `container.Resolve<IService>()` it will throw an exception complaining that it can not create an interface of type `IService`. You need to register a [Type Mapping](xref:Tutorial.Registration.Type.Mapping) to instructs Unity how to create service of type `IService`:
 
 ```cs
 // Register mapping between IService and Component
@@ -103,13 +101,13 @@ var value = container.Resolve<Foo>();
 // value created with constructor 'Foo(IService service)'
 ```
 
-During the resolution Unity tries to satisfy dependency of type `IService` and finds an instruction you left during registration to use type `Component` to satisfy it. It crates `Component`, satisfying all the dependencies, if required, and passes it to constructor of `Foo` as `IService`.
+During the resolution, when Unity will try to satisfy dependencies, it will look for a registration for each dependency and will find this mapping. It will create `Component` and passes it to constructor of `Foo` as `IService`.
 
 For more information see [Type Mapping](xref:Tutorial.Registration.Type.Mapping)
 
 ## Lifetime
 
-By default Unity crates a new instance every time type is requested. Instances it created are not tracked and their lifetime is not managed by the container.
+By default Unity creates a new instance every time type is requested. Instances it created are not tracked or managed by the container.
 
 ```cs
 // Register mapping between IService and Component
@@ -122,13 +120,13 @@ var value2 = container.Resolve<IService>();
 // value1 and value2 are not the same
 ```
 
-To enable lifetime management of the crated instances, type needs to be registered with one of the compatible [lifetime managers](xref:Unity.Lifetime). Depending on registration type Unity provides three utility types to help with registrations:
+To enable lifetime management, type needs to be registered with one of the compatible [lifetime managers](xref:Unity.Lifetime). Depending on registration type Unity provides three helpers:
 
 * [TypeLifetime](xref:Unity.TypeLifetime)
 * [InstanceLifetime](xref:Unity.InstanceLifetime)
 * [FactoryLifetime](xref:Unity.FactoryLifetime)
 
-To make `IService` a singleton for entire application and create it only once you would register it like this:
+For example, to make `IService` a singleton for the entire application and create it only once you would register it like this:
 
 ```cs
 // Register mapping between IService and Component
