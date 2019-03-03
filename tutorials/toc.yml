@@ -56,9 +56,11 @@
       href: resolution/override_dependency.md
 - name: Hierarchies      
   href: hierarchies.md
+- uid: Tutorials.Lifetime
 - name: Lifetime
   items:
-  - name: Overview
+  - uid: Tutorials.Lifetime.Overview
+    name: Overview
     href: lifetime/lifetime.md
   - name: Transient
     href: lifetime/managers.md#transient
