@@ -42,15 +42,15 @@ Unity recognizes three different scenarios of how instances and types are create
 ### Instances created outside of Unity
 
 A lot of times parts of system's infrastructure require to be available to clients and services of the application. These entities are created and managed outside of Unity but should be accessible by consumers of the framework during subsequent resolutions.
-To enable access to these objects Unity provides a way to register instances. For more information see [Instance Registration](instance.md).
+To enable access to these objects Unity provides a way to register instances. For more information see [Instance Registration](xref:Tutorial.Registration.Instance).
 
 ### Instances created by registered Type factories
 
-Although Unity is quite capable in creating instance of types, sometimes it is more efficient or desireable to use `Type` factories. Unity satisfies this requirement by providing API to register a special factory delegate. For more information see [Factory Registration](factory.md)  
+Although Unity is quite capable in creating instance of types, sometimes it is more efficient or desireable to use `Type` factories. Unity satisfies this requirement by providing API to register a special factory delegate. For more information see [Factory Registration](xref:Tutorial.Registration.Factory)  
 
 ### Instances created by Unity
 
-This is the most common scenario where objects are created by the container itself. Creation process is controlled by either `Type` registrations associated with the container or implicit Unity defaults if none registered. For more information how `Type` can be registered see [Type Registration](type.md)
+This is the most common scenario where objects are created by the container itself. Creation process is controlled by either `Type` registrations associated with the container or implicit Unity defaults if none registered. For more information how `Type` can be registered see [Type Registration](xref:Tutorial.Registration.Type)
 
 ## Registration Hierarchies
 
