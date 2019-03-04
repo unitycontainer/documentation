@@ -1,3 +1,7 @@
+---
+uid: Article.Unity.Using
+---
+
 # Using Unity in Applications
 
 This topic describes how to develop applications using Unity, and how to create and build instances of objects. It assumes that you familiar with dependency injection and separation of concerns concepts.

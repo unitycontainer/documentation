@@ -1,12 +1,12 @@
-- name: Introduction
-  href: introduction.md
-- name: Features
-  href: features.md
-- name: Design of Unity
-  href: design_of_unity.md
-- name: Application Design
-  href: application_design.md
-- name: Adding Unity to application
-  href: adding_unity.md
-- name: Quick Start
-  href: using_unity.md
+- uid: Article.Unity.Introduction
+  name: Introduction
+- uid: Article.Unity.Features
+  name: Features
+- uid: Article.Unity.Design 
+  name: Design of Unity
+- uid: Article.Application.Design
+  name: Application Design
+- uid: Article.Unity.Install
+  name: Adding Unity to application
+- uid: Article.Unity.Using
+  name: Quick Start
