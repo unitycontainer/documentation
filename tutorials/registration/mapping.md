@@ -1,5 +1,5 @@
 ---
-uid: Tutorial.Registration.Type.Mapping
+uid: Tutorial.Registration.Mapping
 ---
 
 # Type Mapping

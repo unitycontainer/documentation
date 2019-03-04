@@ -1,27 +1,37 @@
 - name: Unity Workflow
-  href: workflow.md
+  uid: Tutorial.Workflow.Overview
 - name: Registration
   items:
   - name: Overview
-    href: registration/registration.md
+    uid: Tutorial.Registration.Overview
   - name: Metadata
-    href: registration/metadata.md
+    uid: Tutorial.Registration.Metadata
   - name: Instance
-    href: registration/instance.md
+    uid: Tutorial.Registration.Instance
   - name: Factory
-    href: registration/factory.md
+    uid: Tutorial.Registration.Factory
   - name: Type
     items:
     - name: Simple
-      href: registration/type.md
+      uid: Tutorial.Registration.Type
     - name: Mapping
-      href: registration/mapping.md
+      uid: Tutorial.Registration.Mapping
     - name: Injection
-      href: registration/injection.md
-  - name: Attributed
+      uid: Tutorial.Registration.Injection
+  - name: Annotation
     items:
     - name: Overview
-      href: registration/attributes.md
+      uid: Tutorial.Annotation.Overview
+    - name: Constructor
+      uid: Tutorial.Annotation.Constructor
+    - name: Parameter
+      uid: Tutorial.Annotation.Parameter
+    - name: Method
+      uid: Tutorial.Annotation.Method
+    - name: Field
+      uid: Tutorial.Annotation.Field
+    - name: Property
+      uid: Tutorial.Annotation.Property
 - name: Resolution
   items:
   - name: Overview
