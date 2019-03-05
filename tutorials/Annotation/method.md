@@ -6,7 +6,7 @@ uid: Tutorial.Annotation.Method
 
 Method invocation is an optional step you can add to the created object's initialization. Any accessible method could be invoked, provided Unity can satisfy all the parameters with appropriate values.
 
-## Method Annotation
+## Method Invocation
 
 To enable method invocation during object initialization you could apply [InjectionMethod](xref:Unity.InjectionMethodAttribute) attribute to the method you want to be executed.
 
@@ -34,9 +34,9 @@ public class Service
 
 In example above attribute [InjectionMethod](xref:Unity.InjectionMethodAttribute) is applied to method `Initialize(...)` and the method will be executed immediately after the object is created.
 
-## Multiple Method Annotation
+## Multiple Method Invocation
 
-Unity does not place any restrictions on how many methods of the class to be invoked during initialization. You could mark any and all methods with the attribute and Unity will execute them all:
+Unity does not place any restrictions on how many methods of the class will be invoked during the initialization. You could mark any and all methods with the attribute and Unity will execute them all:
 
 ```cs
 public class Service
