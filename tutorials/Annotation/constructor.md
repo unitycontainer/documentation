@@ -45,7 +45,7 @@ In this example type `MyObject` contains three public constructors. Normally, Un
 
 Attribute annotated types are not required to be registered with the Unity container to participate in dependency injection. At runtime Unity will use reflection to discover all required information to create objects of that type.
 
-Sometimes you might be required to use attribute annotated type in a way not intended by original designer. For example if you want to create type `MyObject` from example above using different constructor. You may do so by registering the type with the container and passing [InjectionConstructor](Unity.Injection.InjectionConstructor) injection member to registration method:
+Sometimes you might be required to use attribute annotated type in a way not intended by original designer. For example if you want to create type `MyObject` from example above using different constructor. You may do so by registering the type with the container and passing [InjectionConstructor](xref:Unity.Injection.InjectionConstructor) injection member to registration method:
 
 ```cs
 c.RegisterType<MyObject>("Special Case", 
