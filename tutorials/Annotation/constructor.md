@@ -6,7 +6,7 @@ uid: Tutorial.Annotation.Constructor
 
 When classes are created, Unity provides following mechanisms to properly select and execute constructors:
 
-* **[Automatic Injection](xref:Tutorial.Selection.Constructor)**. With this technique, you allow the Unity container to select the constructor and satisfy any dependencies defined in parameters of the constructor automatically. It will select most complex constructor it can satisfy with dependencies.
+* **Automatic Injection**. With this technique, you allow the Unity container to select the constructor and satisfy any dependencies defined in parameters of the constructor automatically. It will select most complex constructor it can satisfy with dependencies.
 
 * **[Constructor Injection](xref:Tutorial.Injection.Constructor)**. With this technique, you provide [InjectionConstructor](xref:Unity.Injection.InjectionConstructor) injection member during registration of the type or the type mapping. This mechanism allows you to pick different constructor for each [Type Mapping](xref:Tutorial.Registration.Mapping) or each named registration you create.
 
@@ -53,5 +53,3 @@ c.RegisterType<MyObject>("Special Case",
 ```
 
 In this example you create registration for type `MyObject` with name `"Special Case"` and instruct Unity to select constructor that takes one parameter of type `SomeOtherClass`. When registration has explicitly defined by injection member constructor, Unity will ignore [InjectionConstructor](xref:Unity.InjectionConstructorAttribute) attribute and use injected constructor instead.
-
-For more information see [Constructor Selection](xref:Tutorial.Selection.Constructor)

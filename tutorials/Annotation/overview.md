@@ -8,7 +8,7 @@ One of the most useful and powerful techniques when using Unity is to take advan
 
 You can specify constructor, field, property, and method call injection information in configuration or by adding registrations to the container at run time. You can also apply attributes to members of your classes to indicate injection targets. When you resolve these classes through the container, Unity will generate instances of the dependent objects and wire up the injection targets with these instances.
 
-Normally, Unity performs selection of the constructor automatically by choosing the most complex constructor it can satisfy with dependencies and populating these parameters with resolved values when it constructs the object. In some cases, [for various reasons](xref:Tutorial.Selection.Constructor), the constructor could not be selected successfully and container may throw an exception.
+Normally, Unity performs selection of the constructor automatically by choosing the most complex constructor it can satisfy with dependencies and populating these parameters with resolved values when it constructs the object. In some cases, for various reasons, the constructor could not be selected successfully and container may throw an exception.
 
 To disambiguate selection or to override automatic behavior you could specify which constructor Unity should use to construct the object by marking it with [InjectionConstructor](xref:Unity.InjectionConstructorAttribute) attribute.
 
