@@ -32,7 +32,7 @@ public class Service
 }
 ```
 
-In example above attribute [InjectionMethod](xref:Unity.InjectionMethodAttribute) is applied to method `Initialize(...)` and the method will be executed immediately after the object is created.
+In the example above, attribute [InjectionMethod](xref:Unity.InjectionMethodAttribute) is applied to method `Initialize(...)` and the method will be executed immediately after the object is created.
 
 ## Multiple Method Invocation
 
@@ -63,18 +63,48 @@ public class Service
 }
 ```
 
-## Annotating `private` and `protected` methods
+## Restrictions
+
+### Static methods cannot be invoked
+
+Unity does not support invocation of static methods. Static methods annotated with [InjectionMethod](xref:Unity.InjectionMethodAttribute) attribute will be ignored. If [Unity Diagnostic](xref:Tutorial.Unity.Diagnostic) is enabled, the container will throw an exception when it encounters such an annotation.
+
+### Methods with `ref` or `out` parameters cannot be invoked
+
+Methods containing `ref` or `out` parameters cannot be invoked during initialization. The container will throw an exception if encountered these.
+
+```cs
+public class Service
+{
+    [InjectionMethod]  // Error
+    public void Method1(ref object refObject)
+    {
+        ...
+    }
+    ...
+
+    [InjectionMethod]  // Error
+    public void Method2(out object outObject)
+    {
+        ...
+    }
+}
+```
+
+In the example above neither `Method1(ref object refObject)` nor `Method2(out object outObject)` should be annotated for invocation. Doing so will create an error condition.
+
+### Invoking `private` and `protected` methods is not allowed
 
 Although it is technically possible to call `private` and `protected` methods of the class, Unity does not support this feature. This restriction is implemented to impose consistency with accessibility principles of `C#` language.
 
-Unity will ignore attributes on non accessible methods.
+Unity will ignore attributes on non-accessible methods.
 
 ```cs
 public class Service
 {
     ...
 
-    [InjectionMethod]
+    [InjectionMethod]  // Error
     protected void ProtectedMethod(...)
     {
         ...
@@ -82,6 +112,8 @@ public class Service
 }
 ```
 
-In example above method `ProtectedMethod(...)` will not be called.
+In the example above method `ProtectedMethod(...)` will not be called.
 
-If [Unity Diagnostic](xref:Tutorial.Unity.Diagnostic) is enabled, the container will throw an exception when it encounters such an annotation. For more information see  [Unity Diagnostic](xref:Tutorial.Unity.Diagnostic).
+If [Unity Diagnostic](xref:Tutorial.Unity.Diagnostic) is enabled, the container will throw an exception when it encounters this condition.
+
+For more information see  [Unity Diagnostic](xref:Tutorial.Unity.Diagnostic).
