@@ -1,11 +1,11 @@
 - name: Summary
   uid: Specification.Summary
 - name: Constructor
-  href: Specification.Constructor
+  uid: Specification.Constructor
 - name: Method
-  href: Specification.Method
+  uid: Specification.Method
 - name: Field
-  href: Specification.Field
+  uid: Specification.Field
 - name: Property
-  href: Specification.Property
+  uid: Specification.Property
 
