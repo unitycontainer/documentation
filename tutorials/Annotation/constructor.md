@@ -2,7 +2,7 @@
 uid: Tutorial.Annotation.Constructor
 ---
 
-# Annotating Objects for Constructor Injection
+# Annotating types for Constructor invocation
 
 When classes are created, Unity provides following mechanisms to properly select and execute constructors:
 
