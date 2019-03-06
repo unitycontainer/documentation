@@ -28,7 +28,7 @@ A lot of times, if type does not require any custom steps, it is faster to resol
 
 ## What is a Registration and how it works
 
-When you register a `Type`, you are instructing Unity how to create and initialize an instance of that `Type` during instantiation. You also instruct Unity how to deal with the crated instance during its lifetime.
+Registration is how you control Unity to do it 'Your' way. When you register a `Type`, you are instructing Unity to create and initialize an instance of that `Type` in a very particular way. You also instruct Unity how to deal with the crated instance during its lifetime.
 
 Once registration is complete, Unity creates a blueprint of the type factory where it stores implementation details (name, to and from types, etc.), information about what members to inject and how, and lifetime manager responsible for managing the instance.
 At the later time, when that `Type` is requested, Unity uses this blueprint to create a pipeline (resolver delegate) to be used to create type.
@@ -37,20 +37,19 @@ Each Unity container exposes a [collection](xref:Unity.IUnityContainer#Unity_IUn
 
 ## Different types of registrations
 
-Unity recognizes three different scenarios of how instances and types are created:
+Unity recognizes three different scenarios of how instances and types are created and based on these allows three different types of registrations:
 
 ### Instances created outside of Unity
 
-A lot of times parts of system's infrastructure require to be available to clients and services of the application. These entities are created and managed outside of Unity but should be accessible by consumers of the framework during subsequent resolutions.
-To enable access to these objects Unity provides a way to register instances. For more information see [Instance Registration](xref:Tutorial.Registration.Instance).
+A lot of times parts of system's infrastructure require to be available to clients and services of the application. These entities are created and managed outside of the Unity but should be accessible by consumers of the framework during resolution. To enable access to these objects Unity provides a way to register instances. For more information see <xref:Tutorial.Registration.Instance>.
 
-### Instances created by registered Type factories
+### Instances created by Unity using provided Type Factory
 
-Although Unity is quite capable in creating instance of types, sometimes it is more efficient or desireable to use `Type` factories. Unity satisfies this requirement by providing API to register a special factory delegate. For more information see [Factory Registration](xref:Tutorial.Registration.Factory)  
+Although Unity is quite capable in creating instances of types, sometimes it is more efficient or desireable to use `Type` factories. Unity provides API to register a special factory delegate. For more information see <xref:Tutorial.Registration.Factory>
 
 ### Instances created by Unity
 
-This is the most common scenario where objects are created by the container itself. Creation process is controlled by either `Type` registrations associated with the container or implicit Unity defaults if none registered. For more information how `Type` can be registered see [Type Registration](xref:Tutorial.Registration.Type)
+This is the most common scenario where objects are created by the container itself. Creation process is controlled by either `Type` registrations associated with the container or implicit Unity defaults if none registered. For more information how `Type` can be registered see<xref:Tutorial.Registration.Type>
 
 ## Registration Hierarchies
 

@@ -1,5 +1,3 @@
-- name: Specification
-  uid: Specification.Unity
 - name: Introduction
   uid: Specification.Introduction
 - name: Terms and Definitions
@@ -10,4 +8,6 @@
   uid: Specification.Field
 - name: Property
   uid: Specification.Property
+- name: Specification
+  uid: Specification.Unity
 

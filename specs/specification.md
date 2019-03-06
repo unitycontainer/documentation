@@ -3,49 +3,28 @@ uid: Specification.Unity
 title: Unity Container Specification
 ---
 
-1. <xref:Specification.Introduction>
-1. Terms and Definitions
-    1. Injection
-    1. Dependency
-    1. Contract
-        * Type
-        * Name
-    1. Metadata
-    1. Lifetime
-1. Workflow
-    1. Setup
-        1. Creating Container
-            1. Root
-            1. Scopes
-        1. Type Contracts
-            1. Implicit
-            1. Mapping
-            1. Explicit
-                * Instance
-                * Factory
-                * Type
-        1. Provide Services
-            1. Locate Contract
-                1. Existing
-                1. Hierarchical
-                1. None
-                    1. Create Locally
-                    1. With the registration
-                    1. At the root
-            1. Execute contract
-                1. From lifetime manager
-                1. From pipeline
-        1. Manage created objects
-
-
-
 # Unity Container Specification
 
 ## 1 Introduction
 
-[!include [Introduction](1-introduction.md)]
+Unity is a full featured, general-purpose container for use in any type of Microsoft® .NET Framework-based application. It provides all of the features commonly found in dependency injection implementations.
 
-[!include [Terms and Definitions](2-definitions.md)]
+In addition, Unity is extensible. You can write container extensions that change the behavior of the container, or add new capabilities. For example, the interception feature provided by Unity, which you can use to add policies to objects, is implemented as a container extension.
+
+## 2 Terms and Definitions
+
+### 2.1 Injection
+
+### 2.2 Dependency
+
+### 2.3 Contract
+
+* Type
+* Name
+
+### 2.4 Metadata
+
+### 2.5 Lifetime
 
 ## 3 Workflow
 

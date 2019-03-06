@@ -1,5 +1,6 @@
 ---
 uid: Tutorial.Registration.Instance
+title: Instance Registration
 ---
 
 # Instance Registration
