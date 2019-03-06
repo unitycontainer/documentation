@@ -7,7 +7,7 @@
 - name: Resolution
   href: Resolution/toc.yml
 - name: Hierarchies      
-  href: hierarchies.md
+  uid: Tutorial.Container.Hierarchy
 - name: Lifetime
   href: Lifetime/toc.yml
 - name: Diagnostic

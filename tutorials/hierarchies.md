@@ -1,3 +1,20 @@
+---
+uid: Tutorial.Container.Hierarchy
+title: Container Hierarchy
+---
+
+# Container Hierarchies
+
+Unity container provides a way to create child containers (other systems refer to it as resolution scopes) and allows building sophisticated scope trees of registrations. There are just a few simple rules to follow when dealing with container hierarchies:
+
+### Types registered in predecessor containers always available in descendant containers
+
+This is a very simple concept, each registration is like a public virtual declaration in cs types. Every descendant inherits it and can use at will.
+
+### Types registered in descendant containers override the same registration of predecessors
+
+Following the same analogy with public virtual declarations, each override registration installs its own declaration and hides the one in predecessor containers.
+
 # Using Container Hierarchies
 Unity supports nested containers, allowing you to build container hierarchies. Nesting containers enables you to control the scope and lifetime of singleton objects, and register different mappings for specific types. This topic contains the following sections that describe how you can create container hierarchies and use them in your applications:
 * Constructing and Disposing Unity Containers
