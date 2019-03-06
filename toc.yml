@@ -1,7 +1,7 @@
 - name: Overview
   href: Articles/
-#- name: Specification
-#  href: Specs/
+- name: Specification
+  href: Specs/
 - name: Tutorials
   href: Tutorials/
 - name: Api Documentation
