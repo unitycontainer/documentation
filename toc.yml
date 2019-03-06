@@ -1,9 +1,9 @@
 - name: Overview
-  href: articles/
+  href: Articles/
 #- name: Specification
-#  href: specs/
+#  href: Specs/
 - name: Tutorials
-  href: tutorials/
+  href: Tutorials/
 - name: Api Documentation
   href: api/
   homepage: api/index.md
