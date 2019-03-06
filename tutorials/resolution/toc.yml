@@ -1,0 +1,24 @@
+  - name: Overview
+    href: resolution.md
+  - name: Resolving
+    href: type.md
+  - name: Member Selection
+    href: selection.md
+  - name: Generics
+    href: generics.md
+  - name: Collections
+    href: collections.md
+  - name: Deferred
+    href: deferred.md
+  - name: Overrides
+    items:
+    - name: Overview
+      href: overrides.md
+    - name: Parameter
+      href: override_parameter.md
+    - name: Field
+      href: override_field.md
+    - name: Property
+      href: override_property.md
+    - name: Dependency
+      href: override_dependency.md

@@ -1,7 +1,9 @@
-- name: Summary
-  uid: Specification.Summary
-- name: Constructor
-  uid: Specification.Constructor
+- name: Specification
+  uid: Specification.Unity
+- name: Introduction
+  uid: Specification.Introduction
+- name: Terms and Definitions
+  uid: Specification.Definitions
 - name: Method
   uid: Specification.Method
 - name: Field

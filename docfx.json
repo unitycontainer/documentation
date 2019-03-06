@@ -22,12 +22,12 @@
       },
       {
         "files": [
-          "articles/**.md",
-          "articles/**/toc.yml",
-          "specs/**.md",
-          "specs/**/toc.yml",
-          "tutorials/**.md",
-          "tutorials/**/toc.yml",
+          "Articles/**.md",
+          "Articles/**/toc.yml",
+          "Specs/**.md",
+          "Specs/**/toc.yml",
+          "Tutorials/**.md",
+          "Tutorials/**/toc.yml",
           "toc.yml",
           "*.md"
         ],

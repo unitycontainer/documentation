@@ -1,6 +1,3 @@
-[submodule "unitycontainer.github.io"]
-	path = unitycontainer.github.io
-	url = https://github.com/unitycontainer/unitycontainer.github.io.git
 [submodule "src/Abstractions"]
 	path = src/Abstractions
 	url = https://github.com/unitycontainer/abstractions.git
