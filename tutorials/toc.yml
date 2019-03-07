@@ -1,5 +1,5 @@
-- name: Introduction
-  uid: Tutorial.Workflow.Overview
+#- name: Introduction
+#  uid: Tutorial.Workflow.Overview
 - name: Registration
   href: Registration/toc.yml
 - name: Type Annotation

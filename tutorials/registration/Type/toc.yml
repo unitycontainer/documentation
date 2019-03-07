@@ -1,0 +1,10 @@
+- name: Registration
+  uid: Tutorial.Registration.Type
+- name: Constructor
+  href: Constructor/toc.yml
+- name: Field Injection
+  uid: Tutorial.Injection.Field
+- name: Property Injection
+  uid: Tutorial.Injection.Property
+- name: Method Invocation
+  uid: Tutorial.Injection.Method

@@ -1,7 +1,7 @@
 - name: Introduction
   uid: Specification.Unity
-- name: Terms and Definitions
-  uid: Specification.Definitions
+#- name: Terms and Definitions
+#  uid: Specification.Definitions
 - name: Method
   uid: Specification.Method
 - name: Field

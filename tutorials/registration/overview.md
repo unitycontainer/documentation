@@ -52,6 +52,6 @@ Although Unity is quite capable in creating instances of types, sometimes it is 
 
 This is the most common scenario where objects are created by the container itself. Creation process is controlled by either `Type` registrations associated with the container or implicit Unity defaults if none registered. For more information how `Type` can be registered see<xref:Tutorial.Registration.Type>
 
-## Registration Hierarchies
+## Container Hierarchies
 
-Unity container provides a way to create child containers (sometime referred as creating scopes) and allows building sophisticated hierarchical trees of registrations. There are just a few simple rules to follow when dealing with container hierarchies. For more information see <xref:Tutorial.Container.Hierarchy>
+Unity container provides a way to create child containers (also referred as creating scopes) and allows building sophisticated hierarchical trees of registrations. There are just a few simple rules to follow when dealing with container hierarchies. For more information see <xref:Tutorial.Container.Hierarchy>

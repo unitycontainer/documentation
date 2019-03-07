@@ -1,18 +1,13 @@
 ---
 uid: Tutorial.Annotation.Constructor
+title: Constructor Annotation
 ---
 
 # Annotating types for Constructor invocation
 
-When classes are created, Unity provides following mechanisms to properly select and execute constructors:
+Constructor Injection Using an Attribute Annotation allows you to apply attribute to the class' constructor designating it for dependency injection. When creating the class, Unity will always (unless explicitly overwritten) use that constructor. You only need to use this technique when there is more than one constructor in the target type.
 
-* **Automatic Injection**. With this technique, you allow the Unity container to select the constructor and satisfy any dependencies defined in parameters of the constructor automatically. It will select most complex constructor it can satisfy with dependencies.
-
-* **[Constructor Injection](xref:Tutorial.Injection.Constructor)**. With this technique, you provide [InjectionConstructor](xref:Unity.Injection.InjectionConstructor) injection member during registration of the type or the type mapping. This mechanism allows you to pick different constructor for each [Type Mapping](xref:Tutorial.Registration.Mapping) or each named registration you create.
-
-* **[Constructor Injection Using an Attribute Annotation](xref:Tutorial.Annotation.Constructor#constructor-injection-using-an-attribute-annotation)**. With this technique, you apply attribute to the class constructor designating that constructor for dependency injection. When creating the class, Unity will always (unless explicitly overwritten) use that constructor. You only need to use this technique when there is more than one constructor in the target class.
-
-## Constructor Injection Using an Attribute Annotation
+## Annotating Constructor
 
 When a target class contains more than one constructor and automatic selection process does not provide desired selection, you may use the [InjectionConstructor](xref:Unity.InjectionConstructorAttribute) attribute to specify the constructor you wish to use for injection.
 

@@ -18,14 +18,21 @@ var instance = new Service();
 
 container.RegisterInstance(instance);
 ```
+
 Resolving type **Service** like this `container.Resolve<Service>()` will return an instance of the **Service** object we registered.
+
 ## Metadata
-Instance registration, as any other registration type, supports adding a registration [Name](metadata.md#name-optional). Doing so lets you register multiple instance of the same `Type` for later retrieval as a collection. Using overload you can write it like this:
+
+Instance registration, as any other registration type, supports adding a registration [Name](xref:Tutorial.Registration.Metadata#name). Doing so lets you register multiple instance of the same `Type` for later retrieval as a collection. Using overload you can write it like this:
+
 ```cs
 container.RegisterInstance("Some Name", instance);
 ```
+
 ## Type mapping
+
 Any instance can also be registered as any of the ancestral types or any of the interfaces it implements effectively creating a mapping between these types. 
+
 ```cs
 var instance = new Service();
 
@@ -35,31 +42,43 @@ or
 container.RegisterInstance(typeof(IService), instance)
 container.RegisterInstance(typeof(IService), "xyz", instance)
 ```
+
 In this example Unity creates two registrations of type **IService**. When either is resolved it returns the instance of the **Service** object we registered with container. For more information see [Type Mapping](mapping.md)
 
 ## Lifetime
-Due to the fact that container does not create these instances it only supports limited number of compatible lifetimes:
 
-#### [Per Container](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_PerContainer)
+Due to the fact that container does not create these instances, the instance registration only supports limited number of compatible lifetimes:
+
+### [Per Container](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_PerContainer)
+
 By default Unity uses [Per Container](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_PerContainer) lifetime manager when no manager specified explicitly. So all these examples above will be registered with container scope. Unity will keep these instances referenced and alive until the container is alive. Although it is not necessary to provide container controlled lifetime manager you can still write it like this:
+
 ```cs
 container.RegisterInstance("Some Name", instance, InstanceLifetime.PerContainer);
 container.RegisterInstance<IService>("Some Name", instance, InstanceLifetime.PerContainer);
 ```
-#### [Singleton](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_Singleton)
+
+### [Singleton](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_Singleton)
+
 Instances can be registered as global singletons by using [Singleton](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_Singleton) lifetime manager:
+
 ```cs
 container.RegisterInstance("Some Name", instance, InstanceLifetime.Singleton);
 container.RegisterInstance<IService>("Some Name", instance, InstanceLifetime.Singleton);
 ```
+
 These instances will be kept alive until root container is disposed.
 
-#### [External](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_External)
-If Unity is not supposed to control lifetime of the object [External](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_External) lifetime manager should be used:
+### [External](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_External)
+
+If Unity is not supposed to control lifetime of the object the [External](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_External) lifetime manager is used:
+
 ```cs
 container.RegisterInstance<IService>("Some Name", instance, InstanceLifetime.External);
 ```
+
 [External](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_External) lifetime manager is also useful when same instance is registered via multiple interfaces. In this case only one registration should use [Per Container](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_PerContainer) or [Singleton](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_Singleton) manager and the rest should be registered with [External](xref:Unity.InstanceLifetime#Unity_InstanceLifetime_External) lifetime manager. This way, when object is disposed, it is not disposed multiple times:
+
 ```cs
 container.RegisterInstance(instance, InstanceLifetime.Singleton);
 

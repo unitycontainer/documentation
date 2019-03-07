@@ -1,3 +1,0 @@
----
-uid: Tutorial.Injection.Constructor
----

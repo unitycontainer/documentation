@@ -1,16 +1,10 @@
-  - name: Overview
-    uid: Tutorial.Registration.Overview
-  - name: Metadata
-    uid: Tutorial.Registration.Metadata
-  - name: Instance
-    uid: Tutorial.Registration.Instance
-  - name: Factory
-    uid: Tutorial.Registration.Factory
-  - name: Type
-    items:
-    - name: Simple
-      uid: Tutorial.Registration.Type
-    - name: Mapping
-      uid: Tutorial.Registration.Mapping
-    - name: Injection
-      uid: Tutorial.Registration.Injection
+- name: Overview
+  uid: Tutorial.Registration.Overview
+- name: Metadata
+  uid: Tutorial.Registration.Metadata
+- name: Instance
+  uid: Tutorial.Registration.Instance
+- name: Factory
+  uid: Tutorial.Registration.Factory
+- name: Type
+  href: Type/toc.yml

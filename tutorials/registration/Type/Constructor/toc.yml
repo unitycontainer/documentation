@@ -1,0 +1,4 @@
+- name: Selection
+  uid: Tutorial.Injection.Constructor.Selection
+- name: Invoking
+  uid: Tutorial.Injection.Constructor.Invoking
