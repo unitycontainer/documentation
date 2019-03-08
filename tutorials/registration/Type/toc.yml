@@ -1,7 +1,6 @@
-- name: Registration
-  uid: Tutorial.Registration.Type
 - name: Constructor
   href: Constructor/toc.yml
+  topicUid: Tutorial.Injection.Constructor
 - name: Field Injection
   uid: Tutorial.Injection.Field
 - name: Property Injection

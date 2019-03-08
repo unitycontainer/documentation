@@ -78,9 +78,9 @@ For more information about lifetime management see <xref:Tutorial.Lifetime.Overv
 
 ## Creating object Instances
 
-Unity instantiates an objects by creating a resolve pipeline and executing the pipeline with passed in injection values. Each pipeline consists of several steps with each step performing part of the initialization.
+Unity instantiates an objects by creating a resolver pipeline and executing the pipeline with passed in injection values. Each pipeline consists of several steps with each step performing part of the initialization.
 
-How this pipeline is assembled and what values are injected is controlled by collection of [Injection Member](xref:Unity.Injection.InjectionMember) objects passed to registration method. The normal steps of the object creation process are:
+How the pipeline is assembled and what values are injected is controlled by collection of [Injection Member](xref:Unity.Injection.InjectionMember) objects passed to registration method. The normal steps of the object creation process are:
 
 * [Constructor invocation and injection](xref:Tutorial.Injection.Constructor)
 * [Fields injection](xref:Tutorial.Injection.Field)

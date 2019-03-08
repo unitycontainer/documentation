@@ -8,3 +8,4 @@
   uid: Tutorial.Registration.Factory
 - name: Type
   href: Type/toc.yml
+  topicUid: Tutorial.Registration.Type

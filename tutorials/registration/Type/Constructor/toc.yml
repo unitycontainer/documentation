@@ -1,4 +1,4 @@
-- name: Selection
+- name: Default ctor()
+  uid: Tutorial.Injection.Constructor.Default
+- name: Selecting ctor(...)
   uid: Tutorial.Injection.Constructor.Selection
-- name: Invoking
-  uid: Tutorial.Injection.Constructor.Invoking
