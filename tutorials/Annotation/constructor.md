@@ -46,10 +46,4 @@ Annotating multiple constructors with injection parameters is not recommended. U
 
 Attribute annotated types are not required to be registered with the Unity container to participate in dependency injection. At runtime, Unity will use reflection to discover all required information to create objects of that type.
 
-Sometimes you might be required to use attribute annotated type in a way not intended by the original designer. For example, if you want to create type `Service` from the example above using a different constructor. You may do so by registering the type with the container and passing [InjectionConstructor](xref:Unity.Injection.InjectionConstructor) injection member to registration method:
-
-```cs
-c.RegisterType<MyObject>("Special", Invoke.Constructor() )
-```
-
-In this example, you create a registration for type `Service` with name `"Special"` and instruct Unity to select default constructor. When registration has explicitly defined by injection member constructor, Unity will ignore [InjectionConstructor](xref:Unity.InjectionConstructorAttribute) attribute and use injected constructor instead.
+Sometimes you might be required to use attribute annotated type in a way not intended by the original designer. For example, if you want to create type `Service` from the example above using a different constructor. You may do so by registering the type with the container and passing [InjectionConstructor](xref:Unity.Injection.InjectionConstructor) injection member to registration method. For more information see <xref:Tutorial.Injection.Constructor>
