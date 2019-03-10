@@ -1,3 +1,7 @@
+- name: Implicit
+  uid: Tutorial.Injection.Constructor.Implicit
+- name: Annotation
+  uid: Tutorial.Injection.Constructor.Annotation
 - name: Default ctor()
   uid: Tutorial.Injection.Constructor.Default
 - name: By Parameters Count

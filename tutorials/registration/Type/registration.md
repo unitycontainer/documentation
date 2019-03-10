@@ -76,9 +76,9 @@ container.RegisterType<IService, SecureService>("Encrypted", TypeLifetime.Single
 
 For more information about lifetime management see <xref:Tutorial.Lifetime.Overview>
 
-## Creating object Instances
+## Configuring Creation Pipeline
 
-Unity instantiates an objects by creating a resolver pipeline and executing the pipeline with passed in injection values. Each pipeline consists of several steps with each step performing part of the initialization.
+Unity instantiates an objects by creating a resolver pipeline and executing it with passed in injection values. Each pipeline consists of a several steps with each step performing part of the initialization.
 
 How the pipeline is assembled and what values are injected is controlled by collection of [Injection Member](xref:Unity.Injection.InjectionMember) objects passed to registration method. The normal steps of the object creation process are:
 

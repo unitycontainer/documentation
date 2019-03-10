@@ -54,8 +54,10 @@ Invoked constructor and injection of its parameters is configured by registering
 > [!TIP]
 > As alternative, helper [Invoke.Constructor(...)](xref:Unity.Invoke#Unity_Invoke_Constructor) can be used to configure invoked constructor.
 
-#### For more information see
+#### See Also
 
+* [Implicit Constructor Registration](xref:Tutorial.Injection.Constructor.Implicit)
+* [Constructor Annotation](xref:Tutorial.Injection.Constructor.Annotation)
 * [Invoke default constructor](xref:Tutorial.Injection.Constructor.Default)
 * [Select constructors by parameters count](xref:Tutorial.Injection.Constructor.Count)
 * [Select constructors by parameter types](xref:Tutorial.Injection.Constructor.Types)

@@ -1,50 +1,48 @@
 ---
 uid: Tutorial.Annotation.Constructor
-title: Constructor Annotation
+title: Annotating Type for Constructor Injection
 ---
 
-# Annotating types for Constructor invocation
+# Selecting Constructor
 
-Constructor Injection Using an Attribute Annotation allows you to apply attribute to the class' constructor designating it for dependency injection. When creating the class, Unity will always (unless explicitly overwritten) use that constructor. You only need to use this technique when there is more than one constructor in the target type.
+To perform injection of dependent classes into objects you create through the Unity container, you can use the following two techniques:
 
-## Annotating Constructor
+* [Automatic Constructor Injection](xref:Tutorial.Selection.Constructor). With this technique, you allow the Unity container select a constructor and to satisfy any constructor dependencies defined in parameters of the constructor automatically. For more information see <xref:Tutorial.Selection.Constructor>.
 
-When a target class contains more than one constructor and automatic selection process does not provide desired selection, you may use the [InjectionConstructor](xref:Unity.InjectionConstructorAttribute) attribute to specify the constructor you wish to use for injection.
+* [Constructor Injection using explicit registration](xref:Tutorial.Injection.Constructor). With this technique, you register the [Type](xref:System.Type) and apply an [Injection Constructor Member](xref:Unity.Injection.InjectionConstructor) that specifies the dependencies to the registration. For more information see <xref:Tutorial.Injection.Constructor>
 
-Following example demonstrates this technique:
+* **Annotated Constructor Injection**. With this technique, you apply attributes to the class constructor(s) that specify the injection configuration.
 
-```cs
-public class MyObject
-{
-  public MyObject(SomeOtherClass myObjA)
-  {
-    ...
-  }
+## Annotated Constructor Injection
 
-  [InjectionConstructor]
-  public MyObject(MyDependentClass myObjB, string id)
-  {
-    ...
-  }
+Constructor Injection with Attribute Annotation allows you to apply attributes to the class' constructor designating it for dependency injection. When creating the class, Unity will always (unless explicitly overwritten in Registration) use that constructor. You only need to use this technique when there is more than one constructor in the target type.
 
-  public MyObject(MyDependentClass myObjB, string id, ILogger logger)
-  {
-    ...
-  }
-}
-```
+### Annotating a Constructor
 
-In this example type `MyObject` contains three public constructors. Normally, Unity would select third constructor with three parameters, but by annotating second constructor with the attribute you force Unity to use it during resolution.
+When a target class contains more than one constructor and automatic algorithm does not provide desired selection, you may use the [InjectionConstructor](xref:Unity.InjectionConstructorAttribute) attribute to specify the constructor you wish to use for injection.
 
-## Overriding constructor selection
+Consider the following [Type](xref:System.Type):
+
+[!code-csharp [class Service](../../src/SpecificationTests/src/Constructor/Attribute/Setup.cs#class_service)]
+
+In this example type `Service` contains four public constructors. Three of these constructors have one parameter each. A [Type](xref:System.Type) like this creates an ambiguity that Unity could not resolve by itself.
+
+> [!WARNING]
+> During resolution, the container will pick the first encountered constructor it could satisfy with dependencies and will use it to instantiate the class. In this case it could be any of the three constructors with one parameter.
+
+> [!NOTE]
+> If Diagnostic is enabled Unity will throw an exception reporting ambiguous constructors.
+
+Normally, Unity would select third constructor with three parameters, but by annotating second constructor with the attribute you force Unity to use it during resolution.
+
+### Overriding constructor selection
 
 Attribute annotated types are not required to be registered with the Unity container to participate in dependency injection. At runtime Unity will use reflection to discover all required information to create objects of that type.
 
 Sometimes you might be required to use attribute annotated type in a way not intended by original designer. For example if you want to create type `MyObject` from example above using different constructor. You may do so by registering the type with the container and passing [InjectionConstructor](xref:Unity.Injection.InjectionConstructor) injection member to registration method:
 
 ```cs
-c.RegisterType<MyObject>("Special Case",
-                         Invoke.Constructor(typeof(SomeOtherClass)))
+c.RegisterType<MyObject>("Special", Invoke.Constructor() )
 ```
 
-In this example you create registration for type `MyObject` with name `"Special Case"` and instruct Unity to select constructor that takes one parameter of type `SomeOtherClass`. When registration has explicitly defined by injection member constructor, Unity will ignore [InjectionConstructor](xref:Unity.InjectionConstructorAttribute) attribute and use injected constructor instead.
+In this example you create registration for type `MyObject` with name `"Special"` and instruct Unity to select default constructor. When registration has explicitly defined by injection member constructor, Unity will ignore [InjectionConstructor](xref:Unity.InjectionConstructorAttribute) attribute and use injected constructor instead.

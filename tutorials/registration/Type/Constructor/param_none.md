@@ -59,7 +59,7 @@ Normally, Unity will create this [Type](xref:System.Type) by executing most comp
 
 Or you can register Open Generic [Type](xref:System.Type):
 
-[!code-csharp [Register Service{}](../../../../src/SpecificationTests/src/Constructor/Injection/Default.cs#inject_default_ctor_open_generic_arrange)]
+[!code-csharp [Register Service{T arg}](../../../../src/SpecificationTests/src/Constructor/Injection/Default.cs#inject_default_ctor_open_generic_arrange)]
 
 ### Resolving `Service<T>`
 
@@ -69,8 +69,10 @@ If you resolve `Service<object>`:
 
 either registration will invoke the default constructor.
 
-### For more information see
+### See Also
 
+* [Implicit Constructor Registration](xref:Tutorial.Injection.Constructor.Implicit)
+* [Constructor Annotation](xref:Tutorial.Injection.Constructor.Annotation)
 * [Select constructors by parameters count](xref:Tutorial.Injection.Constructor.Count)
 * [Select constructors by parameter types](xref:Tutorial.Injection.Constructor.Types)
 * [Select constructors based on injected values](xref:Tutorial.Injection.Constructor.Values)
