@@ -28,7 +28,7 @@ Consider the following [Type](xref:System.Type):
 In this example type `Service` contains four public constructors. Three of these constructors have one parameter each. A [Type](xref:System.Type) like this creates an ambiguity that Unity could not resolve by itself.
 
 > [!WARNING]
-> During resolution, the container will pick the first encountered constructor it could satisfy with dependencies and will use it to instantiate the class. In this case, it could be any of the three constructors with one parameter.
+> During resolution, the container will pick the first encountered constructor it could satisfy with dependencies and will use it. In the example above, it could be any of the three constructors with one parameter.
 
 > [!NOTE]
 > If Diagnostic is enabled Unity will throw an exception reporting ambiguous constructors.
