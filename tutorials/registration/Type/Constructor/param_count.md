@@ -9,7 +9,7 @@ title: Select Constructor By Number of Parameters
 
 Selecting constructor by number of parameters is the simplest form of selection. You could use this selection method if the constructor you invoking has unique number of parameters.
 
-### Any Type
+### Type of Parameter as Contract Type
 
 This method is useful when you are working on a [Type](xref:System.Type) that takes certain number of parameters but you don't care what these parameter types are.
 
