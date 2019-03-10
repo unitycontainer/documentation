@@ -13,7 +13,7 @@ A _Default_ called a constructor with no parameters. It could be explicitly defi
 
 To configure resolution of a [Type](xref:System.Type) with a default constructor you need to register that [Type](xref:System.Type) with [Injection Constructor Member](xref:Unity.Injection.InjectionConstructor) which takes no parameters. Consider the following [Type](xref:System.Type):
 
-[!code-csharp [class Service](../../../../src/SpecificationTests/src/Constructor/Injection/TestData.cs#class_service)]
+[!code-csharp [class Service](../../../../src/SpecificationTests/src/Constructor/Injection/Setup.cs#class_service)]
 
 Class `Service` is a plain type with three accessible constructors. First constructor is a default constructor with no parameters, second and third constructors take one parameter each.
 
@@ -47,7 +47,7 @@ Unity can register and create Generic types. It allows to register Closed and Op
 
 The principle for registering of default constructor is exactly the same as for plain types. Consider the following [Type](xref:System.Type):
 
-[!code-csharp [class Service{T}](../../../../src/SpecificationTests/src/Constructor/Injection/TestData.cs#class_service_generic)]
+[!code-csharp [class Service{T}](../../../../src/SpecificationTests/src/Constructor/Injection/Setup.cs#class_service_generic)]
 
 Class `Service<T>` is an open generic type with two constructors. First constructor is a default constructor with no parameters and second takes one parameter.
 
@@ -55,7 +55,7 @@ Class `Service<T>` is an open generic type with two constructors. First construc
 
 Normally, Unity will create this [Type](xref:System.Type) by executing most complex constructor. To force Unity to use default constructor you need to register `Service<T>` and instruct the container to invoke it during resolution. You can register constructed generic based on `Service<T>` like this:
 
-[!code-csharp [Register Service{string}](../../../../src/SpecificationTests/src/Constructor/Injection/Default.cs#inject_default_ctor_closed_generic_arrange)]
+[!code-csharp [Register Service{object}](../../../../src/SpecificationTests/src/Constructor/Injection/Default.cs#inject_default_ctor_closed_generic_arrange)]
 
 Or you can register Open Generic [Type](xref:System.Type):
 
@@ -63,12 +63,14 @@ Or you can register Open Generic [Type](xref:System.Type):
 
 ### Resolving `Service<T>`
 
-If you resolve `Service<string>`:
+If you resolve `Service<object>`:
 
 [!code-csharp [Resolve Service](../../../../src/SpecificationTests/src/Constructor/Injection/Default.cs#inject_default_ctor_closed_generic_act)]
 
-either registration will invoke default constructor.
+either registration will invoke the default constructor.
 
-## More Information
+### For more information see
 
-For information on how to select constructors with parameters see <xref:Tutorial.Injection.Constructor.Selection>
+* [Select constructors by parameters count](xref:Tutorial.Injection.Constructor.Count)
+* [Select constructors by parameter types](xref:Tutorial.Injection.Constructor.Types)
+* [Select constructors based on injected values](xref:Tutorial.Injection.Constructor.Values)

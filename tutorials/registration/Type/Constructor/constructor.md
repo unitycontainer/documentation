@@ -50,12 +50,13 @@ Invoked constructor and injection of its parameters is configured by registering
 * Specify the Contract/Registration Name to by used when resolving
 * Provide a Resolver for the parameter
 * Provide value
-
+ 
 > [!TIP]
 > As alternative, helper [Invoke.Constructor(...)](xref:Unity.Invoke#Unity_Invoke_Constructor) can be used to configure invoked constructor.
 
-#### How To
+#### For more information see
 
-* [Invoke default constructors](xref:Tutorial.Injection.Constructor.Default)
-* [Select constructors by parameter types](xref:Tutorial.Injection.Constructor.Selection)
-* [Select constructors based on injected values](xref:Tutorial.Injection.Constructor.Selection)
+* [Invoke default constructor](xref:Tutorial.Injection.Constructor.Default)
+* [Select constructors by parameters count](xref:Tutorial.Injection.Constructor.Count)
+* [Select constructors by parameter types](xref:Tutorial.Injection.Constructor.Types)
+* [Select constructors based on injected values](xref:Tutorial.Injection.Constructor.Values)

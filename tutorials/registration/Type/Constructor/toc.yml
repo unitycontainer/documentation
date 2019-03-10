@@ -1,4 +1,6 @@
 - name: Default ctor()
   uid: Tutorial.Injection.Constructor.Default
-- name: Selecting ctor(...)
-  uid: Tutorial.Injection.Constructor.Selection
+- name: By Parameters Count
+  uid: Tutorial.Injection.Constructor.Count
+- name: By Types Of Parameters 
+  uid: Tutorial.Injection.Constructor.Types
