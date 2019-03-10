@@ -28,12 +28,19 @@ Consider the following [Type](xref:System.Type):
 In this example type `Service` contains four public constructors. Three of these constructors have one parameter each. A [Type](xref:System.Type) like this creates an ambiguity that Unity could not resolve by itself.
 
 > [!WARNING]
-> During resolution, the container will pick the first encountered constructor it could satisfy with dependencies and will use it. In the example above, it could be any of the three constructors with one parameter.
+> During resolution, the container will pick the first constructor it could satisfy with dependencies and will use it. In the example above, it could be any of the three constructors with one parameter.
 
 > [!NOTE]
-> If Diagnostic is enabled Unity will throw an exception reporting ambiguous constructors.
+> If [Diagnostic](xref:Tutorial.Unity.Diagnostic) extension is enabled, Unity will throw an exception reporting ambiguous constructors.
 
 Normally, Unity would select the third constructor with three parameters, but by annotating the second constructor with the attribute you force Unity to use it during resolution.
+
+### Multiple Constructor Annotations
+
+Annotating multiple constructors with injection parameters is not recommended. Unity is not guaranteed to process constructors in certain order. If multiple constructors are annotated, behavior might change from version to version.
+
+> [!NOTE]
+> If [Diagnostic](xref:Tutorial.Unity.Diagnostic) extension is enabled, Unity will throw an exception reporting ambiguous constructor annotations.
 
 ### Overriding constructor selection
 
