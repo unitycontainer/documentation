@@ -29,19 +29,19 @@ The lazy approach allows registrations to proceed at random order and do not req
 
 One of the first steps, when creating a pipeline, is a constructor selection. Constructors are selected in the following order:
 
-* If present, constructor specified by [Injection Constructor](xref:Unity.Injection.InjectionConstructor)
-* If present, constructor annotated with an attribute
+* If present, use registered [Injection Constructor](xref:Unity.Injection.InjectionConstructor)
+* If present, annotated with an attribute
 * Automatically select constructor
   * Get all accessible constructors
   * Process constructors in ascending order from most complex to the default
-    * Filter out static and [restricted](xref:Tutorial.Injection.Constructor#restrictions) constructors
+    * Filter out [restricted](xref:Tutorial.Injection.Constructor#restrictions) constructors
     * Loop through parameters and check if
       * Is primitive
-        * Registered with the container
+        * Is registered with the container
         * Has *default* value
       * Is resolvable type
       * Is registered with container
-    * Select the first constructor with all parameters that can be successfully injected
+    * Select the first constructor the container can create
 
 The Unity container will select the first successful match and use it as a selection.
 

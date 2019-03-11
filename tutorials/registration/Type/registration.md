@@ -76,11 +76,15 @@ container.RegisterType<IService, SecureService>("Encrypted", TypeLifetime.Single
 
 For more information about lifetime management see <xref:Tutorial.Lifetime>
 
-## Configuring Creation Pipeline
+## Creation Pipeline
 
 Unity instantiates an objects by creating a resolver pipeline and executing it with passed in injection values. Each pipeline consists of a several steps with each step performing part of the initialization.
 
 How the pipeline is assembled and what values are injected is controlled by collection of [Injection Member](xref:Unity.Injection.InjectionMember) objects passed to registration method. The normal steps of the object creation process are:
+
+## Injection Instructions
+
+During the registration you could Configure the container to select certain constructor, initialize properties and fields, call methods, and inject values and instructions for dependencies. All this is done by passing appropriate [Injection Members](xref:Unity.Injection) to the registration. For more information see:
 
 * [Constructor invocation and injection](xref:Tutorial.Injection.Constructor)
 * [Fields injection](xref:Tutorial.Injection.Field)

@@ -5,13 +5,15 @@ title: Default Constructor
 
 # Default Constructors
 
+A _Default_ called a constructor with no parameters. It could be explicitly defined on a [Type](xref:System.Type) or if [Type](xref:System.Type) has no defined constructors, C# will implicitly create one for you.
+
 ## Invoking Default Constructor
 
-A _Default_ called a constructor with no parameters. It could be explicitly defined on a [Type](xref:System.Type) or if [Type](xref:System.Type) has no defined constructors, C# will implicitly define one for you.
+To configure resolution of a [Type](xref:System.Type) with a default constructor you need to register that [Type](xref:System.Type) with [Injection Constructor Member](xref:Unity.Injection.InjectionConstructor) which takes no parameters. 
 
 ### Class `Service`
 
-To configure resolution of a [Type](xref:System.Type) with a default constructor you need to register that [Type](xref:System.Type) with [Injection Constructor Member](xref:Unity.Injection.InjectionConstructor) which takes no parameters. Consider the following [Type](xref:System.Type):
+Consider the following [Type](xref:System.Type):
 
 [!code-csharp [class Service](../../../../src/SpecificationTests/src/Constructor/Injection/Setup.cs#class_service)]
 

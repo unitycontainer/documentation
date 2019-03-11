@@ -69,7 +69,3 @@ For more information see [Type Mapping](mapping.md).
 ## [Lifetime Manager](xref:Unity.IContainerRegistration#Unity_IContainerRegistration_LifetimeManager)
 
 This member holds a reference to a lifetime manager that Unity will be using to manage instance(s) of this type. For more information see [Lifetime Management](../lifetime/lifetime.md) 
-
-## [Injection Instructions](xref:Tutorial.Registration.Type)
-
-During registration you could instruct the container to select certain constructor, initialize properties and fields, call methods, and inject values and instructions for dependencies. All this is done by passing appropriate [Injection Members](xref:Unity.Injection) to the registration. For more information see <xref:Tutorial.Registration.Type>
