@@ -2,14 +2,18 @@
   uid: Tutorial.Terms
 - name: Registration
   href: Registration/toc.yml
+  topicUid: Tutorial.Registration
 - name: Type Annotation
   href: Annotation/toc.yml
+  topicUid: Tutorial.Annotation
 - name: Resolution
   href: Resolution/toc.yml
+  topicUid: Tutorial.Resolution
 - name: Hierarchies      
   uid: Tutorial.Container.Hierarchy
 - name: Lifetime
   href: Lifetime/toc.yml
+  topicUid: Tutorial.Lifetime
 - name: Diagnostic
   href: diagnostic.md
 - name: Legacy Support

@@ -74,7 +74,7 @@ container.RegisterType<IService, WebService>("WebMail", TypeLifetime.Singleton);
 container.RegisterType<IService, SecureService>("Encrypted", TypeLifetime.Singleton);
 ```
 
-For more information about lifetime management see <xref:Tutorial.Lifetime.Overview>
+For more information about lifetime management see <xref:Tutorial.Lifetime>
 
 ## Configuring Creation Pipeline
 

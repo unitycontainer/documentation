@@ -1,5 +1,5 @@
 ---
-uid: Tutorial.Resolution.Overview
+uid: Tutorial.Resolution
 ---
 
 # Resolving Objects

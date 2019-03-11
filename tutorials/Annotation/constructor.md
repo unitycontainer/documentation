@@ -11,7 +11,7 @@ To select constructors you create through the Unity container, you can use the f
 
 * [Constructor Injection using explicit registration](xref:Tutorial.Injection.Constructor). With this technique, you register the [Type](xref:System.Type) and apply an [Injection Constructor Member](xref:Unity.Injection.InjectionConstructor) that specifies the dependencies to the registration. For more information see <xref:Tutorial.Injection.Constructor>
 
-* **Annotated Constructor Injection**. With this technique, you apply attributes to the class constructor(s) that specify the injection configuration.
+* **Annotated Constructor Injection**. With this technique, you apply [InjectionConstructor](xref:Unity.InjectionConstructorAttribute) attribute to one of the class constructors to designate it to be used to instantiate an instance.
 
 ## Annotated Constructor Injection
 
@@ -41,9 +41,3 @@ Annotating multiple constructors with injection parameters is not recommended. U
 
 > [!NOTE]
 > If [Diagnostic](xref:Tutorial.Unity.Diagnostic) extension is enabled, Unity will throw an exception reporting ambiguous constructor annotations.
-
-### Overriding constructor selection
-
-Attribute annotated types are not required to be registered with the Unity container to participate in dependency injection. At runtime, Unity will use reflection to discover all required information to create objects of that type.
-
-Sometimes you might be required to use attribute annotated type in a way not intended by the original designer. For example, if you want to create type `Service` from the example above using a different constructor. You may do so by registering the type with the container and passing [InjectionConstructor](xref:Unity.Injection.InjectionConstructor) injection member to registration method. For more information see <xref:Tutorial.Injection.Constructor>

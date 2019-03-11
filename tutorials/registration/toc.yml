@@ -1,11 +1,9 @@
-- name: Overview
-  uid: Tutorial.Registration.Overview
-- name: Registration Metadata
+- name: Metadata
   uid: Tutorial.Registration.Metadata
-- name: Instance Registration
+- name: Instance
   uid: Tutorial.Registration.Instance
-- name: Factory Registration
+- name: Factory
   uid: Tutorial.Registration.Factory
-- name: Type Registration
+- name: Type
   href: Type/toc.yml
   topicUid: Tutorial.Registration.Type

@@ -1,9 +1,9 @@
 ---
-uid: Tutorial.Registration.Overview
+uid: Tutorial.Registration
 title: Registration
 ---
 
-# Registering Types with Unity
+# Registration
 
 Unity does not require `Type` to be registered to resolve it.
 
@@ -18,6 +18,8 @@ you can resolve it from Unity:
 ```cs
 var value = container.Resolve<SomeClass>();
 ```
+
+## Minimum Registration Requirements
 
 A lot of times, if type does not require any custom steps, it is faster to resolve `Type` from the container if it is not registered. You should only register a `Type` if one of the following is required:
 

@@ -1,5 +1,5 @@
 ---
-uid: Tutorial.Lifetime.Overview
+uid: Tutorial.Lifetime
 title: Lifetime Management
 ---
 
