@@ -19,13 +19,13 @@ Automatic constructor selection is performed if no other information is availabl
 
 The Unity container will try to execute the most complex constructor it can provide with appropriate dependencies. In other words, if the container can resolve and/or inject all parameters of the constructor, it will be selected.
 
-### Creating Pipeline
+### Creating Build Pipeline
 
 Selection process takes place during the first resolution of a [Type](xref:System.Type) contract. Unity container employs lazy resolution strategy. It will defer pipeline creation until the contract ([RegistrationType and Name](xref:Tutorial.Registration.Metadata)) is requested.
 
 The lazy approach allows registrations to proceed at random order and do not require dependencies to be registered before dependents. As long as all of these are available at the time of resolution Unity does not care in what order they were registered.
 
-### Constructor selection Steps
+### Constructor Selection Steps
 
 One of the first steps, when creating a pipeline, is a constructor selection. Constructors are selected in the following order:
 
@@ -46,10 +46,10 @@ One of the first steps, when creating a pipeline, is a constructor selection. Co
 The Unity container will select the first successful match and use it as a selection.
 
 > [!WARNING]
-> In case when more than one constructor could be matched at the same time, the order and constructor selection can not be guaranteed.
+> When more than one constructor could be matched at the same time, the order and constructor selection can not be guaranteed.
 
 > [!NOTE]
-> If [Diagnostic](xref:Tutorial.Unity.Diagnostic) extension is enabled, Unity will perform a selection validation and will throw an exception, reporting ambiguous constructors, if more than one constructor can be selected with current configuration.
+> If [Diagnostic](xref:Tutorial.Unity.Diagnostic) extension is enabled, Unity will perform a selection validation and will throw an exception, reporting ambiguous constructors, if more than one constructor can be successfully selected with current configuration.
 
 If no constructor could be selected, the container will throw an exception.
 

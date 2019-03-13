@@ -1,0 +1,13 @@
+{
+  "name": "documentation",
+  "description": "Unity Container Documentation",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unitycontainer/documentation.git"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "browser-sync": "^2.26.3",
+    "gulp-exec": "^3.0.2"
+  }
+}
