@@ -1,7 +1,6 @@
 # Welcome to Unity Container Documentation
 
-
-# Overview
+## Overview
 
 The Unity Container (Unity) is a lightweight, extensible dependency injection container. It facilitates building loosely coupled applications and provides developers with the following advantages:
 
@@ -12,11 +11,9 @@ The Unity Container (Unity) is a lightweight, extensible dependency injection co
 * Instance and type interception
 * Registration by convention
 
-# Issues and Contributions
+## Issues and Contributions
 
-- If something is broken and you know how to fix it, send a pull request. 
-- If you have no idea what is wrong, create an issue
+* If something is broken and you know how to fix it, send a pull request. 
+* If you have no idea what is wrong, create an issue
 
 ## Any feedback and contributions are welcome
-
-
