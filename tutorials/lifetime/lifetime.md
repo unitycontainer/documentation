@@ -9,9 +9,9 @@ The Unity container manages the lifetime of objects based on a [Lifetime Manager
 
 When you register a type in configuration, or by using the ``RegisterType`` method and do not explicitly specify lifetime manager, the default behavior is for the container to use a transient lifetime manager. It creates a new instance of the registered, mapped, or requested type each time you call the Resolve method or when the dependency mechanism injects instances into other classes. The container does not store a reference to the object.
 
-Unity uses specific types that inherit from the ``LifetimeManager`` base class (collectively referred to as lifetime managers) to control how it stores references to object instances and how the container disposes of these instances.
+Unity uses specific types that inherit from the `LifetimeManager` base class (collectively referred to as lifetime managers) to control how it stores references to object instances and how the container disposes of these instances.
 
-When you register an existing object using the ``RegisterInstance`` method, the default behavior is for the container to take over management of the lifetime of the object you pass to this method using the ``ContainerControlledLifetimeManager``. This means that container maintains strong reference to the object and at the end of the container lifetime, the existing object is disposed.
+When you register an existing object using the `RegisterInstance` method, the default behavior is for the container to take over management of the lifetime of the object you pass to this method using the ``ContainerControlledLifetimeManager``. This means that container maintains strong reference to the object and at the end of the container lifetime, the existing object is disposed.
 
 ## How registering lifetime works
 
@@ -29,8 +29,7 @@ everything is simple. Registered type is ``SomeType`` and Unity will resolve it 
 
 ### Mapping registration
 
-This is the most common scenario for dependency injection using Unity. It involves registering a mapping between types such as an interface or a base class and a corresponding concrete class that implements or inherits from it.
-When type is registered as a mapping:
+This is the most common scenario for dependency injection using Unity. It involves registering a mapping between types such as an interface or a base class and a corresponding concrete class that implements or inherits from it. When type is registered as a mapping:
 
 ```C#
 RegisterType<IService, SomeType>();
@@ -50,7 +49,7 @@ In this example:
 RegisterType<IService, Service>();
 ```
 
-registered type ``IService`` is mapped to type ``Service``. No lifetime manager is provided so every time ``IService`` is created Unity constructs a new ``Service`` object and returns it as ``IService`` to the caller.
+registered type `IService` is mapped to type ``Service``. No lifetime manager is provided so every time ``IService`` is created Unity constructs a new `Service` object and returns it as ``IService`` to the caller.
 
 Now, if you want to assign a lifetime to this registration like this:
 
