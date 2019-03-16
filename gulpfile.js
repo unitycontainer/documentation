@@ -43,7 +43,6 @@ const paths = watched();
 const watch = () => gulp.watch(paths, gulp.series(build, reload));
 
 exports.default = gulp.parallel(watch, serve);
-exports.watch = watch;
 exports.serve = serve;
 exports.build = build;
 exports.develop = exports.default;

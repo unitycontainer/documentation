@@ -4,15 +4,21 @@ uid: Article.Unity.Features
 
 # Features
 
-### Setup
+## General Features
+
+* No registration required for simple POCO types
+* Registration/updates at any time (no builder required)
+* Support registration metadata
+* Support generic types
+* Register existing objects
+* Custom Type factories
+* Register Type
+* List all registrations
+* Check existing registrations
+
+## Setup
 
 * Registration
-  * No registration required for simple POCO types
-  * Registration/updates at any time (no builder required)
-  * Support registration metadata
-  * Support generic types
-  * Register existing objects 
-  * Custom Type factories
   * Type mappings
     * Register as a `Type`
     * Support `Type` polymorphism

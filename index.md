@@ -13,7 +13,7 @@ The Unity Container (Unity) is a lightweight, extensible dependency injection co
 
 ## Issues and Contributions
 
-* If something is broken and you know how to fix it, send a pull request. 
+* If something is broken and you know how to fix it, send a pull request.
 * If you have no idea what is wrong, create an issue
 
 ## Any feedback and contributions are welcome

@@ -1,9 +1,9 @@
 ---
 uid: Tutorial.Annotation
-title: Type Annotation
+title: Attributed Injection Model
 ---
 
-# Type Annotation
+# Attributed Injection Model
 
 One of the most useful and powerful techniques when using Unity is to take advantage of dependency injection for the parameters of class constructors and methods, and for the values of fields and properties. This approach allows you to resolve and populate the entire hierarchy of objects used in your application based on type registrations and mappings defined in the container, with the subsequent advantages this offers.
 
