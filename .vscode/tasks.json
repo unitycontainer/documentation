@@ -12,11 +12,6 @@
                 "reveal": "silent"
             },
             "problemMatcher": "$msCompile"
-        },
-        {
-            "type": "gulp",
-            "task": "serve",
-            "problemMatcher": []
         }
     ]
 }
