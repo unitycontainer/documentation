@@ -3,7 +3,7 @@ uid: Tutorial.Resolution.Override
 title: Resolution Override
 ---
 
-# Overriding dependency values during resolution
+# Overriding dependencies during resolution
 
 The parameter and dependency overrides, ParameterOverride and DependencyOverride, are ResolverOverride implementations that provide support for overriding the registration information for resolving instances of types. When you call the Resolve method, these classes enable you to override values specified when the type was registered, such as by a RegisterType or RegisterInstance statement. In effect, RegisterType supplied values are overridden by Resolve supplied values.
 
