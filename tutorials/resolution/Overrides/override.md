@@ -22,4 +22,4 @@ A parameter and property override never affects what element gets selected. They
 * [Field Overrides](xref:Tutorial.Resolution.Override.Field)
 * [Dependency Overrides](xref:Tutorial.Resolution.Override.Dependency)
 
-![GitHub Logo](/images/resolver-override.png)
+![Resolver Override](/images/resolver-override.png)
