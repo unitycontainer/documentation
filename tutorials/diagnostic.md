@@ -62,5 +62,7 @@ var container = new UnityContainer();
 container.EnableDebugDiagnostic();
 ```
 
+the extension is enabled only calling method is compiled with `DEBUG` symbol defined (compile in Debug mode).
+
 > [!IMPORTANT]
 > Extension methods will not work on [IUnityContainer](xref:Unity.IUnityContainer) interface. It is only available on the UnityContainer itself.
