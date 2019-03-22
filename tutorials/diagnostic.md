@@ -53,7 +53,7 @@ var container = new UnityContainer()
                     .EnableDiagnostic();
 ```
 
-### Enabling Debug Diagnostics
+### Enabling extension only in Debug
 
 The container provides conditional extension [EnableDebugDiagnostic()](https://github.com/unitycontainer/container/blob/master/src/Extensions/DiagnosticExtensions.cs). This method will only enable diagnostics in `DEBUG` mode. In this example
 
