@@ -71,8 +71,8 @@ uid: Article.Unity.Features
 * Create optimized (compiled) pipelines
 * Seamlessly resolve registered instances or creates new objects
 * Built-in support for deferred resolution
-  * `Func<T>` 
-  * `Lazy<T>` 
+  * `Func<T>`
+  * `Lazy<T>`
 * Built-in support for collections
   * `T[]`
   * `IEnumerable<T>`

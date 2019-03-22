@@ -1,38 +1,16 @@
   - name: Transient
-    href: managers.md#transient
+    uid: Tutorial.Lifetime.Transient
   - name: Singleton
-    href: managers.md#singleton
+    href: lifetime_managers.md
   - name: Per Container
-    href: managers.md#per-container
+    href: lifetime_managers.md
   - name: Per Container Transient
-    href: managers.md#per-container-transient
+    href: lifetime_managers.md
   - name: External
-    href: managers.md#external
+    href: lifetime_managers.md
   - name: Hierarchical
-    href: managers.md#hierarchical
+    href: lifetime_managers.md
   - name: Per Resolve
-    href: managers.md#per-resolve
+    href: lifetime_managers.md
   - name: Per Thread
-    href: managers.md#per-thread
-  - name: Disposal
-    href: disposal.md
-  - name: Lifetime Managers
-    items: 
-    - name: Overview
-      href: lifetime_managers.md
-    - name: Transient
-      href: lifetime_managers.md#transientlifetimemanager
-    - name: Per Container Transient
-      href: lifetime_managers.md#containercontrolledtransientmanager
-    - name: Per Container
-      href: lifetime_managers.md#containercontrolledlifetimemanager
-    - name: Singleton
-      href: lifetime_managers.md#singletonlifetimemanager
-    - name: External
-      href: lifetime_managers.md#externallycontrolledlifetimemanager 
-    - name: Hierarchical
-      href: lifetime_managers.md#hierarchicallifetimemanager 
-    - name: Per Resolve
-      href: lifetime_managers.md#perresolvelifetimemanager 
-    - name: Per Thread
-      href: lifetime_managers.md#perthreadlifetimemanager 
+    href: lifetime_managers.md
