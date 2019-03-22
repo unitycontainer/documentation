@@ -1,16 +1,16 @@
   - name: Transient
     uid: Tutorial.Lifetime.Transient
   - name: Singleton
-    href: lifetime_managers.md
+    uid: Tutorial.Lifetime.Singleton
   - name: Per Container
-    href: lifetime_managers.md
+    uid: Tutorial.Lifetime.Container
   - name: Per Container Transient
-    href: lifetime_managers.md
+    uid: Tutorial.Lifetime.Container.Transient
   - name: External
-    href: lifetime_managers.md
+    uid: Tutorial.Lifetime.External
   - name: Hierarchical
-    href: lifetime_managers.md
+    uid: Tutorial.Lifetime.Hierarchical
   - name: Per Resolve
-    href: lifetime_managers.md
+    uid: Tutorial.Lifetime.Resolve
   - name: Per Thread
-    href: lifetime_managers.md
+    uid: Tutorial.Lifetime.Thread
