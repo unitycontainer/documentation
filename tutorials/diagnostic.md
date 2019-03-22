@@ -2,3 +2,65 @@
 uid: Tutorial.Unity.Diagnostic
 title: Diagnostic
 ---
+
+# Diagnostic
+
+Creating and configuring Unity container is a complicated process. A lot of things could go wrong and finding where it was misconfigured might be rather involved. To simplify debugging and to help fix issues Unity offers **Diagnostic** extension.
+
+## Performance considerations
+
+The Unity container uses reflection for most of its operations. It gather information about types and creates pipelines to create these types based on reflected data. Validation is performed based on reflected data as well. Because of that it is rather resource extensive and relatively slow.
+
+Unity runtime engine, to optimize performance, does not do any runtime validation and only performs absolute minimum checks, just enough to be able to run. As result a lot of error conditions are not captured during the design and debug phase. To remedy this shortcoming the container exposes **Diagnostic** extension which does thorough examination of registration data and reports any error conditions to the developer.
+
+## Unity Diagnostic Extension
+
+**Diagnostic** extension, among other things, validates for the following errors:
+
+* Cyclical references (The famous Stack Overflow Exception)
+* Validity of provided Injection Members
+* Improper referencing to itself
+* Invalid parameters in constructors and invoked methods
+
+## Enabling Diagnostics
+
+The extension could be enabled in few different ways:
+
+### Add Extension
+
+The most basic case is when extension as added through call to `AddExtension(...)`. It works with either regular or generic methods.
+
+```cs
+var container = new UnityContainer()
+                .AddExtension(new Diagnostic());
+```
+
+or
+
+```cs
+var container = new UnityContainer()
+                .AddExtension<Diagnostic>();
+```
+
+The first method with `AddExtension(new Diagnostic())` is a bit faster but difference is negligible.
+
+### Using extension method
+
+For convenience, Unity container exposes [EnableDiagnostic()](https://github.com/unitycontainer/container/blob/master/src/Extensions/DiagnosticExtensions.cs) extension method. This method is equal to adding extension to the container.
+
+```cs
+var container = new UnityContainer()
+                    .EnableDebugDiagnostic();
+```
+
+### Enabling Debug Diagnostics
+
+The container provides conditional extension [EnableDebugDiagnostic()](https://github.com/unitycontainer/container/blob/master/src/Extensions/DiagnosticExtensions.cs). This method will only enable diagnostics in `DEBUG` mode. In this example
+
+```cs
+var container = new UnityContainer();
+container.EnableDebugDiagnostic();
+```
+
+> [!IMPORTANT]
+> Extension methods will not work on [IUnityContainer](xref:Unity.IUnityContainer) interface. It is only available on the UnityContainer itself.
