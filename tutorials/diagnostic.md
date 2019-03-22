@@ -50,7 +50,7 @@ For convenience, Unity container exposes [EnableDiagnostic()](https://github.com
 
 ```cs
 var container = new UnityContainer()
-                    .EnableDebugDiagnostic();
+                    .EnableDiagnostic();
 ```
 
 ### Enabling Debug Diagnostics
