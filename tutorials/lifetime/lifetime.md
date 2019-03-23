@@ -15,52 +15,18 @@ When you register an existing object using the `RegisterInstance` method, the de
 
 ## How registering lifetime works
 
-Unity uses concepts of **Registered** type and **MappedTo** type. Depending if registration is a mapping or just single type registration Unity behaves differently
+When type is registered with a lifetime manager, the creation and life cycle of the created instances is controlled according to that lifetime.
 
-### Single type registration
+When a container is requested to produce an instance of the type, it first checks if a lifetime manager is associated with it. If not, or if it is a transient manager, the container simply creates the instance and return it to the caller.
 
-When type is registered like this:
+If registration contains a lifetime manager, the container tries to get the value from that manager. If the manager has nothing stored in it, the container created an instance. But before it returns the instance to the caller it adds it to the lifetime manager for later use.
 
-```C#
-RegisterType<SomeType>(new ContainerControlledLifetimeManager());
-```
+Next time the type is requested, the container gets the value previously stored in the manager, if available, and returns it to the caller.
 
-everything is simple. Registered type is ``SomeType`` and Unity will resolve it as container controlled singleton.
-
-### Mapping registration
-
-This is the most common scenario for dependency injection using Unity. It involves registering a mapping between types such as an interface or a base class and a corresponding concrete class that implements or inherits from it. When type is registered as a mapping:
-
-```C#
-RegisterType<IService, SomeType>();
-```
-
-**Registered** type (used to be called **From** type) is always the first in the sequence, in this case `IService`. Registration like this tells Unity that when `IService` is requested it should resolve it as ``SomeType`` and return as `IService`.
-When next time you call ``Resolve<IService>()`` Unity performs following tasks:
-
-- Checks if ``SomeType`` is registered and if yes, resolves that registration
-- If ``SomeType`` is not registered Unity creates it and returns to the caller
-
-In the example above ``SomeType`` is registered as a container controlled singleton, so it will always resolve the same instance.
-
-In this example:
-
-```C#
-RegisterType<IService, Service>();
-```
-
-registered type `IService` is mapped to type ``Service``. No lifetime manager is provided so every time ``IService`` is created Unity constructs a new `Service` object and returns it as ``IService`` to the caller.
-
-Now, if you want to assign a lifetime to this registration like this:
-
-```C#
-RegisterType<IService, Service>(new ContainerControlledLifetimeManager());
-```
-
-it tells Unity to resolve ``IService`` as usual and store result in ``ContainerControlledLifetimeManager``. So next time you call ``Resolve<IService>`` Unity will locate registration for ``IService`` and check if associated ``ContainerControlledLifetimeManager`` has instance already stored in it. If yes, it will simply return that instance.
+Each lifetime manager has its own criteria how to store and retrieve object instances. Some only store unique instances in a container, others store unique instances per thread or session. Each algorithm serves particular purpose.
 
 ## Built-In Lifetimes
 
-The Unity container includes several lifetime managers that you can use directly in your code. Unity includes the following lifetime implementations:
+The Unity container implements several lifetime managers that you can use directly in your code. The range covers most common use cases and scenarios. Unity includes the following lifetime implementations:
 
 [!include [Managers List](managers.md)]
