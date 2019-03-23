@@ -59,8 +59,8 @@ RegisterType<IService, Service>(new ContainerControlledLifetimeManager());
 
 it tells Unity to resolve ``IService`` as usual and store result in ``ContainerControlledLifetimeManager``. So next time you call ``Resolve<IService>`` Unity will locate registration for ``IService`` and check if associated ``ContainerControlledLifetimeManager`` has instance already stored in it. If yes, it will simply return that instance.
 
-## Unity Built-In Lifetime Managers
+## Built-In Lifetimes
 
-Unity includes several lifetime managers that you can use directly in your code, but you can create your own lifetime managers to implement specific lifetime scenarios. Unity includes the following lifetime managers:
+The Unity container includes several lifetime managers that you can use directly in your code. Unity includes the following lifetime implementations:
 
 [!include [Managers List](managers.md)]
