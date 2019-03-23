@@ -9,7 +9,7 @@ Per thread lifetime means a new instance of the registered [Type](xref:System.Ty
 
 ## The Lifetime Manager
 
-Per thread lifetime is controlled by [PerThreadLifetimeManager](xref:Unity.Lifetime.PerThreadLifetimeManager) lifetime manager. This lifetime manager effectively implements a singleton behavior for objects on a per-thread basis.
+Per thread lifetime is controlled by [PerThreadLifetimeManager](xref:Unity.Lifetime.PerThreadLifetimeManager) type. This lifetime manager effectively implements a singleton behavior for objects on a per-thread basis.
 
 ## Registration
 
@@ -31,7 +31,7 @@ container.RegisterFactory<IService>((c, t, n) => new Service(),
 ```
 
 > [!NOTE]
-> Please note that registrations use [TypeLifetime](xref:Unity.TypeLifetime) and [FactoryLifetime](xref:FactoryLifetime) respectively.
+> Please note that registrations use [TypeLifetime](xref:Unity.TypeLifetime#Unity_TypeLifetime_PerThread) and [FactoryLifetime](xref:Unity.FactoryLifetime#Unity_FactoryLifetime_PerThread) respectively.
 
 ## See Also
 

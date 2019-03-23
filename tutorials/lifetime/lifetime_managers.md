@@ -5,11 +5,11 @@ Unity uses lifetime managers to control lifetime of objects it creates. It inclu
 ## [ContainerControlledTransientManager](xref:Unity.Lifetime.ContainerControlledTransientManager)
 
 For this lifetime manager Unity creates and returns a new instance of the requested type for each call to the **Resolve** method. This lifetime manager is similar to **TransientManager** with the only difference that it holds reference to each created disposable instance and disposes these when container is disposed.
-This manager is useful when used in session based designs with child container associated with the session. 
+This manager is useful when used in session based designs with child container associated with the session.
 
 ## [ContainerControlledLifetimeManager](xref:Unity.Lifetime.ContainerControlledLifetimeManager)
 
-This manager registers an existing or resolved object as a singleton instance in the container the object of instance are registered. For this lifetime manager Unity returns the same instance of the registered type or object each time you call the **Resolve** method or when the dependency mechanism injects instances into other classes. This lifetime manager effectively implements a singleton behavior for objects. Unity uses this lifetime manager by default for the **RegisterInstance** method if different lifetime manager was not specified. 
+This manager registers an existing or resolved object as a singleton instance in the container the object of instance are registered. For this lifetime manager Unity returns the same instance of the registered type or object each time you call the **Resolve** method or when the dependency mechanism injects instances into other classes. This lifetime manager effectively implements a singleton behavior for objects. Unity uses this lifetime manager by default for the **RegisterInstance** method if different lifetime manager was not specified.
 
 If you want singleton behavior for an object that Unity will create when you specify a type mapping in configuration or when you use the **RegisterType** method, you must explicitly specify this lifetime manager.
 
@@ -46,9 +46,3 @@ RegisterType<Service>(new HierarchicalLifetimeManager());                <-- Ser
 RegisterType<IService, Service>(new HierarchicalLifetimeManager());      <-- IService is a per child singleton
 RegisterInstance(new OtherService(), new HierarchicalLifetimeManager()); <-- OtherService is a per child singleton
 ```
-
-## [PerResolveLifetimeManager](xref:Unity.Lifetime.PerResolveLifetimeManager)
-
-For this lifetime manager the behavior is like a **TransientLifetimeManager**, but also provides a signal to the default build plan, marking the type so that instances are reused across the build-up object graph. In the case of recursion, the singleton behavior applies where the object has been registered with the **PerResolveLifetimeManager**.
-
-
