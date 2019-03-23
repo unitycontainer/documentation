@@ -64,5 +64,3 @@ it tells Unity to resolve ``IService`` as usual and store result in ``ContainerC
 Unity includes several lifetime managers that you can use directly in your code, but you can create your own lifetime managers to implement specific lifetime scenarios. Unity includes the following lifetime managers:
 
 [!include [Managers List](managers.md)]
-
-[Ref](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff660872(v%3dpandp.20))
