@@ -5,7 +5,7 @@ title: Per Resolve Lifetime
 
 # Per Resolve Lifetime
 
-This lifetime keeps instance reference only for the duration of one resolution call. This type of lifetime is useful when you need to pass same instance of the dependency to different nodes of the resolution graph. Consider this scenario:
+This lifetime keeps a reference to an instance only for the duration of one resolution call. This type of lifetime is useful when you need to pass the same instance of the dependency to a different nodes of the resolution graph. Consider this scenario:
 
 ```cs
 
@@ -14,14 +14,13 @@ class a {}
 class b
 {
     b(a arg)
-    {
-    }
+    {...}
 }
 
 class c
 {
     c(a arg1, b arg1)
-    {}
+    {...}
 }
 
 ```
@@ -30,7 +29,7 @@ When you resolve type `c`, it depends on type `b` and type `a`. Type `b`, in tur
 
 If type `a` is a singleton, the logic is easy. But if you require each instance of `c` to have a unique `a`, you could use per resolve lifetime. The instance of `a` will act as a singleton only during that one resolution. Next call to resolve the dependent type will create a new object.
 
-In the case of recursion, the singleton behavior still applies and prevents circular dependency.
+In the case of recursion, the singleton behavior is still applies and prevents circular dependency.
 
 ## The Lifetime Manager
 
