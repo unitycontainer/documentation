@@ -19,7 +19,7 @@ class b
 
 class c
 {
-    c(a arg1, b arg1)
+    c(a arg1, b arg2)
     {...}
 }
 

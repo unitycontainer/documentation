@@ -17,7 +17,7 @@ Registering a type with singleton lifetime always places the registration at the
 
 Repeating the registration on any of the child nodes with singleton lifetime will always override the root registration.
 
-Singleton lifetime is supported by all registration types
+Singleton lifetime is supported by all registration types.
 
 ### Example
 
