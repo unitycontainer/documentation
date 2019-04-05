@@ -1,5 +1,5 @@
-- name: Terms and Definitions
-  uid: Tutorial.Terms
+#- name: Terms and Definitions
+#  uid: Tutorial.Terms
 - name: Attributed Injection Model
   href: Annotation/toc.yml
   topicUid: Tutorial.Annotation
@@ -14,7 +14,8 @@
 - name: Lifetime
   href: Lifetime/toc.yml
   topicUid: Tutorial.Lifetime
-- name: Diagnostic
-  href: diagnostic.md
+- name: Extensions
+  href: Extensions/toc.yml
+  topicUid: Tutorial.Extensions
 
 

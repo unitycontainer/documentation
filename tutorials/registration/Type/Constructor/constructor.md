@@ -26,7 +26,7 @@ Automatic Selection is a default method of selecting constructors. It will be us
 By default Unity uses 'smart' algorithm to select constructor. It sorts all accessible constructors by number of parameters in ascending order and goes from most complex to the default, checking if it can satisfy its parameters. The container selects the first constructor it can create and executes it.
 
 > [!WARNING]
-> Unity will not check for ambiguities unless [Diagnostic](xref:Tutorial.Unity.Diagnostic) extension is installed.
+> Unity will not check for ambiguities unless [Diagnostic](xref:Tutorial.Extension.Diagnostic) extension is installed.
 
 > [!TIP]
 > Legacy selection algorithm which selects the most complex constructor could be enabled by installing `Legacy` extension. It will replace and disable 'smart' selection.

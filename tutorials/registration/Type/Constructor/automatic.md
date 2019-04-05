@@ -5,7 +5,7 @@ title: Automatic Constructor Injection
 
 [!include[file2](../../../Resolution/Selection/constructor.md)]
 
-### See Also
+**See Also:**
 
 * [Constructor Annotation](xref:Tutorial.Injection.Constructor.Annotation)
 * [Invoke default constructor](xref:Tutorial.Injection.Constructor.Default)

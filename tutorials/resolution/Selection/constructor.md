@@ -48,8 +48,10 @@ The Unity container will select the first successful match and use it as a selec
 > [!WARNING]
 > When more than one constructor could be matched at the same time, the order and constructor selection can not be guaranteed.
 
+During normal operation the container does not perform validation.
+
 > [!NOTE]
-> If [Diagnostic](xref:Tutorial.Unity.Diagnostic) extension is enabled, Unity will perform a selection validation and will throw an exception, reporting ambiguous constructors, if more than one constructor can be successfully selected with current configuration.
+> If [Diagnostic](xref:Tutorial.Extension.Diagnostic) extension is enabled, Unity will perform a selection validation and will throw an exception, reporting ambiguous constructors, if more than one constructor can be successfully selected with current configuration.
 
 If no constructor could be selected, the container will throw an exception.
 

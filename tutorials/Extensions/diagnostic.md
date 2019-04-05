@@ -1,6 +1,6 @@
 ---
-uid: Tutorial.Unity.Diagnostic
-title: Diagnostic
+uid: Tutorial.Extension.Diagnostic
+title: Diagnostic Extension
 ---
 
 # Diagnostic

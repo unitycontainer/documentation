@@ -30,8 +30,10 @@ In this example type `Service` contains four public constructors. Three of these
 > [!WARNING]
 > During resolution, the container will pick the first constructor it could satisfy with dependencies and will use it. In the example above, it could be any of the three constructors with one parameter.
 
+The container is not trying to validate all available contractors during normal execution.
+
 > [!NOTE]
-> If [Diagnostic](xref:Tutorial.Unity.Diagnostic) extension is enabled, Unity will throw an exception reporting ambiguous constructors.
+> If [Diagnostic](xref:Tutorial.Extension.Diagnostic) extension is enabled, Unity will throw an exception reporting ambiguous constructors.
 
 Normally, Unity would select the third constructor with three parameters, but by annotating the second constructor with the attribute you force Unity to use it during resolution.
 
@@ -40,4 +42,4 @@ Normally, Unity would select the third constructor with three parameters, but by
 Annotating multiple constructors with injection parameters is not recommended. Unity is not guaranteed to process constructors in certain order. If multiple constructors are annotated, behavior might change from version to version.
 
 > [!NOTE]
-> If [Diagnostic](xref:Tutorial.Unity.Diagnostic) extension is enabled, Unity will throw an exception reporting ambiguous constructor annotations.
+> If [Diagnostic](xref:Tutorial.Extension.Diagnostic) extension is enabled, Unity will throw an exception reporting ambiguous constructor annotations.

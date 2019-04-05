@@ -67,7 +67,7 @@ public class Service
 
 ### Static methods cannot be invoked
 
-Unity does not support invocation of static methods. Static methods annotated with [InjectionMethod](xref:Unity.InjectionMethodAttribute) attribute will be ignored. If [Unity Diagnostic](xref:Tutorial.Unity.Diagnostic) is enabled, the container will throw an exception when it encounters such an annotation.
+Unity does not support invocation of static methods. Static methods annotated with [InjectionMethod](xref:Unity.InjectionMethodAttribute) attribute will be ignored. If [Unity Diagnostic](xref:Tutorial.Extension.Diagnostic) is enabled, the container will throw an exception when it encounters such an annotation.
 
 ### Methods with `ref` or `out` parameters cannot be invoked
 
@@ -114,6 +114,6 @@ public class Service
 
 In the example above method `ProtectedMethod(...)` will not be called.
 
-If [Unity Diagnostic](xref:Tutorial.Unity.Diagnostic) is enabled, the container will throw an exception when it encounters this condition.
+If [Unity Diagnostic](xref:Tutorial.Extension.Diagnostic) is enabled, the container will throw an exception when it encounters this condition.
 
-For more information see  [Unity Diagnostic](xref:Tutorial.Unity.Diagnostic).
+For more information see  [Unity Diagnostic](xref:Tutorial.Extension.Diagnostic).

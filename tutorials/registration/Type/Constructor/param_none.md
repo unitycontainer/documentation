@@ -24,7 +24,7 @@ Class `Service` is a plain type with three accessible constructors. First constr
 If you try to resolve this class with no registration, Unity will select one of the constructors with parameter. You can not guarantee which one it will select because both have the same number of parameters and each could be satisfied with dependencies.
 
 > [!TIP]
-> If [Diagnostic](xref:Tutorial.Unity.Diagnostic) is enabled, it will throw an ambiguous constructor exception.
+> If [Diagnostic](xref:Tutorial.Extension.Diagnostic) is enabled, it will throw an ambiguous constructor exception.
 
 To prevent ambiguity, or if you need to execute default constructor, you can register this [Type](xref:System.Type) and instruct the container to invoke default constructor during resolution. In simplest form this registration will look like this:
 
