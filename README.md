@@ -3,3 +3,5 @@
 # Unity Documentation
 
 This repository hosts source files and instructions for building Unity documentation site: https://unitycontainer.github.io 
+
+If you'd like to contribute documentation or report an issue please do it in [this repository](https://github.com/unitycontainer/documentation).
