@@ -10,3 +10,5 @@
   uid: Article.Unity.Install
 - name: Quick Start
   uid: Article.Unity.Using
+- name: Change Log
+  uid: Article.Change.Log
