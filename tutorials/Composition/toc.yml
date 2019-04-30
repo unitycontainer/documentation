@@ -4,6 +4,9 @@
 - name: Build-Up
   href: BuildUp/toc.yml
   topicUid: Tutorial.BuildUp
+- name: Type Mapping
+  href: Mapping/toc.yml
+  topicUid: Tutorial.Mapping
 - name: Selection
   href: Selection/toc.yml
   topicUid: Tutorial.Resolution.Selection

@@ -1,7 +1,5 @@
 - name: Metadata
   uid: Tutorial.Registration.Metadata
-- name: Type Mapping
-  uid: Tutorial.Registration.Mapping
 - name: Instance Registration
   uid: Tutorial.Registration.Instance
 - name: Factory Registration

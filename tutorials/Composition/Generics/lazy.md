@@ -1,5 +1,5 @@
 ---
-uid: Tutorial.Generics.Lazy
+uid: Tutorial.Lazy
 title: Lazy
 ---
 

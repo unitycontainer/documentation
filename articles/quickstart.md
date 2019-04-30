@@ -97,7 +97,7 @@ public class Foo
 
 In this example we have `IService` interface defining an API and class `Component` implementing that API. Type `Foo` is a consumer of the service and should be injected by container with an instance of the service during initialization.
 
-If you just call `container.Resolve<IService>()` it will throw an exception complaining that it can not create an interface of type `IService`. You need to register a [Type Mapping](xref:Tutorial.Registration.Mapping) to instructs Unity how to create service of type `IService`:
+If you just call `container.Resolve<IService>()` it will throw an exception complaining that it can not create an interface of type `IService`. You need to register a [Type Mapping](xref:Tutorial.Mapping) to instructs Unity how to create service of type `IService`:
 
 ```cs
 // Register mapping between IService and Component
@@ -111,7 +111,7 @@ var value = container.Resolve<Foo>();
 
 During the resolution, when Unity will try to satisfy dependencies, it will look for a registration for each dependency and will find this mapping. It will create `Component` and passes it to constructor of `Foo` as `IService`.
 
-For more information see [Type Mapping](xref:Tutorial.Registration.Mapping)
+For more information see [Type Mapping](xref:Tutorial.Mapping)
 
 ## Lifetime
 
