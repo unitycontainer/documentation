@@ -1,14 +1,14 @@
 #- name: Terms and Definitions
 #  uid: Tutorial.Terms
+- name: Composition
+  href: Composition/toc.yml
+  topicUid: Tutorial.Composition
 - name: Attributed Injection Model
   href: Annotation/toc.yml
   topicUid: Tutorial.Annotation
 - name: Registration
   href: Registration/toc.yml
   topicUid: Tutorial.Registration
-- name: Resolution
-  href: Resolution/toc.yml
-  topicUid: Tutorial.Resolution
 - name: Hierarchies      
   uid: Tutorial.Container.Hierarchy
 - name: Lifetime

@@ -1,5 +1,6 @@
 ---
 uid: Tutorial.Resolution.Type
+title: Resolution By Type
 ---
 
 # Resolving an Object by Type

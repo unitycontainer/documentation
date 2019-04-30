@@ -3,7 +3,7 @@ uid: Tutorial.Injection.Constructor.Implicit
 title: Automatic Constructor Injection
 ---
 
-[!include[file2](../../../Resolution/Selection/constructor.md)]
+[!include[file2](../../../Composition/Selection/constructor.md)]
 
 **See Also:**
 

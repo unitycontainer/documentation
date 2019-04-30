@@ -1,3 +1,9 @@
+---
+uid: Tutorial.Deferred
+title: Deferred Resolution
+---
+
+
 # Deferring the Resolution of Objects
 Unity provides a technique to facilitate holding a reference to an object you need, but do not want to construct right away. You wish to defer resolution of the object. Instead of creating a factory for the type and injecting the factory into your class, then using it to create the type you want you can use the .NET standard type Func<T> (C#) or Func(Of T) (Visual Basic) with the Resolve method. This returns a delegate that, when invoked, calls into the container and returns an instance of the specified type (in this case, T).
 

@@ -1,3 +1,9 @@
+---
+uid: Tutorial.Collections
+title: Collections
+---
+
+
 # Resolving collections of Objects of a Particular Type
 Unity supports creating multiple registration of the same type by adding a name to the registration. It is useful if you want to register different services of the same type. For example, if you have multiple printers and you want them all to be available to consumers you would register them like this:
 ```cs
@@ -35,4 +41,3 @@ Assert(4 == printers.Count)
 ``` 
 Unity creates type `List<IPrinter>` and during initialization selects longest constructor it can satisfy with dependencies (`List(IEnumerable<T> items)`). It crates the enumeration and passes it to List constructor. Resulting instance is a list of all registrations of that type.
 
- 
