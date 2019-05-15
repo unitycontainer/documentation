@@ -12,9 +12,9 @@ During registration Unity relies on information you provide to properly register
 A `Type` that will be requested during resolution is called **Registered Type**. In the example below `SomeType` would be a registered type. 
 
 ```cs
-container.RegisterType<SomeClass>();
+container.RegisterType<SomeType>();
 ...
-var value = container.Resolve<SomeClass>();
+var value = container.Resolve<SomeType>();
 ```
 
 Different container authors call this type by different names, [FromType](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ee650974(v%3dpandp.10)), [ServiceType](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.servicedescriptor.servicetype), etc. The key point to remember is that this is the `Type` container will be referencing in the internal registry and will be looking for when executing the resolve.
@@ -68,4 +68,4 @@ For more information see [Type Mapping](mapping.md).
 
 ## [Lifetime Manager](xref:Unity.IContainerRegistration#Unity_IContainerRegistration_LifetimeManager)
 
-This member holds a reference to a lifetime manager that Unity will be using to manage instance(s) of this type. For more information see [Lifetime Management](../lifetime/lifetime.md) 
+This member holds a reference to a lifetime manager that Unity will be using to manage instance(s) of this type. For more information see [Lifetime Management](../lifetime/lifetime.md).
