@@ -21,7 +21,7 @@ Unity was designed to achieve the following goals:
 
 ## Packaging
 
-To allow maximum decoupling between declarative part and implementation Unity split into two assemblies: [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/) and [Unity.Container](https://www.nuget.org/packages/Unity.Container/)
+To allow maximum decoupling between declarative part and implementation, Unity split into two assemblies: [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/) and [Unity.Container](https://www.nuget.org/packages/Unity.Container/)
 
 ### [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/)
 
@@ -39,7 +39,7 @@ This assembly implements Unity container's engine and exposes public members req
 
 ### [Unity](https://www.nuget.org/packages/Unity/)
 
-This is a convenience package containing both [Unity.Abstractions](https://www.nuget.org/packages/Unity/) as well as [Unity.Container](https://www.nuget.org/packages/Unity/) assemblies. This package is distributed for these who do now wish to separate declarations and implementation.
+This is a convenience package containing both [Unity.Abstractions](https://www.nuget.org/packages/Unity/) as well as [Unity.Container](https://www.nuget.org/packages/Unity/) assemblies. This package is distributed for these who do not wish to separate declarations and implementation.
 
 ## More Information
 
