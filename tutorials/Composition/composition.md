@@ -13,7 +13,7 @@ The Unity container supports two types of composition:
 
 ## Resolution
 
-Resolution is a process where an object is built from scratch. In other words, the container is allocating the memory for an abject, calls a constructor with all of its dependencies and performs all necessary initialization required by the type. For more information see <xref:Tutorial.Resolution>
+Resolution is a process where an object is built from scratch. In other words, the container is allocating the memory for an object, calls a constructor with all of its dependencies and performs all necessary initialization required by the type. For more information see <xref:Tutorial.Resolution>
 
 ## Building Up
 
