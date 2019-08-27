@@ -5,9 +5,9 @@ title: Hierarchical Lifetime
 
 # Hierarchical Lifetime
 
-The Unity container allows creating hierarchies of child containers. This lifetime creates local singleton for each level of the hierarchy. So, when you resolve a type and this container does not have an instance of that type, the container will create new instance. Next type the type is resolved the same instance will be returned.
+The Unity container allows creating hierarchies of child containers. This lifetime creates local singleton for each level of the hierarchy. So, when you resolve a type and this container does not have an instance of that type, the container will create new instance. Next time the type is resolved the same instance will be returned.
 
-If a child container is created and requested to resolve the type, the child container will create a new instance and store it for subsequent resolutions. Next time the child container requested to resolve the type, it will return stored instance.
+If a child container is created and requested to resolve the type, the child container will create a new instance and store it for subsequent resolutions. Next time the child container requests to resolve the type, it will return the stored instance.
 
 If you have multiple children, each will resolve its own instance.
 
