@@ -4,10 +4,6 @@ uid: Article.Unity.Design
 
 # Design of Unity
 
-This topic describes the design goals, the architecture, and the design highlights of Unity. You do not have to understand the design to use Unity; however, this topic will help you to understand how it works and how it interacts with the underlying object builder subsystem.
-
-## Design Goals
-
 Unity was designed to achieve the following goals:
 
 * Promote the principles of modular design through aggressive decoupling.
@@ -19,27 +15,39 @@ Unity was designed to achieve the following goals:
 * Provide extensibility through container extensions.
 * Provide stability required in enterprise-level line of business (LOB) applications.
 
-## Packaging
+To allow maximum flexibility Unity container split into **core** and **extension** packages. Core packages implement basic [IoC](https://en.wikipedia.org/wiki/Inversion_of_control)/[DI](https://en.wikipedia.org/wiki/Dependency_injection) functionality and extensions provide specific behavior such as configuration, decoration, and etc.
 
-To allow maximum decoupling between declarative part and implementation, Unity split into two assemblies: [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/) and [Unity.Container](https://www.nuget.org/packages/Unity.Container/)
+## Unity Core
 
-### [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/)
+Unity core consists of two assemblies:
 
-This assembly contains all public member declarations required to use Unity container in applications. It defines [IUnityContainer](xref:Unity.IUnityContainer) interface as well as types and interfaces used to register, configure and resolve types and instances. Abstraction assembly contains following namespaces:
+* `Unity.Abstractions`
+* `Unity.Container`
 
-* [Unity](xref:Unity)
-* [Unity.Injection](xref:Unity.Injection)
-* [Unity.Lifetime](xref:Unity.Lifetime)
-* [Unity.Policy](xref:Unity.Policy)
-* [Unity.Resolution](xref:Unity.Resolution)
+`Unity.Abstractions` assembly contains all public declarations required to use the container in applications and relatively unchanged from version to version. It defines [IUnityContainer](xref:Unity.IUnityContainer) interface as well as types and interfaces used to register, configure and resolve types and instances.
 
-### [Unity.Container](https://www.nuget.org/packages/Unity.Container/)
+`Unity.Container` assembly implements the IoC engine and exposes public members required to extend the container.
 
-This assembly implements Unity container's engine and exposes public members required to extend the container. 
+### Core Packages
 
-### [Unity](https://www.nuget.org/packages/Unity/)
+For legacy support and general convenience core library is distributed in two different forms:
 
-This is a convenience package containing both [Unity.Abstractions](https://www.nuget.org/packages/Unity/) as well as [Unity.Container](https://www.nuget.org/packages/Unity/) assemblies. This package is distributed for these who do not wish to separate declarations and implementation.
+* as composite package [Unity](https://www.nuget.org/packages/Unity/)
+* as independent packages [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/) and [Unity.Container](https://www.nuget.org/packages/Unity.Container/)
+
+#### Composite package [Unity](https://www.nuget.org/packages/Unity/)
+
+This is a convenience package containing both `Unity.Abstractions` as well as `Unity.Container` assemblies. This package is distributed to support legacy applications.
+
+#### Independent Packages [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/) and [Unity.Container](https://www.nuget.org/packages/Unity.Container/)
+
+To allow easier path to upgrade and maximum decoupling between declarative part and implementation, Unity split into two assemblies: [Unity.Abstractions](https://www.nuget.org/packages/Unity.Abstractions/) and [Unity.Container](https://www.nuget.org/packages/Unity.Container/)
+
+When used in libraries it allows linking to Unity.Abstractions and referencing Unity.Container only in bootstrapping project.
+
+## Unity Extensions
+
+Unity project implements and distributes several extensions such as Unity.Configuration, Unity.Interception, [and etc.](https://www.nuget.org/packages?q=unitycontainer)
 
 ## More Information
 
