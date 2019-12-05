@@ -46,7 +46,7 @@ The first method, one with `AddExtension(new Diagnostic())` is a bit faster.
 
 ### Using extension method
 
-For convenience, Unity container exposes [EnableDiagnostic()](https://github.com/unitycontainer/container/blob/master/src/Extensions/DiagnosticExtensions.cs) extension method. This method is equal to adding extension to the container.
+For convenience, Unity container exposes [EnableDiagnostic()](https://github.com/unitycontainer/container/blob/master/src/Extensions/Diagnostic.cs) extension method. This method is equal to adding extension to the container.
 
 ```cs
 var container = new UnityContainer()
@@ -55,7 +55,7 @@ var container = new UnityContainer()
 
 ### Enabling extension only in Debug
 
-The container provides conditional extension [EnableDebugDiagnostic()](https://github.com/unitycontainer/container/blob/master/src/Extensions/DiagnosticExtensions.cs). This method will only enable diagnostics in `DEBUG` mode. In this example
+The container provides conditional extension [EnableDebugDiagnostic()](https://github.com/unitycontainer/container/blob/master/src/Extensions/Diagnostic.cs). This method will only enable diagnostics in `DEBUG` mode. In this example
 
 ```cs
 var container = new UnityContainer();
