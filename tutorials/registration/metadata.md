@@ -64,7 +64,7 @@ var result = container.Resolve<IService>();
 Assert(typeof(Service) == result.GetType())
 ```
 
-For more information see [Type Mapping](mapping.md).
+For more information see [Type Mapping](xref:Tutorial.Mapping).
 
 ## [Lifetime Manager](xref:Unity.IContainerRegistration#Unity_IContainerRegistration_LifetimeManager)
 

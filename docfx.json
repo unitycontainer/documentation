@@ -3,9 +3,19 @@
     {
       "src": [
         {
-      	  "files": [
-      		  "src/Abstractions/src/Unity.Abstractions.csproj"
-      	  ]
+          "files": ["*.csproj"],
+          "exclude": [ "**/bin/**", "**/obj/**" ],
+          "src": "../Abstractions/src"
+        },
+        {
+          "files": ["*.csproj"],
+          "exclude": [ "**/bin/**", "**/obj/**" ],
+          "src": "../Container/src"
+        },
+        {
+          "files": ["*.csproj"],
+          "exclude": [ "**/bin/**", "**/obj/**", "**/Microsoft.Practices/**" ],
+          "src": "../Configuration/src"
         }
       ],
       "dest": "api",

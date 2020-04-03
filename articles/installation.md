@@ -8,11 +8,11 @@ Unity is designed to support a range of common scenarios for resolving instances
 
 ## To prepare your application
 
-Before you can add Unity to your solution you need to decide if you want to reference packages individually ([Abstractions](https://www.nuget.org/packages/Unity.Abstractions/), [Container](https://www.nuget.org/packages/Unity.Container/)) or use composite [Unity]([Unity](https://www.nuget.org/packages/Unity/)) package.
+Before you can add Unity to your solution you need to decide if you want to reference packages individually ([Abstractions](https://www.nuget.org/packages/Unity.Abstractions/), [Container](https://www.nuget.org/packages/Unity.Container/)) or use composite [Unity](https://www.nuget.org/packages/Unity) package.
 
 ### Referencing composite package
 
- Referencing single [Unity]([Unity](https://www.nuget.org/packages/Unity/)) package is more appropriate in case of small(ish) project, when everything is contained within one solution. Upgrading such solution is trivial with the help of NuGet Manager.
+ Referencing single [Unity](https://www.nuget.org/packages/Unity/) package is more appropriate in case of small(ish) project, when everything is contained within one solution. Upgrading such solution is trivial with the help of NuGet Manager.
 
 ### Referencing individual packages
 
