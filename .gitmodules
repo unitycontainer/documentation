@@ -4,7 +4,6 @@
 [submodule "src/Container"]
 	path = src/Container
 	url = https://github.com/unitycontainer/container.git
-	branch = v5.x
 [submodule "src/SpecificationTests"]
 	path = src/SpecificationTests
 	url = https://github.com/unitycontainer/specification-tests.git

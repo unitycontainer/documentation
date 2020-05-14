@@ -60,7 +60,7 @@ container.RegisterType<IService, WebService>("WebMail");
 container.RegisterType<IService, SecureService>("Encrypted");
 ```
 
-For more information see <xref:Tutorial.Registration.Mapping>
+For more information see <xref:Tutorial.Mapping>
 
 ## Lifetime Management
 

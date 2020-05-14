@@ -66,7 +66,7 @@
     "globalMetadata" :
     {
       "_appTitle" : "Unity Container",
-      "_appFooter" : "<span>Copyright &copy; 2008–2019 <strong>Unity Container</strong> project</span>",
+      "_appFooter" : "<span>Copyright &copy; 2020 <strong>.NET Foundation and Contributors</strong>. All Rights Reserved</span>",
       "_appLogoPath" : "images/logo.svg",
       "_appFaviconPath": "images/favicon.png"
     }  

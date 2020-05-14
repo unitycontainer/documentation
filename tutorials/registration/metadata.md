@@ -3,8 +3,6 @@ uid: Tutorial.Registration.Metadata
 title: Registration Metadata
 ---
 
-# Registration Metadata
-
 During registration Unity relies on information you provide to properly register types, instances, and factories. This is a description of metadata you could provide to properly declare how the `Type` should be registered and  built:
 
 ## [Registered Type](xref:Unity.IContainerRegistration#Unity_IContainerRegistration_RegisteredType)
@@ -64,7 +62,7 @@ var result = container.Resolve<IService>();
 Assert(typeof(Service) == result.GetType())
 ```
 
-For more information see [Type Mapping](mapping.md).
+For more information see [Type Mapping](xref:Tutorial.Mapping).
 
 ## [Lifetime Manager](xref:Unity.IContainerRegistration#Unity_IContainerRegistration_LifetimeManager)
 
