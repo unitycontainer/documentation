@@ -35,6 +35,8 @@ When the container creates singleton objects, it manages the lifetime of these s
 
 Therefore, if you require two separate sets of such objects that must have different lifetimes, you can use hierarchical containers to store and manage each set. Register instances that you want to be able to dispose separately in one or more child containers that you can dispose without disposing the parent container.
 
+Note that due to possibility of child container disposal, resolution of singletons (registered with `Singleton` or `PerContainer` lifetime) will only be using registrations available in the container they were registered in and its ancestors, but not child containers, to satisfy their dependencies, even if the resolution is requested through a child container. It's Unity's way of making sure it is not storing an instance that references potentially disposed objects.
+
 The following code demonstrates the use of a child container to manage the lifetime of specific singleton instances while maintaining the singleton instances in the parent container.
 
 ```cs
