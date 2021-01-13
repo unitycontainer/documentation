@@ -7,7 +7,7 @@ title: Container Hierarchy
 
 Unity container provides a way to create child containers (other systems refer to it as resolution scopes) and allows building sophisticated scope trees of registrations. There are just a few simple rules to follow when dealing with container hierarchies:
 
-* Types registered in predecessor containers always available in descendant containers. This is a very simple concept, each registration is like a public virtual declaration in cs types. Every descendant inherits it and can use at will.
+* Types registered in predecessor containers are always available in descendant containers. This is a very simple concept, each registration is like a public virtual declaration in cs types. Every descendant inherits it and can use at will.
 
 * Types registered in descendant containers override the same registration of predecessors. Following the same analogy with public virtual declarations, each override registration installs its own declaration and hides the one in predecessor containers.
 
@@ -34,6 +34,8 @@ The following methods enable you to create a new default UnityContainer, create 
 When the container creates singleton objects, it manages the lifetime of these singletons. They remain in scope until you (or the garbage collector) dispose the container. At this point, it disposes the registered singleton instances it contains. In addition, if you dispose the parent container in a nested container hierarchy, it automatically disposes all child containers and the registered singletons they contain.
 
 Therefore, if you require two separate sets of such objects that must have different lifetimes, you can use hierarchical containers to store and manage each set. Register instances that you want to be able to dispose separately in one or more child containers that you can dispose without disposing the parent container.
+
+Note that due to possibility of child container disposal, resolution of singletons (registered with `Singleton` or `PerContainer` lifetime) will only be using registrations available in the container they were registered in and its ancestors, but not child containers, to satisfy their dependencies, even if the resolution is requested through a child container. It's Unity's way of making sure it is not storing an instance that references potentially disposed objects.
 
 The following code demonstrates the use of a child container to manage the lifetime of specific singleton instances while maintaining the singleton instances in the parent container.
 
