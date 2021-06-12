@@ -5,7 +5,7 @@ title: Per Container Lifetime
 
 # Per Container Lifetime
 
-Per Container lifetime allows a registration of an existing or resolved object as a scoped singleton in the container it was created or registered. In other words this instance is unique within the container it war registered with. Child or parent containers could have their own instances registered for the same contract.
+Per Container lifetime allows a registration of an existing or resolved object as a scoped singleton in the container it was created or registered. In other words this instance is unique within the container it was registered with. Child or parent containers could have their own instances registered for the same contract.
 
 Unity returns the same instance each time the `Resolve` method is called or when the dependency mechanism injects the instance into other classes.
 
