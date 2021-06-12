@@ -13,7 +13,7 @@ In July of 2019 I started to work on Unity full time. During this time a lot was
 * Performance of v6.0 engine improved dramatically
 * Work on back-porting fixes into [Unity v5.12.x](https://github.com/unitycontainer/unity/tree/release/5.12.0) (LTS) started
 
-The effort was privately funded and lasted until recently. But now the future of [Unity container](https://github.com/unitycontainer) is at stake. Venues that paid for the work on the library are no longer available.
+The effort was privately funded and lasted until recently. But now the future of [Unity container](https://github.com/unitycontainer) is at stake.
 
 ## [Make Unity sustainable](https://opencollective.com/unity-container)
 
