@@ -1,19 +1,27 @@
-# Welcome to Unity Container Documentation
+# Message To Community
 
-## Overview
+Dear community,
 
-The Unity Container (Unity) is a lightweight, extensible dependency injection container. It facilitates building loosely coupled applications and provides developers with the following advantages:
+I am [Eugene Sadovoi](https://www.linkedin.com/in/esadovoi/) ([ENikS](https://github.com/ENikS)), maintainer of the [Unity container](https://github.com/unitycontainer). Back in 2017 I wanted to fix few Unity issues, related to my work for an employer, but ended up adopting the whole project. 
+Initially I worked on the library during my free time, but it became [very obvious very quick](https://github.com/unitycontainer/unity/issues/199#issuecomment-746006052) that Unity is not a hobbyist software.
 
-* Simplified object creation, especially for hierarchical object structures and dependencies
-* Abstraction of requirements; this allows developers to specify dependencies at run time or in configuration and simplify management of crosscutting concerns
-* Increased flexibility by deferring component configuration to the container
-* Service location capability; this allows clients to store or cache the container
-* Instance and type interception
-* Registration by convention
+In July of 2019 I started to work on Unity full time. During this time a lot was accomplished:
 
-## Issues and Contributions
+* New [engine](https://github.com/unitycontainer/unity/tree/release/6.0.0) compatible with .NET 5.0 is almost done
+* More that [100 issues](https://github.com/orgs/unitycontainer/projects/3) were identified and fixed
+* More than 2000 [regression tests](https://github.com/unitycontainer?q=regression) were created
+* Performance of v6.0 engine improved dramatically
+* Work on back-porting fixes into [Unity v5.12.x](https://github.com/unitycontainer/unity/tree/release/5.12.0) (LTS) started
 
-* If something is broken and you know how to fix it, send a pull request.
-* If you have no idea what is wrong, create an issue
+The effort was privately funded and lasted until recently. But now the future of [Unity container](https://github.com/unitycontainer) is at stake. Venues that paid for the work on the library are no longer available.
 
-## Any feedback and contributions are welcome
+## [Make Unity sustainable](https://opencollective.com/unity-container)
+
+The community support is crucial for the projects to survive and to move forward.
+Unity is all about trust and sharing. [Open Collective](https://opencollective.com/unity-container) lets finances to be managed so everyone can see where money comes from and where it goes. It was selected to provide mechanism for the community to support and finance the project.
+
+If your project depends on [Unity container](https://github.com/unitycontainer) and you want it to be maintainer and developed, please **[support](https://opencollective.com/unity-container)** it. Remember, I can only have one full time job, so without proper financial backing there will be no more releases beyond v5.11
+
+**[Become contributor to Unity project](https://opencollective.com/unity-container)**
+
+[...continue to site](xref:Article.Unity.Introduction)
