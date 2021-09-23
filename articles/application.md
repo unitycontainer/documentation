@@ -30,7 +30,7 @@ By using dependency injection mechanisms, such as Unity container, developers ca
 
 In addition, the providers may require instances of other components. For example, a caching provider may need to use the services of a cryptography component or service. When components require the services of other components, you can use dependency injection to automatically instantiate and inject instances of these components into a component, based on either configuration settings in the container or on code within the application.
 
-For more information about how you can use dependency injection in this way, see Using Injection Attributes.
+For more information about how you can use dependency injection in this way, see [Using Injection Attributes](http://unitycontainer.org/tutorials/Annotation/annotation.html#using-injection-attributes).
 
 ## Managing Crosscutting Concerns
 
@@ -73,7 +73,7 @@ String loggerName = ConfigurationManager.AppSettings["LoggerName"].ToString();
 ILogger myLogger = myContainer.Resolve<ILogger>(loggerName);
 ```
 
-For more information about registering types, type mappings, and resolving instances, see Resolving Objects.
+For more information about registering types, type mappings, and resolving instances, see [Resolving Objects](http://unitycontainer.org/tutorials/Composition/Resolution/resolution.html).
 
 ## Service and Component Location
 
@@ -118,7 +118,7 @@ CustomerAccessBase cData
   = (CustomerAccessBase)myContainer.Resolve<CustomerAccessBase>(serviceName);
 ```
 
-For more information about registering types, type mappings, and resolving instances, see Resolving Objects. For more information about using lifetime managers to control the creation, lifetime, and disposal of objects, see Understanding Lifetime Managers.
+For more information about registering types, type mappings, and resolving instances, see [Resolving Objects](http://unitycontainer.org/tutorials/Composition/Resolution/resolution.html). For more information about using lifetime managers to control the creation, lifetime, and disposal of objects, see [Understanding Lifetime Managers](http://unitycontainer.org/tutorials/lifetime/lifetime.html).
 
 ## Policy Injection through Interception
 
